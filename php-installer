@@ -1,1 +1,0 @@
-docker run --rm -v /home/mis/crm-addons/adobe-sign:/local swaggerapi/swagger-codegen-cli:2.4.0 generate -i /local/json/agreements.json -l php -o /local
