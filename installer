@@ -12,4 +12,5 @@ then
     exit;
 fi
 
-docker run --rm -v /home/mis/crm-addons/adobe-sign:/local swaggerapi/swagger-codegen-cli:2.4.0 generate -i /local/json/agreements.json -l $1 -o /local
+docker run --rm -v /home/mis/crm-addons/adobe-sign:/local swaggerapi/swagger-codegen-cli:2.4.0 generate -i /local/json/agreements.json -l $1 -o /local/out/$1
+
