@@ -16,6 +16,14 @@ docker run --rm -v ${PWD}:/local \
     swaggerapi/swagger-codegen-cli:2.4.0 generate \
     -i /local/json/agreements.json \
     -l $1 \
-    -o /local/out/$1 \
+    -o /local/$1 \
+    --git-user-id UniCourt \
+    --git-repo-id adobe-sign
+
+docker run --rm -v ${PWD}:/local \
+    swaggerapi/swagger-codegen-cli:2.4.0 generate \
+    -i /local/json/libraryDocuments.json \
+    -l $1 \
+    -o /local/$1 \
     --git-user-id UniCourt \
     --git-repo-id adobe-sign
