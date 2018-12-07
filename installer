@@ -12,5 +12,10 @@ then
     exit;
 fi
 
-docker run --rm -v /home/mis/crm-addons/adobe-sign:/local swaggerapi/swagger-codegen-cli:2.4.0 generate -i /local/json/agreements.json -l $1 -o /local/out/$1
-
+docker run --rm -v ${PWD}:/local \
+    swaggerapi/swagger-codegen-cli:2.4.0 generate \
+    -i /local/json/agreements.json \
+    -l $1 \
+    -o /local/out/$1 \
+    --git-user-id UniCourt \
+    --git-repo-id autopilot
