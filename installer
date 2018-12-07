@@ -18,4 +18,4 @@ docker run --rm -v ${PWD}:/local \
     -l $1 \
     -o /local/out/$1 \
     --git-user-id UniCourt \
-    --git-repo-id autopilot
+    --git-repo-id adobe-sign
