@@ -1,6 +1,6 @@
 <?php
 /**
- * FileInfo
+ * PageInfo
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * FileInfo Class Doc Comment
+ * PageInfo Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class FileInfo implements ModelInterface, ArrayAccess
+class PageInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class FileInfo implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'FileInfo';
+    protected static $swaggerModelName = 'PageInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,9 +55,7 @@ class FileInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'label' => 'string',
-        'transient_document_id' => 'string',
-        'url_file_info' => '\Swagger\Client\Model\URLFileInfo'
+        'next_cursor' => 'string'
     ];
 
     /**
@@ -66,9 +64,7 @@ class FileInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'label' => null,
-        'transient_document_id' => null,
-        'url_file_info' => null
+        'next_cursor' => null
     ];
 
     /**
@@ -98,9 +94,7 @@ class FileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'label' => 'label',
-        'transient_document_id' => 'transientDocumentId',
-        'url_file_info' => 'urlFileInfo'
+        'next_cursor' => 'nextCursor'
     ];
 
     /**
@@ -109,9 +103,7 @@ class FileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'label' => 'setLabel',
-        'transient_document_id' => 'setTransientDocumentId',
-        'url_file_info' => 'setUrlFileInfo'
+        'next_cursor' => 'setNextCursor'
     ];
 
     /**
@@ -120,9 +112,7 @@ class FileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'label' => 'getLabel',
-        'transient_document_id' => 'getTransientDocumentId',
-        'url_file_info' => 'getUrlFileInfo'
+        'next_cursor' => 'getNextCursor'
     ];
 
     /**
@@ -185,9 +175,7 @@ class FileInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['transient_document_id'] = isset($data['transient_document_id']) ? $data['transient_document_id'] : null;
-        $this->container['url_file_info'] = isset($data['url_file_info']) ? $data['url_file_info'] : null;
+        $this->container['next_cursor'] = isset($data['next_cursor']) ? $data['next_cursor'] : null;
     }
 
     /**
@@ -215,73 +203,25 @@ class FileInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets label
+     * Gets next_cursor
      *
      * @return string
      */
-    public function getLabel()
+    public function getNextCursor()
     {
-        return $this->container['label'];
+        return $this->container['next_cursor'];
     }
 
     /**
-     * Sets label
+     * Sets next_cursor
      *
-     * @param string $label The unique label value of a file info element. In case of custom workflow this will map a file to corresponding file element in workflow definition. This must be specified in case of custom workflow agreement creation request
+     * @param string $next_cursor Used to navigate to the next page. If not returned, there are no further pages.
      *
      * @return $this
      */
-    public function setLabel($label)
+    public function setNextCursor($next_cursor)
     {
-        $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets transient_document_id
-     *
-     * @return string
-     */
-    public function getTransientDocumentId()
-    {
-        return $this->container['transient_document_id'];
-    }
-
-    /**
-     * Sets transient_document_id
-     *
-     * @param string $transient_document_id ID for a transient document that will be added to the library document
-     *
-     * @return $this
-     */
-    public function setTransientDocumentId($transient_document_id)
-    {
-        $this->container['transient_document_id'] = $transient_document_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets url_file_info
-     *
-     * @return \Swagger\Client\Model\URLFileInfo
-     */
-    public function getUrlFileInfo()
-    {
-        return $this->container['url_file_info'];
-    }
-
-    /**
-     * Sets url_file_info
-     *
-     * @param \Swagger\Client\Model\URLFileInfo $url_file_info URL for an external document to add to the library document
-     *
-     * @return $this
-     */
-    public function setUrlFileInfo($url_file_info)
-    {
-        $this->container['url_file_info'] = $url_file_info;
+        $this->container['next_cursor'] = $next_cursor;
 
         return $this;
     }

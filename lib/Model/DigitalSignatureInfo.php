@@ -1,6 +1,6 @@
 <?php
 /**
- * DocumentImageUrls
+ * DigitalSignatureInfo
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * DocumentImageUrls Class Doc Comment
+ * DigitalSignatureInfo Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DocumentImageUrls implements ModelInterface, ArrayAccess
+class DigitalSignatureInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'DocumentImageUrls';
+    protected static $swaggerModelName = 'DigitalSignatureInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,9 +55,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'image_size' => 'string',
-        'image_ur_ls' => '\Swagger\Client\Model\PageImageUrl[]',
-        'images_available' => 'bool'
+        'name' => 'string',
+        'company' => 'string',
+        'email' => 'string'
     ];
 
     /**
@@ -66,9 +66,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'image_size' => null,
-        'image_ur_ls' => null,
-        'images_available' => null
+        'name' => null,
+        'company' => null,
+        'email' => null
     ];
 
     /**
@@ -98,9 +98,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'image_size' => 'imageSize',
-        'image_ur_ls' => 'imageURLs',
-        'images_available' => 'imagesAvailable'
+        'name' => 'name',
+        'company' => 'company',
+        'email' => 'email'
     ];
 
     /**
@@ -109,9 +109,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'image_size' => 'setImageSize',
-        'image_ur_ls' => 'setImageUrLs',
-        'images_available' => 'setImagesAvailable'
+        'name' => 'setName',
+        'company' => 'setCompany',
+        'email' => 'setEmail'
     ];
 
     /**
@@ -120,9 +120,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'image_size' => 'getImageSize',
-        'image_ur_ls' => 'getImageUrLs',
-        'images_available' => 'getImagesAvailable'
+        'name' => 'getName',
+        'company' => 'getCompany',
+        'email' => 'getEmail'
     ];
 
     /**
@@ -166,37 +166,8 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const IMAGE_SIZE_FIXED_WIDTH_50PX = 'FIXED_WIDTH_50px';
-    const IMAGE_SIZE_FIXED_WIDTH_250PX = 'FIXED_WIDTH_250px';
-    const IMAGE_SIZE_FIXED_WIDTH_675PX = 'FIXED_WIDTH_675px';
-    const IMAGE_SIZE_ZOOM_50_PERCENT = 'ZOOM_50_PERCENT';
-    const IMAGE_SIZE_ZOOM_75_PERCENT = 'ZOOM_75_PERCENT';
-    const IMAGE_SIZE_ZOOM_100_PERCENT = 'ZOOM_100_PERCENT';
-    const IMAGE_SIZE_ZOOM_125_PERCENT = 'ZOOM_125_PERCENT';
-    const IMAGE_SIZE_ZOOM_150_PERCENT = 'ZOOM_150_PERCENT';
-    const IMAGE_SIZE_ZOOM_200_PERCENT = 'ZOOM_200_PERCENT';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getImageSizeAllowableValues()
-    {
-        return [
-            self::IMAGE_SIZE_FIXED_WIDTH_50PX,
-            self::IMAGE_SIZE_FIXED_WIDTH_250PX,
-            self::IMAGE_SIZE_FIXED_WIDTH_675PX,
-            self::IMAGE_SIZE_ZOOM_50_PERCENT,
-            self::IMAGE_SIZE_ZOOM_75_PERCENT,
-            self::IMAGE_SIZE_ZOOM_100_PERCENT,
-            self::IMAGE_SIZE_ZOOM_125_PERCENT,
-            self::IMAGE_SIZE_ZOOM_150_PERCENT,
-            self::IMAGE_SIZE_ZOOM_200_PERCENT,
-        ];
-    }
     
 
     /**
@@ -214,9 +185,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['image_size'] = isset($data['image_size']) ? $data['image_size'] : null;
-        $this->container['image_ur_ls'] = isset($data['image_ur_ls']) ? $data['image_ur_ls'] : null;
-        $this->container['images_available'] = isset($data['images_available']) ? $data['images_available'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['company'] = isset($data['company']) ? $data['company'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -227,14 +198,6 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getImageSizeAllowableValues();
-        if (!is_null($this->container['image_size']) && !in_array($this->container['image_size'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'image_size', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -252,82 +215,73 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets image_size
+     * Gets name
      *
      * @return string
      */
-    public function getImageSize()
+    public function getName()
     {
-        return $this->container['image_size'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets image_size
+     * Sets name
      *
-     * @param string $image_size ImageSize corresponding to the imageUrl returned
+     * @param string $name Name captured during digital signing
      *
      * @return $this
      */
-    public function setImageSize($image_size)
+    public function setName($name)
     {
-        $allowedValues = $this->getImageSizeAllowableValues();
-        if (!is_null($image_size) && !in_array($image_size, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'image_size', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['image_size'] = $image_size;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets image_ur_ls
+     * Gets company
      *
-     * @return \Swagger\Client\Model\PageImageUrl[]
+     * @return string
      */
-    public function getImageUrLs()
+    public function getCompany()
     {
-        return $this->container['image_ur_ls'];
+        return $this->container['company'];
     }
 
     /**
-     * Sets image_ur_ls
+     * Sets company
      *
-     * @param \Swagger\Client\Model\PageImageUrl[] $image_ur_ls A list of image url (one per page).
+     * @param string $company Company name captured during digital signing
      *
      * @return $this
      */
-    public function setImageUrLs($image_ur_ls)
+    public function setCompany($company)
     {
-        $this->container['image_ur_ls'] = $image_ur_ls;
+        $this->container['company'] = $company;
 
         return $this;
     }
 
     /**
-     * Gets images_available
+     * Gets email
      *
-     * @return bool
+     * @return string
      */
-    public function getImagesAvailable()
+    public function getEmail()
     {
-        return $this->container['images_available'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets images_available
+     * Sets email
      *
-     * @param bool $images_available true if images for the associated image size is available, else false.
+     * @param string $email Email captured during digital signing
      *
      * @return $this
      */
-    public function setImagesAvailable($images_available)
+    public function setEmail($email)
     {
-        $this->container['images_available'] = $images_available;
+        $this->container['email'] = $email;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * URLFileInfo
+ * Document
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * URLFileInfo Class Doc Comment
+ * Document Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class URLFileInfo implements ModelInterface, ArrayAccess
+class Document implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class URLFileInfo implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'URLFileInfo';
+    protected static $swaggerModelName = 'Document';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,9 +55,11 @@ class URLFileInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'mime_type' => 'string',
+        'num_pages' => 'int',
         'name' => 'string',
-        'url' => 'string'
+        'id' => 'string',
+        'label' => 'string',
+        'mime_type' => 'string'
     ];
 
     /**
@@ -66,9 +68,11 @@ class URLFileInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'mime_type' => null,
+        'num_pages' => null,
         'name' => null,
-        'url' => null
+        'id' => null,
+        'label' => null,
+        'mime_type' => null
     ];
 
     /**
@@ -98,9 +102,11 @@ class URLFileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'mime_type' => 'mimeType',
+        'num_pages' => 'numPages',
         'name' => 'name',
-        'url' => 'url'
+        'id' => 'id',
+        'label' => 'label',
+        'mime_type' => 'mimeType'
     ];
 
     /**
@@ -109,9 +115,11 @@ class URLFileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'mime_type' => 'setMimeType',
+        'num_pages' => 'setNumPages',
         'name' => 'setName',
-        'url' => 'setUrl'
+        'id' => 'setId',
+        'label' => 'setLabel',
+        'mime_type' => 'setMimeType'
     ];
 
     /**
@@ -120,9 +128,11 @@ class URLFileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'mime_type' => 'getMimeType',
+        'num_pages' => 'getNumPages',
         'name' => 'getName',
-        'url' => 'getUrl'
+        'id' => 'getId',
+        'label' => 'getLabel',
+        'mime_type' => 'getMimeType'
     ];
 
     /**
@@ -185,9 +195,11 @@ class URLFileInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['mime_type'] = isset($data['mime_type']) ? $data['mime_type'] : null;
+        $this->container['num_pages'] = isset($data['num_pages']) ? $data['num_pages'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['mime_type'] = isset($data['mime_type']) ? $data['mime_type'] : null;
     }
 
     /**
@@ -215,25 +227,25 @@ class URLFileInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets mime_type
+     * Gets num_pages
      *
-     * @return string
+     * @return int
      */
-    public function getMimeType()
+    public function getNumPages()
     {
-        return $this->container['mime_type'];
+        return $this->container['num_pages'];
     }
 
     /**
-     * Sets mime_type
+     * Sets num_pages
      *
-     * @param string $mime_type The mime type of the referenced file, used to determine if the file can be accepted and the necessary conversion steps can be performed
+     * @param int $num_pages Number of pages in the document
      *
      * @return $this
      */
-    public function setMimeType($mime_type)
+    public function setNumPages($num_pages)
     {
-        $this->container['mime_type'] = $mime_type;
+        $this->container['num_pages'] = $num_pages;
 
         return $this;
     }
@@ -251,7 +263,7 @@ class URLFileInfo implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name The original system file name of the document being sent
+     * @param string $name Name of the original document uploaded. This is returned in GET but not accepted back in PUT
      *
      * @return $this
      */
@@ -263,25 +275,73 @@ class URLFileInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets url
+     * Gets id
      *
      * @return string
      */
-    public function getUrl()
+    public function getId()
     {
-        return $this->container['url'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets url
+     * Sets id
      *
-     * @param string $url A publicly accessible URL for retrieving the raw file content
+     * @param string $id ID of the document. In case of PUT call, this is the only field that is accepted in Document structure. Name and mimeType are ignored in case of PUT call
      *
      * @return $this
      */
-    public function setUrl($url)
+    public function setId($id)
     {
-        $this->container['url'] = $url;
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets label
+     *
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+     * Sets label
+     *
+     * @param string $label Label of the document
+     *
+     * @return $this
+     */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
+
+        return $this;
+    }
+
+    /**
+     * Gets mime_type
+     *
+     * @return string
+     */
+    public function getMimeType()
+    {
+        return $this->container['mime_type'];
+    }
+
+    /**
+     * Sets mime_type
+     *
+     * @param string $mime_type mimeType of the original file. This is returned in GET but not accepted back in PUT
+     *
+     * @return $this
+     */
+    public function setMimeType($mime_type)
+    {
+        $this->container['mime_type'] = $mime_type;
 
         return $this;
     }

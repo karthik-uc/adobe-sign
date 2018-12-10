@@ -1,6 +1,6 @@
 <?php
 /**
- * DigitalSignatureInfo
+ * DocumentImageUrls
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * DigitalSignatureInfo Class Doc Comment
+ * DocumentImageUrls Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DigitalSignatureInfo implements ModelInterface, ArrayAccess
+class DocumentImageUrls implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'DigitalSignatureInfo';
+    protected static $swaggerModelName = 'DocumentImageUrls';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,9 +55,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'company' => 'string',
-        'email' => 'string',
-        'name' => 'string'
+        'image_ur_ls' => '\Swagger\Client\Model\PageImageUrl[]',
+        'images_available' => 'bool',
+        'image_size' => 'string'
     ];
 
     /**
@@ -66,9 +66,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'company' => null,
-        'email' => null,
-        'name' => null
+        'image_ur_ls' => null,
+        'images_available' => null,
+        'image_size' => null
     ];
 
     /**
@@ -98,9 +98,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'company' => 'company',
-        'email' => 'email',
-        'name' => 'name'
+        'image_ur_ls' => 'imageURLs',
+        'images_available' => 'imagesAvailable',
+        'image_size' => 'imageSize'
     ];
 
     /**
@@ -109,9 +109,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'company' => 'setCompany',
-        'email' => 'setEmail',
-        'name' => 'setName'
+        'image_ur_ls' => 'setImageUrLs',
+        'images_available' => 'setImagesAvailable',
+        'image_size' => 'setImageSize'
     ];
 
     /**
@@ -120,9 +120,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'company' => 'getCompany',
-        'email' => 'getEmail',
-        'name' => 'getName'
+        'image_ur_ls' => 'getImageUrLs',
+        'images_available' => 'getImagesAvailable',
+        'image_size' => 'getImageSize'
     ];
 
     /**
@@ -166,8 +166,37 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const IMAGE_SIZE_FIXED_WIDTH_50PX = 'FIXED_WIDTH_50px';
+    const IMAGE_SIZE_FIXED_WIDTH_250PX = 'FIXED_WIDTH_250px';
+    const IMAGE_SIZE_FIXED_WIDTH_675PX = 'FIXED_WIDTH_675px';
+    const IMAGE_SIZE_ZOOM_50_PERCENT = 'ZOOM_50_PERCENT';
+    const IMAGE_SIZE_ZOOM_75_PERCENT = 'ZOOM_75_PERCENT';
+    const IMAGE_SIZE_ZOOM_100_PERCENT = 'ZOOM_100_PERCENT';
+    const IMAGE_SIZE_ZOOM_125_PERCENT = 'ZOOM_125_PERCENT';
+    const IMAGE_SIZE_ZOOM_150_PERCENT = 'ZOOM_150_PERCENT';
+    const IMAGE_SIZE_ZOOM_200_PERCENT = 'ZOOM_200_PERCENT';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getImageSizeAllowableValues()
+    {
+        return [
+            self::IMAGE_SIZE_FIXED_WIDTH_50PX,
+            self::IMAGE_SIZE_FIXED_WIDTH_250PX,
+            self::IMAGE_SIZE_FIXED_WIDTH_675PX,
+            self::IMAGE_SIZE_ZOOM_50_PERCENT,
+            self::IMAGE_SIZE_ZOOM_75_PERCENT,
+            self::IMAGE_SIZE_ZOOM_100_PERCENT,
+            self::IMAGE_SIZE_ZOOM_125_PERCENT,
+            self::IMAGE_SIZE_ZOOM_150_PERCENT,
+            self::IMAGE_SIZE_ZOOM_200_PERCENT,
+        ];
+    }
     
 
     /**
@@ -185,9 +214,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['company'] = isset($data['company']) ? $data['company'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['image_ur_ls'] = isset($data['image_ur_ls']) ? $data['image_ur_ls'] : null;
+        $this->container['images_available'] = isset($data['images_available']) ? $data['images_available'] : null;
+        $this->container['image_size'] = isset($data['image_size']) ? $data['image_size'] : null;
     }
 
     /**
@@ -198,6 +227,14 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getImageSizeAllowableValues();
+        if (!is_null($this->container['image_size']) && !in_array($this->container['image_size'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'image_size', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -215,73 +252,82 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets company
+     * Gets image_ur_ls
      *
-     * @return string
+     * @return \Swagger\Client\Model\PageImageUrl[]
      */
-    public function getCompany()
+    public function getImageUrLs()
     {
-        return $this->container['company'];
+        return $this->container['image_ur_ls'];
     }
 
     /**
-     * Sets company
+     * Sets image_ur_ls
      *
-     * @param string $company Company name captured during digital signing
+     * @param \Swagger\Client\Model\PageImageUrl[] $image_ur_ls A list of image url (one per page).
      *
      * @return $this
      */
-    public function setCompany($company)
+    public function setImageUrLs($image_ur_ls)
     {
-        $this->container['company'] = $company;
+        $this->container['image_ur_ls'] = $image_ur_ls;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets images_available
      *
-     * @return string
+     * @return bool
      */
-    public function getEmail()
+    public function getImagesAvailable()
     {
-        return $this->container['email'];
+        return $this->container['images_available'];
     }
 
     /**
-     * Sets email
+     * Sets images_available
      *
-     * @param string $email Email captured during digital signing
+     * @param bool $images_available true if images for the associated image size is available, else false.
      *
      * @return $this
      */
-    public function setEmail($email)
+    public function setImagesAvailable($images_available)
     {
-        $this->container['email'] = $email;
+        $this->container['images_available'] = $images_available;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets image_size
      *
      * @return string
      */
-    public function getName()
+    public function getImageSize()
     {
-        return $this->container['name'];
+        return $this->container['image_size'];
     }
 
     /**
-     * Sets name
+     * Sets image_size
      *
-     * @param string $name Name captured during digital signing
+     * @param string $image_size ImageSize corresponding to the imageUrl returned
      *
      * @return $this
      */
-    public function setName($name)
+    public function setImageSize($image_size)
     {
-        $this->container['name'] = $name;
+        $allowedValues = $this->getImageSizeAllowableValues();
+        if (!is_null($image_size) && !in_array($image_size, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'image_size', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['image_size'] = $image_size;
 
         return $this;
     }

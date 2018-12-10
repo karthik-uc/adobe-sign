@@ -1,6 +1,6 @@
 <?php
 /**
- * DocumentImageUrlsInfo
+ * FileInfo
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * DocumentImageUrlsInfo Class Doc Comment
+ * FileInfo Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
+class FileInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'DocumentImageUrlsInfo';
+    protected static $swaggerModelName = 'FileInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,8 +55,11 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'document_id' => 'string',
-        'document_image_urls_list' => '\Swagger\Client\Model\DocumentImageUrls[]'
+        'transient_document_id' => 'string',
+        'document' => '\Swagger\Client\Model\Document',
+        'library_document_id' => 'string',
+        'label' => 'string',
+        'url_file_info' => '\Swagger\Client\Model\URLFileInfo'
     ];
 
     /**
@@ -65,8 +68,11 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'document_id' => null,
-        'document_image_urls_list' => null
+        'transient_document_id' => null,
+        'document' => null,
+        'library_document_id' => null,
+        'label' => null,
+        'url_file_info' => null
     ];
 
     /**
@@ -96,8 +102,11 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'document_id' => 'documentId',
-        'document_image_urls_list' => 'documentImageUrlsList'
+        'transient_document_id' => 'transientDocumentId',
+        'document' => 'document',
+        'library_document_id' => 'libraryDocumentId',
+        'label' => 'label',
+        'url_file_info' => 'urlFileInfo'
     ];
 
     /**
@@ -106,8 +115,11 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'document_id' => 'setDocumentId',
-        'document_image_urls_list' => 'setDocumentImageUrlsList'
+        'transient_document_id' => 'setTransientDocumentId',
+        'document' => 'setDocument',
+        'library_document_id' => 'setLibraryDocumentId',
+        'label' => 'setLabel',
+        'url_file_info' => 'setUrlFileInfo'
     ];
 
     /**
@@ -116,8 +128,11 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'document_id' => 'getDocumentId',
-        'document_image_urls_list' => 'getDocumentImageUrlsList'
+        'transient_document_id' => 'getTransientDocumentId',
+        'document' => 'getDocument',
+        'library_document_id' => 'getLibraryDocumentId',
+        'label' => 'getLabel',
+        'url_file_info' => 'getUrlFileInfo'
     ];
 
     /**
@@ -180,8 +195,11 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
-        $this->container['document_image_urls_list'] = isset($data['document_image_urls_list']) ? $data['document_image_urls_list'] : null;
+        $this->container['transient_document_id'] = isset($data['transient_document_id']) ? $data['transient_document_id'] : null;
+        $this->container['document'] = isset($data['document']) ? $data['document'] : null;
+        $this->container['library_document_id'] = isset($data['library_document_id']) ? $data['library_document_id'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['url_file_info'] = isset($data['url_file_info']) ? $data['url_file_info'] : null;
     }
 
     /**
@@ -209,49 +227,121 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets document_id
+     * Gets transient_document_id
      *
      * @return string
      */
-    public function getDocumentId()
+    public function getTransientDocumentId()
     {
-        return $this->container['document_id'];
+        return $this->container['transient_document_id'];
     }
 
     /**
-     * Sets document_id
+     * Sets transient_document_id
      *
-     * @param string $document_id Id of the document
+     * @param string $transient_document_id ID for a transient document that will be added to the agreement
      *
      * @return $this
      */
-    public function setDocumentId($document_id)
+    public function setTransientDocumentId($transient_document_id)
     {
-        $this->container['document_id'] = $document_id;
+        $this->container['transient_document_id'] = $transient_document_id;
 
         return $this;
     }
 
     /**
-     * Gets document_image_urls_list
+     * Gets document
      *
-     * @return \Swagger\Client\Model\DocumentImageUrls[]
+     * @return \Swagger\Client\Model\Document
      */
-    public function getDocumentImageUrlsList()
+    public function getDocument()
     {
-        return $this->container['document_image_urls_list'];
+        return $this->container['document'];
     }
 
     /**
-     * Sets document_image_urls_list
+     * Sets document
      *
-     * @param \Swagger\Client\Model\DocumentImageUrls[] $document_image_urls_list A list of documents image URLs.
+     * @param \Swagger\Client\Model\Document $document A document that is associated with the agreement. This field cannot be provided in POST call. In case of GET call, this is the only field returned in the response
      *
      * @return $this
      */
-    public function setDocumentImageUrlsList($document_image_urls_list)
+    public function setDocument($document)
     {
-        $this->container['document_image_urls_list'] = $document_image_urls_list;
+        $this->container['document'] = $document;
+
+        return $this;
+    }
+
+    /**
+     * Gets library_document_id
+     *
+     * @return string
+     */
+    public function getLibraryDocumentId()
+    {
+        return $this->container['library_document_id'];
+    }
+
+    /**
+     * Sets library_document_id
+     *
+     * @param string $library_document_id ID for an existing Library document that will be added to the agreement
+     *
+     * @return $this
+     */
+    public function setLibraryDocumentId($library_document_id)
+    {
+        $this->container['library_document_id'] = $library_document_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets label
+     *
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+     * Sets label
+     *
+     * @param string $label The unique label value of a file info element. In case of custom workflow this will map a file to corresponding file element in workflow definition. This must be specified in case of custom workflow agreement creation request
+     *
+     * @return $this
+     */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
+
+        return $this;
+    }
+
+    /**
+     * Gets url_file_info
+     *
+     * @return \Swagger\Client\Model\URLFileInfo
+     */
+    public function getUrlFileInfo()
+    {
+        return $this->container['url_file_info'];
+    }
+
+    /**
+     * Sets url_file_info
+     *
+     * @param \Swagger\Client\Model\URLFileInfo $url_file_info URL for an external document to add to the agreement
+     *
+     * @return $this
+     */
+    public function setUrlFileInfo($url_file_info)
+    {
+        $this->container['url_file_info'] = $url_file_info;
 
         return $this;
     }
