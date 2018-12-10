@@ -1,58 +1,37 @@
 {
-  "name": "unicourt/adobe-integration",
-  "version": "1.0.0",
-  "repositories": [
-    {
-      "type": "path",
-      "url": "Adobe/ESign/Agreements"
+    "name": "unicourt/adobe-sign",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [
+        "swagger",
+        "php",
+        "sdk",
+        "api"
+    ],
+    "homepage": "http://swagger.io",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Swagger and contributors",
+            "homepage": "https://github.com/swagger-api/swagger-codegen"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2"
     },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/BaseUris"
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "~2.6",
+        "friendsofphp/php-cs-fixer": "~2.12"
     },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/Groups"
+    "autoload": {
+        "psr-4": { "Adobe\\ESign\\\\" : "lib/" }
     },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/LibraryDocuments"
-    },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/MegaSigns"
-    },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/TransientDocuments"
-    },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/Users"
-    },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/Webhooks"
-    },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/Widgets"
-    },
-    {
-      "type": "path",
-      "url": "Adobe/ESign/Workflows"
+    "autoload-dev": {
+        "psr-4": { "Adobe\\ESign\\\\" : "test/" }
     }
-  ],
-  "require": {
-    "esign/agreements": "1.0.0",
-    "esign/baseUris": "1.0.0",
-    "esign/groups": "1.0.0",
-    "esign/libraryDocuments": "1.0.0",
-    "esign/megaSigns": "1.0.0",
-    "esign/transientDocuments": "1.0.0",
-    "esign/users": "1.0.0",
-    "esign/webhooks": "1.0.0",
-    "esign/widgets": "1.0.0",
-    "esign/workflows": "1.0.0"
-  }
 }
