@@ -22,5 +22,5 @@ do
         --output /local \
         --git-user-id esign \
         --git-repo-id $repo_id \
-        --config /local/OpenApiConfig/$i
+        --config /local/OpenApiConfig/$1_config/$i
 done
