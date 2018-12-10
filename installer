@@ -12,17 +12,14 @@ then
     exit;
 fi
 
-for i in $(find json -name "*.json")
+for i in $(find OpenApi/ -type f -name "*.json" -exec basename {} \;)
 do
-    fileName=$(echo $i | awk -F "/" '{print $2;}')
-    baseName=$(echo $fileName | awk -F "." '{print $1;}')
-    echo "print '$baseName'.capitalize()" | python
-    # docker run --rm -v ${PWD}:/local/Adobe/ESign \
-    #     swaggerapi/swagger-codegen-cli:2.4.0 generate \
-    #     --input-spec /local/Adobe/ESign/$i \
-    #     --lang $1 \
-    #     --output /local \
-    #     --git-user-id UniCourt \
-    #     --git-repo-id adobe-sign \
-    #     --config /local/Adobe/ESign/config.php
+    docker run --rm -v ${PWD}:/local \
+        swaggerapi/swagger-codegen-cli:2.4.0 generate \
+        --input-spec /local/OpenApi/json/$i \
+        --lang $1 \
+        --output /local \
+        --git-user-id UniCourt \
+        --git-repo-id adobe-sign \
+        --config /local/OpenApiConfig/$i
 done
