@@ -14,13 +14,15 @@ fi
 
 for i in $(find json -name "*.json")
 do
-    docker run --rm -v ${PWD}:/local/SwaggerClient-php \
-        swaggerapi/swagger-codegen-cli:2.4.0 generate \
-        --input-spec /local/SwaggerClient-php/$i \
-        --lang $1 \
-        --output /local \
-        --git-user-id UniCourt \
-        --git-repo-id adobe-sign
+    fileName=$(echo $i | awk -F "/" '{print $2;}')
+    baseName=$(echo $fileName | awk -F "." '{print $1;}')
+    echo "print '$baseName'.capitalize()" | python
+    # docker run --rm -v ${PWD}:/local/Adobe/ESign \
+    #     swaggerapi/swagger-codegen-cli:2.4.0 generate \
+    #     --input-spec /local/Adobe/ESign/$i \
+    #     --lang $1 \
+    #     --output /local \
+    #     --git-user-id UniCourt \
+    #     --git-repo-id adobe-sign \
+    #     --config /local/Adobe/ESign/config.php
 done
-
-sudo chown -R $USER:$USER .
