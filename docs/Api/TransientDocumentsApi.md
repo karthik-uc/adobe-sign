@@ -1,6 +1,6 @@
 # Adobe\ESign\\TransientDocumentsApi
 
-All URIs are relative to *http://localhost/api/rest/v6*
+All URIs are relative to *https://secure.na1.echosign.com/api/rest/v6*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Uploads a document and obtains the document's ID.
 
-The document uploaded through this call is referred to as transient since it is available only for 7 days after the upload. The returned transient document ID can be used in the API calls where the uploaded file needs to be referred. The transient document request is a multipart request consisting of three parts - filename, mime type and the file stream. You can only upload one file at a time in this request.
+The document uploaded through this call is referred to as transient since it is available only for 7 days after the upload. The returned transient document ID can be used in the API calls where the uploaded file needs to be referred. The transient document request is a multipart request consisting of three parts - filename, mime type and the file stream. You can only upload one file at a time in this request.
 
 ### Example
 ```php

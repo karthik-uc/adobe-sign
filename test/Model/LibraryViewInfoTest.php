@@ -87,4 +87,11 @@ class LibraryViewInfoTest extends \PHPUnit_Framework_TestCase
     public function testPropertyName()
     {
     }
+
+    /**
+     * Test attribute "send_view_configuration"
+     */
+    public function testPropertySendViewConfiguration()
+    {
+    }
 }

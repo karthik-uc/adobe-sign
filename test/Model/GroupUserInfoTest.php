@@ -75,20 +75,6 @@ class GroupUserInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "company"
-     */
-    public function testPropertyCompany()
-    {
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-    }
-
-    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()
@@ -96,9 +82,9 @@ class GroupUserInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "last_name"
      */
-    public function testPropertyId()
+    public function testPropertyLastName()
     {
     }
 
@@ -110,9 +96,23 @@ class GroupUserInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "last_name"
+     * Test attribute "company"
      */
-    public function testPropertyLastName()
+    public function testPropertyCompany()
+    {
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
     {
     }
 }

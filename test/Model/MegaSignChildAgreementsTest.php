@@ -75,16 +75,16 @@ class MegaSignChildAgreementsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "mega_sign_child_agreement_list"
+     * Test attribute "page"
      */
-    public function testPropertyMegaSignChildAgreementList()
+    public function testPropertyPage()
     {
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "mega_sign_child_agreement_list"
      */
-    public function testPropertyPage()
+    public function testPropertyMegaSignChildAgreementList()
     {
     }
 }

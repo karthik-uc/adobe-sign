@@ -75,6 +75,13 @@ class MegaSignViewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_current"
+     */
+    public function testPropertyIsCurrent()
+    {
+    }
+
+    /**
      * Test attribute "embedded_code"
      */
     public function testPropertyEmbeddedCode()
@@ -85,13 +92,6 @@ class MegaSignViewTest extends \PHPUnit_Framework_TestCase
      * Test attribute "expiration"
      */
     public function testPropertyExpiration()
-    {
-    }
-
-    /**
-     * Test attribute "is_current"
-     */
-    public function testPropertyIsCurrent()
     {
     }
 

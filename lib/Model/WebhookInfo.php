@@ -55,20 +55,20 @@ class WebhookInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'application_display_name' => 'string',
-        'application_name' => 'string',
+        'resource_id' => 'string',
+        'webhook_url_info' => '\Adobe\ESign\\Model\WebhookUrlInfo',
+        'webhook_conditional_params' => '\Adobe\ESign\\Model\WebhookConditionalParams',
         'created' => '\DateTime',
+        'webhook_subscription_events' => 'string[]',
+        'application_display_name' => 'string',
+        'scope' => 'string',
+        'name' => 'string',
         'id' => 'string',
         'last_modified' => '\DateTime',
-        'name' => 'string',
-        'resource_id' => 'string',
-        'resource_type' => 'string',
-        'scope' => 'string',
         'state' => 'string',
-        'status' => 'string',
-        'webhook_conditional_params' => '\Adobe\ESign\\Model\WebhookConditionalParams',
-        'webhook_subscription_events' => 'string[]',
-        'webhook_url_info' => '\Adobe\ESign\\Model\WebhookUrlInfo'
+        'application_name' => 'string',
+        'resource_type' => 'string',
+        'status' => 'string'
     ];
 
     /**
@@ -77,20 +77,20 @@ class WebhookInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'application_display_name' => null,
-        'application_name' => null,
+        'resource_id' => null,
+        'webhook_url_info' => null,
+        'webhook_conditional_params' => null,
         'created' => 'date',
+        'webhook_subscription_events' => null,
+        'application_display_name' => null,
+        'scope' => null,
+        'name' => null,
         'id' => null,
         'last_modified' => 'date',
-        'name' => null,
-        'resource_id' => null,
-        'resource_type' => null,
-        'scope' => null,
         'state' => null,
-        'status' => null,
-        'webhook_conditional_params' => null,
-        'webhook_subscription_events' => null,
-        'webhook_url_info' => null
+        'application_name' => null,
+        'resource_type' => null,
+        'status' => null
     ];
 
     /**
@@ -120,20 +120,20 @@ class WebhookInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'application_display_name' => 'applicationDisplayName',
-        'application_name' => 'applicationName',
+        'resource_id' => 'resourceId',
+        'webhook_url_info' => 'webhookUrlInfo',
+        'webhook_conditional_params' => 'webhookConditionalParams',
         'created' => 'created',
+        'webhook_subscription_events' => 'webhookSubscriptionEvents',
+        'application_display_name' => 'applicationDisplayName',
+        'scope' => 'scope',
+        'name' => 'name',
         'id' => 'id',
         'last_modified' => 'lastModified',
-        'name' => 'name',
-        'resource_id' => 'resourceId',
-        'resource_type' => 'resourceType',
-        'scope' => 'scope',
         'state' => 'state',
-        'status' => 'status',
-        'webhook_conditional_params' => 'webhookConditionalParams',
-        'webhook_subscription_events' => 'webhookSubscriptionEvents',
-        'webhook_url_info' => 'webhookUrlInfo'
+        'application_name' => 'applicationName',
+        'resource_type' => 'resourceType',
+        'status' => 'status'
     ];
 
     /**
@@ -142,20 +142,20 @@ class WebhookInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'application_display_name' => 'setApplicationDisplayName',
-        'application_name' => 'setApplicationName',
+        'resource_id' => 'setResourceId',
+        'webhook_url_info' => 'setWebhookUrlInfo',
+        'webhook_conditional_params' => 'setWebhookConditionalParams',
         'created' => 'setCreated',
+        'webhook_subscription_events' => 'setWebhookSubscriptionEvents',
+        'application_display_name' => 'setApplicationDisplayName',
+        'scope' => 'setScope',
+        'name' => 'setName',
         'id' => 'setId',
         'last_modified' => 'setLastModified',
-        'name' => 'setName',
-        'resource_id' => 'setResourceId',
-        'resource_type' => 'setResourceType',
-        'scope' => 'setScope',
         'state' => 'setState',
-        'status' => 'setStatus',
-        'webhook_conditional_params' => 'setWebhookConditionalParams',
-        'webhook_subscription_events' => 'setWebhookSubscriptionEvents',
-        'webhook_url_info' => 'setWebhookUrlInfo'
+        'application_name' => 'setApplicationName',
+        'resource_type' => 'setResourceType',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -164,20 +164,20 @@ class WebhookInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'application_display_name' => 'getApplicationDisplayName',
-        'application_name' => 'getApplicationName',
+        'resource_id' => 'getResourceId',
+        'webhook_url_info' => 'getWebhookUrlInfo',
+        'webhook_conditional_params' => 'getWebhookConditionalParams',
         'created' => 'getCreated',
+        'webhook_subscription_events' => 'getWebhookSubscriptionEvents',
+        'application_display_name' => 'getApplicationDisplayName',
+        'scope' => 'getScope',
+        'name' => 'getName',
         'id' => 'getId',
         'last_modified' => 'getLastModified',
-        'name' => 'getName',
-        'resource_id' => 'getResourceId',
-        'resource_type' => 'getResourceType',
-        'scope' => 'getScope',
         'state' => 'getState',
-        'status' => 'getStatus',
-        'webhook_conditional_params' => 'getWebhookConditionalParams',
-        'webhook_subscription_events' => 'getWebhookSubscriptionEvents',
-        'webhook_url_info' => 'getWebhookUrlInfo'
+        'application_name' => 'getApplicationName',
+        'resource_type' => 'getResourceType',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -221,16 +221,6 @@ class WebhookInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const RESOURCE_TYPE_AGREEMENT = 'AGREEMENT';
-    const RESOURCE_TYPE_WIDGET = 'WIDGET';
-    const RESOURCE_TYPE_MEGASIGN = 'MEGASIGN';
-    const SCOPE_ACCOUNT = 'ACCOUNT';
-    const SCOPE_GROUP = 'GROUP';
-    const SCOPE_USER = 'USER';
-    const SCOPE_RESOURCE = 'RESOURCE';
-    const STATE_ACTIVE = 'ACTIVE';
-    const STATUS_ACTIVE = 'ACTIVE';
-    const STATUS_INACTIVE = 'INACTIVE';
     const WEBHOOK_SUBSCRIPTION_EVENTS_AGREEMENT_CREATED = 'AGREEMENT_CREATED';
     const WEBHOOK_SUBSCRIPTION_EVENTS_AGREEMENT_ACTION_DELEGATED = 'AGREEMENT_ACTION_DELEGATED';
     const WEBHOOK_SUBSCRIPTION_EVENTS_AGREEMENT_RECALLED = 'AGREEMENT_RECALLED';
@@ -264,62 +254,23 @@ class WebhookInfo implements ModelInterface, ArrayAccess
     const WEBHOOK_SUBSCRIPTION_EVENTS_WIDGET_DISABLED = 'WIDGET_DISABLED';
     const WEBHOOK_SUBSCRIPTION_EVENTS_WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM = 'WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM';
     const WEBHOOK_SUBSCRIPTION_EVENTS_WIDGET_ALL = 'WIDGET_ALL';
+    const WEBHOOK_SUBSCRIPTION_EVENTS_LIBRARY_DOCUMENT_CREATED = 'LIBRARY_DOCUMENT_CREATED';
+    const WEBHOOK_SUBSCRIPTION_EVENTS_LIBRARY_DOCUMENT_AUTO_CANCELLED_CONVERSION_PROBLEM = 'LIBRARY_DOCUMENT_AUTO_CANCELLED_CONVERSION_PROBLEM';
+    const WEBHOOK_SUBSCRIPTION_EVENTS_LIBRARY_DOCUMENT_MODIFIED = 'LIBRARY_DOCUMENT_MODIFIED';
+    const WEBHOOK_SUBSCRIPTION_EVENTS_LIBRARY_DOCUMENT_ALL = 'LIBRARY_DOCUMENT_ALL';
+    const SCOPE_ACCOUNT = 'ACCOUNT';
+    const SCOPE_GROUP = 'GROUP';
+    const SCOPE_USER = 'USER';
+    const SCOPE_RESOURCE = 'RESOURCE';
+    const STATE_ACTIVE = 'ACTIVE';
+    const RESOURCE_TYPE_AGREEMENT = 'AGREEMENT';
+    const RESOURCE_TYPE_WIDGET = 'WIDGET';
+    const RESOURCE_TYPE_MEGASIGN = 'MEGASIGN';
+    const RESOURCE_TYPE_LIBRARY_DOCUMENT = 'LIBRARY_DOCUMENT';
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_INACTIVE = 'INACTIVE';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getResourceTypeAllowableValues()
-    {
-        return [
-            self::RESOURCE_TYPE_AGREEMENT,
-            self::RESOURCE_TYPE_WIDGET,
-            self::RESOURCE_TYPE_MEGASIGN,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getScopeAllowableValues()
-    {
-        return [
-            self::SCOPE_ACCOUNT,
-            self::SCOPE_GROUP,
-            self::SCOPE_USER,
-            self::SCOPE_RESOURCE,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStateAllowableValues()
-    {
-        return [
-            self::STATE_ACTIVE,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_ACTIVE,
-            self::STATUS_INACTIVE,
-        ];
-    }
     
     /**
      * Gets allowable values of the enum
@@ -362,6 +313,65 @@ class WebhookInfo implements ModelInterface, ArrayAccess
             self::WEBHOOK_SUBSCRIPTION_EVENTS_WIDGET_DISABLED,
             self::WEBHOOK_SUBSCRIPTION_EVENTS_WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM,
             self::WEBHOOK_SUBSCRIPTION_EVENTS_WIDGET_ALL,
+            self::WEBHOOK_SUBSCRIPTION_EVENTS_LIBRARY_DOCUMENT_CREATED,
+            self::WEBHOOK_SUBSCRIPTION_EVENTS_LIBRARY_DOCUMENT_AUTO_CANCELLED_CONVERSION_PROBLEM,
+            self::WEBHOOK_SUBSCRIPTION_EVENTS_LIBRARY_DOCUMENT_MODIFIED,
+            self::WEBHOOK_SUBSCRIPTION_EVENTS_LIBRARY_DOCUMENT_ALL,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getScopeAllowableValues()
+    {
+        return [
+            self::SCOPE_ACCOUNT,
+            self::SCOPE_GROUP,
+            self::SCOPE_USER,
+            self::SCOPE_RESOURCE,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_ACTIVE,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getResourceTypeAllowableValues()
+    {
+        return [
+            self::RESOURCE_TYPE_AGREEMENT,
+            self::RESOURCE_TYPE_WIDGET,
+            self::RESOURCE_TYPE_MEGASIGN,
+            self::RESOURCE_TYPE_LIBRARY_DOCUMENT,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_INACTIVE,
         ];
     }
     
@@ -381,20 +391,20 @@ class WebhookInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['application_display_name'] = isset($data['application_display_name']) ? $data['application_display_name'] : null;
-        $this->container['application_name'] = isset($data['application_name']) ? $data['application_name'] : null;
+        $this->container['resource_id'] = isset($data['resource_id']) ? $data['resource_id'] : null;
+        $this->container['webhook_url_info'] = isset($data['webhook_url_info']) ? $data['webhook_url_info'] : null;
+        $this->container['webhook_conditional_params'] = isset($data['webhook_conditional_params']) ? $data['webhook_conditional_params'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['webhook_subscription_events'] = isset($data['webhook_subscription_events']) ? $data['webhook_subscription_events'] : null;
+        $this->container['application_display_name'] = isset($data['application_display_name']) ? $data['application_display_name'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['last_modified'] = isset($data['last_modified']) ? $data['last_modified'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['resource_id'] = isset($data['resource_id']) ? $data['resource_id'] : null;
-        $this->container['resource_type'] = isset($data['resource_type']) ? $data['resource_type'] : null;
-        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['application_name'] = isset($data['application_name']) ? $data['application_name'] : null;
+        $this->container['resource_type'] = isset($data['resource_type']) ? $data['resource_type'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['webhook_conditional_params'] = isset($data['webhook_conditional_params']) ? $data['webhook_conditional_params'] : null;
-        $this->container['webhook_subscription_events'] = isset($data['webhook_subscription_events']) ? $data['webhook_subscription_events'] : null;
-        $this->container['webhook_url_info'] = isset($data['webhook_url_info']) ? $data['webhook_url_info'] : null;
     }
 
     /**
@@ -405,14 +415,6 @@ class WebhookInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getResourceTypeAllowableValues();
-        if (!is_null($this->container['resource_type']) && !in_array($this->container['resource_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'resource_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         $allowedValues = $this->getScopeAllowableValues();
         if (!is_null($this->container['scope']) && !in_array($this->container['scope'], $allowedValues, true)) {
@@ -426,6 +428,14 @@ class WebhookInfo implements ModelInterface, ArrayAccess
         if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getResourceTypeAllowableValues();
+        if (!is_null($this->container['resource_type']) && !in_array($this->container['resource_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'resource_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -454,49 +464,73 @@ class WebhookInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets application_display_name
+     * Gets resource_id
      *
      * @return string
      */
-    public function getApplicationDisplayName()
+    public function getResourceId()
     {
-        return $this->container['application_display_name'];
+        return $this->container['resource_id'];
     }
 
     /**
-     * Sets application_display_name
+     * Sets resource_id
      *
-     * @param string $application_display_name The display name of the application through which webhook is created
+     * @param string $resource_id Id of the resource type for which you want to create webhook. Provide agreementId if webhook needs to be created for an agreement. Similarly, widgetId if webhook needs to be created for a widget, megaSignId if webhook needs to be created for a megaSign and libraryDocumentId if webhook needs to be created for a library document. Need to specify only if scope is 'RESOURCE'. Can't be modified in PUT request
      *
      * @return $this
      */
-    public function setApplicationDisplayName($application_display_name)
+    public function setResourceId($resource_id)
     {
-        $this->container['application_display_name'] = $application_display_name;
+        $this->container['resource_id'] = $resource_id;
 
         return $this;
     }
 
     /**
-     * Gets application_name
+     * Gets webhook_url_info
      *
-     * @return string
+     * @return \Adobe\ESign\\Model\WebhookUrlInfo
      */
-    public function getApplicationName()
+    public function getWebhookUrlInfo()
     {
-        return $this->container['application_name'];
+        return $this->container['webhook_url_info'];
     }
 
     /**
-     * Sets application_name
+     * Sets webhook_url_info
      *
-     * @param string $application_name The name of the application through which webhook is created
+     * @param \Adobe\ESign\\Model\WebhookUrlInfo $webhook_url_info Info of webhook url
      *
      * @return $this
      */
-    public function setApplicationName($application_name)
+    public function setWebhookUrlInfo($webhook_url_info)
     {
-        $this->container['application_name'] = $application_name;
+        $this->container['webhook_url_info'] = $webhook_url_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets webhook_conditional_params
+     *
+     * @return \Adobe\ESign\\Model\WebhookConditionalParams
+     */
+    public function getWebhookConditionalParams()
+    {
+        return $this->container['webhook_conditional_params'];
+    }
+
+    /**
+     * Sets webhook_conditional_params
+     *
+     * @param \Adobe\ESign\\Model\WebhookConditionalParams $webhook_conditional_params Conditions which webhook creator can specify for the payload while creating or updating a webhook
+     *
+     * @return $this
+     */
+    public function setWebhookConditionalParams($webhook_conditional_params)
+    {
+        $this->container['webhook_conditional_params'] = $webhook_conditional_params;
 
         return $this;
     }
@@ -521,6 +555,120 @@ class WebhookInfo implements ModelInterface, ArrayAccess
     public function setCreated($created)
     {
         $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets webhook_subscription_events
+     *
+     * @return string[]
+     */
+    public function getWebhookSubscriptionEvents()
+    {
+        return $this->container['webhook_subscription_events'];
+    }
+
+    /**
+     * Sets webhook_subscription_events
+     *
+     * @param string[] $webhook_subscription_events Determines events for which the webhook is triggered. The possible values are <br> AGREEMENT_CREATED : When an agreement is created <br>, AGREEMENT_ACTION_DELEGATED : When an agreement is delegated <br>, AGREEMENT_RECALLED : When an agreement is recalled <br>, AGREEMENT_REJECTED : When an agreement is rejected <br>, AGREEMENT_EXPIRED : When an agreement expires <br>, AGREEMENT_ACTION_COMPLETED : When an agreement action is completed <br>, AGREEMENT_WORKFLOW_COMPLETED : When an agreement workflow is completed <br>, AGREEMENT_EMAIL_VIEWED : When an agreement's email is viewed <br>, AGREEMENT_MODIFIED : When an agreement is modified <br>, AGREEMENT_SHARED : When an agreement is shared <br>, AGREEMENT_VAULTED : When an agreement is vaulted <br>, AGREEMENT_ACTION_REQUESTED : When an agreement action is requested <br>, AGREEMENT_ACTION_REPLACED_SIGNER : When signer is replaced for an agreement <br>, AGREEMENT_AUTO_CANCELLED_CONVERSION_PROBLEM : When an agreement is auto-cancelled due to conversion problem <br>, AGREEMENT_DOCUMENTS_DELETED : When an agreement documents are deleted <br>, AGREEMENT_EMAIL_BOUNCED : When an agreement email gets bounced <br>, AGREEMENT_KBA_AUTHENTICATED : When an agreement KBA is authenticated <br>, AGREEMENT_OFFLINE_SYNC : When an agreement is synced offline <br>, AGREEMENT_USER_ACK_AGREEMENT_MODIFIED : User Acknowledgement when an agreement is modified <br>, AGREEMENT_UPLOADED_BY_SENDER : When an agreement is uploaded by sender <br>, AGREEMENT_WEB_IDENTITY_AUTHENTICATED : When an agreement web identity is authenticated <br>, AGREEMENT_ALL : All the supported agreement events for Webhooks <br>, MEGASIGN_CREATED : When a megaSign is created <br>, MEGASIGN_RECALLED : When a megaSign is recalled <br>, MEGASIGN_SHARED : When a megaSign is shared <br>, MEGASIGN_ALL : All the supported megaSign events for Webhooks <br>, WIDGET_CREATED : When a widget is created <br>, WIDGET_MODIFIED : When a widget is modified <br>, WIDGET_SHARED : When a widget is shared <br>, WIDGET_ENABLED : When a widget is enabled <br>, WIDGET_DISABLED : When a widget is disabled <br>, WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM : When a widget is auto-cancelled due to conversion problem <br>, WIDGET_ALL : All the supported widget events for Webhooks <br>, LIBRARY_DOCUMENT_CREATED : When a library document  is created <br>, LIBRARY_DOCUMENT_AUTO_CANCELLED_CONVERSION_PROBLEM : When a library document is auto-cancelled due to conversion problem <br>, LIBRARY_DOCUMENT_MODIFIED : When a library document is modified <br>, LIBRARY_DOCUMENT_ALL : All the supported library document  events for Webhooks
+     *
+     * @return $this
+     */
+    public function setWebhookSubscriptionEvents($webhook_subscription_events)
+    {
+        $allowedValues = $this->getWebhookSubscriptionEventsAllowableValues();
+        if (!is_null($webhook_subscription_events) && array_diff($webhook_subscription_events, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'webhook_subscription_events', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['webhook_subscription_events'] = $webhook_subscription_events;
+
+        return $this;
+    }
+
+    /**
+     * Gets application_display_name
+     *
+     * @return string
+     */
+    public function getApplicationDisplayName()
+    {
+        return $this->container['application_display_name'];
+    }
+
+    /**
+     * Sets application_display_name
+     *
+     * @param string $application_display_name The display name of the application through which webhook is created
+     *
+     * @return $this
+     */
+    public function setApplicationDisplayName($application_display_name)
+    {
+        $this->container['application_display_name'] = $application_display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets scope
+     *
+     * @return string
+     */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+     * Sets scope
+     *
+     * @param string $scope Scope of webhook. Can't be modified in PUT request. The possible values are ACCOUNT, GROUP, USER or RESOURCE
+     *
+     * @return $this
+     */
+    public function setScope($scope)
+    {
+        $allowedValues = $this->getScopeAllowableValues();
+        if (!is_null($scope) && !in_array($scope, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'scope', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['scope'] = $scope;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name The name of the webhook
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }
@@ -574,120 +722,6 @@ class WebhookInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name The name of the webhook
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets resource_id
-     *
-     * @return string
-     */
-    public function getResourceId()
-    {
-        return $this->container['resource_id'];
-    }
-
-    /**
-     * Sets resource_id
-     *
-     * @param string $resource_id Id of the resource type for which you want to create webhook. Provide agreementId if webhook needs to be created for an agreement. Similarly, widgetId if webhook needs to be created for a widget and megaSignId if webhook needs to be created for a megaSign. Need to specify only if scope is 'RESOURCE'. Can't be modified in PUT request
-     *
-     * @return $this
-     */
-    public function setResourceId($resource_id)
-    {
-        $this->container['resource_id'] = $resource_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets resource_type
-     *
-     * @return string
-     */
-    public function getResourceType()
-    {
-        return $this->container['resource_type'];
-    }
-
-    /**
-     * Sets resource_type
-     *
-     * @param string $resource_type The resource for which you want to create webhook. Need to specify only if scope is 'RESOURCE'. Can't be modified in PUT request. The possible values are AGREEMENT, WIDGET and MEGASIGN.
-     *
-     * @return $this
-     */
-    public function setResourceType($resource_type)
-    {
-        $allowedValues = $this->getResourceTypeAllowableValues();
-        if (!is_null($resource_type) && !in_array($resource_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'resource_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['resource_type'] = $resource_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets scope
-     *
-     * @return string
-     */
-    public function getScope()
-    {
-        return $this->container['scope'];
-    }
-
-    /**
-     * Sets scope
-     *
-     * @param string $scope Scope of webhook. Can't be modified in PUT request. The possible values are ACCOUNT, GROUP, USER or RESOURCE
-     *
-     * @return $this
-     */
-    public function setScope($scope)
-    {
-        $allowedValues = $this->getScopeAllowableValues();
-        if (!is_null($scope) && !in_array($scope, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'scope', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['scope'] = $scope;
-
-        return $this;
-    }
-
-    /**
      * Gets state
      *
      * @return string
@@ -721,6 +755,63 @@ class WebhookInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets application_name
+     *
+     * @return string
+     */
+    public function getApplicationName()
+    {
+        return $this->container['application_name'];
+    }
+
+    /**
+     * Sets application_name
+     *
+     * @param string $application_name The name of the application through which webhook is created
+     *
+     * @return $this
+     */
+    public function setApplicationName($application_name)
+    {
+        $this->container['application_name'] = $application_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets resource_type
+     *
+     * @return string
+     */
+    public function getResourceType()
+    {
+        return $this->container['resource_type'];
+    }
+
+    /**
+     * Sets resource_type
+     *
+     * @param string $resource_type The resource for which you want to create webhook. Need to specify only if scope is 'RESOURCE'. Can't be modified in PUT request. The possible values are AGREEMENT, WIDGET,  MEGASIGN AND LIBRARY_DOCUMENT
+     *
+     * @return $this
+     */
+    public function setResourceType($resource_type)
+    {
+        $allowedValues = $this->getResourceTypeAllowableValues();
+        if (!is_null($resource_type) && !in_array($resource_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'resource_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['resource_type'] = $resource_type;
+
+        return $this;
+    }
+
+    /**
      * Gets status
      *
      * @return string
@@ -749,87 +840,6 @@ class WebhookInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets webhook_conditional_params
-     *
-     * @return \Adobe\ESign\\Model\WebhookConditionalParams
-     */
-    public function getWebhookConditionalParams()
-    {
-        return $this->container['webhook_conditional_params'];
-    }
-
-    /**
-     * Sets webhook_conditional_params
-     *
-     * @param \Adobe\ESign\\Model\WebhookConditionalParams $webhook_conditional_params Conditions which webhook creator can specify for the payload while creating or updating a webhook
-     *
-     * @return $this
-     */
-    public function setWebhookConditionalParams($webhook_conditional_params)
-    {
-        $this->container['webhook_conditional_params'] = $webhook_conditional_params;
-
-        return $this;
-    }
-
-    /**
-     * Gets webhook_subscription_events
-     *
-     * @return string[]
-     */
-    public function getWebhookSubscriptionEvents()
-    {
-        return $this->container['webhook_subscription_events'];
-    }
-
-    /**
-     * Sets webhook_subscription_events
-     *
-     * @param string[] $webhook_subscription_events Determines events for which the webhook is triggered. The possible values are <br> AGREEMENT_CREATED : When an agreement is created <br>, AGREEMENT_ACTION_DELEGATED : When an agreement is delegated <br>, AGREEMENT_RECALLED : When an agreement is recalled <br>, AGREEMENT_REJECTED : When an agreement is rejected <br>, AGREEMENT_EXPIRED : When an agreement expires <br>, AGREEMENT_ACTION_COMPLETED : When an agreement action is completed <br>, AGREEMENT_WORKFLOW_COMPLETED : When an agreement workflow is completed <br>, AGREEMENT_EMAIL_VIEWED : When an agreement's email is viewed <br>, AGREEMENT_MODIFIED : When an agreement is modified <br>, AGREEMENT_SHARED : When an agreement is shared <br>, AGREEMENT_VAULTED : When an agreement is vaulted <br>, AGREEMENT_ACTION_REQUESTED : When an agreement action is requested <br>, AGREEMENT_ACTION_REPLACED_SIGNER : When signer is replaced for an agreement <br>, AGREEMENT_AUTO_CANCELLED_CONVERSION_PROBLEM : When an agreement is auto-cancelled due to conversion problem <br>, AGREEMENT_DOCUMENTS_DELETED : When an agreement documents are deleted <br>, AGREEMENT_EMAIL_BOUNCED : When an agreement email gets bounced <br>, AGREEMENT_KBA_AUTHENTICATED : When an agreement KBA is authenticated <br>, AGREEMENT_OFFLINE_SYNC : When an agreement is synced offline <br>, AGREEMENT_USER_ACK_AGREEMENT_MODIFIED : User Acknowledgement when an agreement is modified <br>, AGREEMENT_UPLOADED_BY_SENDER : When an agreement is uploaded by sender <br>, AGREEMENT_WEB_IDENTITY_AUTHENTICATED : When an agreement web identity is authenticated <br>, AGREEMENT_ALL : All the supported agreement events for Webhooks <br>, MEGASIGN_CREATED : When a megaSign is created <br>, MEGASIGN_RECALLED : When a megaSign is recalled <br>, MEGASIGN_SHARED : When a megaSign is shared <br>, MEGASIGN_ALL : All the supported megaSign events for Webhooks <br>, WIDGET_CREATED : When a widget is created <br>, WIDGET_MODIFIED : When a widget is modified <br>, WIDGET_SHARED : When a widget is shared <br>, WIDGET_ENABLED : When a widget is enabled <br>, WIDGET_DISABLED : When a widget is disabled <br>, WIDGET_AUTO_CANCELLED_CONVERSION_PROBLEM : When a widget is auto-cancelled due to conversion problem <br>, WIDGET_ALL : All the supported widget events for Webhooks
-     *
-     * @return $this
-     */
-    public function setWebhookSubscriptionEvents($webhook_subscription_events)
-    {
-        $allowedValues = $this->getWebhookSubscriptionEventsAllowableValues();
-        if (!is_null($webhook_subscription_events) && array_diff($webhook_subscription_events, $allowedValues)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'webhook_subscription_events', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['webhook_subscription_events'] = $webhook_subscription_events;
-
-        return $this;
-    }
-
-    /**
-     * Gets webhook_url_info
-     *
-     * @return \Adobe\ESign\\Model\WebhookUrlInfo
-     */
-    public function getWebhookUrlInfo()
-    {
-        return $this->container['webhook_url_info'];
-    }
-
-    /**
-     * Sets webhook_url_info
-     *
-     * @param \Adobe\ESign\\Model\WebhookUrlInfo $webhook_url_info Info of webhook url
-     *
-     * @return $this
-     */
-    public function setWebhookUrlInfo($webhook_url_info)
-    {
-        $this->container['webhook_url_info'] = $webhook_url_info;
 
         return $this;
     }

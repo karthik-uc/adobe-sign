@@ -75,13 +75,6 @@ class UserGroupInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-    }
-
-    /**
      * Test attribute "is_group_admin"
      */
     public function testPropertyIsGroupAdmin()
@@ -92,6 +85,13 @@ class UserGroupInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
     {
     }
 }

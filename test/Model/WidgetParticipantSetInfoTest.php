@@ -75,16 +75,16 @@ class WidgetParticipantSetInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "member_infos"
+     * Test attribute "role"
      */
-    public function testPropertyMemberInfos()
+    public function testPropertyRole()
     {
     }
 
     /**
-     * Test attribute "role"
+     * Test attribute "member_infos"
      */
-    public function testPropertyRole()
+    public function testPropertyMemberInfos()
     {
     }
 }

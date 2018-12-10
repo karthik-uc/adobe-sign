@@ -56,8 +56,8 @@ class WebhookWidgetEvents implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_detailed_info' => 'bool',
-        'include_documents_info' => 'bool',
-        'include_participants_info' => 'bool'
+        'include_participants_info' => 'bool',
+        'include_documents_info' => 'bool'
     ];
 
     /**
@@ -67,8 +67,8 @@ class WebhookWidgetEvents implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_detailed_info' => null,
-        'include_documents_info' => null,
-        'include_participants_info' => null
+        'include_participants_info' => null,
+        'include_documents_info' => null
     ];
 
     /**
@@ -99,8 +99,8 @@ class WebhookWidgetEvents implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'include_detailed_info' => 'includeDetailedInfo',
-        'include_documents_info' => 'includeDocumentsInfo',
-        'include_participants_info' => 'includeParticipantsInfo'
+        'include_participants_info' => 'includeParticipantsInfo',
+        'include_documents_info' => 'includeDocumentsInfo'
     ];
 
     /**
@@ -110,8 +110,8 @@ class WebhookWidgetEvents implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'include_detailed_info' => 'setIncludeDetailedInfo',
-        'include_documents_info' => 'setIncludeDocumentsInfo',
-        'include_participants_info' => 'setIncludeParticipantsInfo'
+        'include_participants_info' => 'setIncludeParticipantsInfo',
+        'include_documents_info' => 'setIncludeDocumentsInfo'
     ];
 
     /**
@@ -121,8 +121,8 @@ class WebhookWidgetEvents implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'include_detailed_info' => 'getIncludeDetailedInfo',
-        'include_documents_info' => 'getIncludeDocumentsInfo',
-        'include_participants_info' => 'getIncludeParticipantsInfo'
+        'include_participants_info' => 'getIncludeParticipantsInfo',
+        'include_documents_info' => 'getIncludeDocumentsInfo'
     ];
 
     /**
@@ -186,8 +186,8 @@ class WebhookWidgetEvents implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_detailed_info'] = isset($data['include_detailed_info']) ? $data['include_detailed_info'] : null;
-        $this->container['include_documents_info'] = isset($data['include_documents_info']) ? $data['include_documents_info'] : null;
         $this->container['include_participants_info'] = isset($data['include_participants_info']) ? $data['include_participants_info'] : null;
+        $this->container['include_documents_info'] = isset($data['include_documents_info']) ? $data['include_documents_info'] : null;
     }
 
     /**
@@ -239,30 +239,6 @@ class WebhookWidgetEvents implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets include_documents_info
-     *
-     * @return bool
-     */
-    public function getIncludeDocumentsInfo()
-    {
-        return $this->container['include_documents_info'];
-    }
-
-    /**
-     * Sets include_documents_info
-     *
-     * @param bool $include_documents_info Determines whether document info will be returned in the response payload
-     *
-     * @return $this
-     */
-    public function setIncludeDocumentsInfo($include_documents_info)
-    {
-        $this->container['include_documents_info'] = $include_documents_info;
-
-        return $this;
-    }
-
-    /**
      * Gets include_participants_info
      *
      * @return bool
@@ -282,6 +258,30 @@ class WebhookWidgetEvents implements ModelInterface, ArrayAccess
     public function setIncludeParticipantsInfo($include_participants_info)
     {
         $this->container['include_participants_info'] = $include_participants_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_documents_info
+     *
+     * @return bool
+     */
+    public function getIncludeDocumentsInfo()
+    {
+        return $this->container['include_documents_info'];
+    }
+
+    /**
+     * Sets include_documents_info
+     *
+     * @param bool $include_documents_info Determines whether document info will be returned in the response payload
+     *
+     * @return $this
+     */
+    public function setIncludeDocumentsInfo($include_documents_info)
+    {
+        $this->container['include_documents_info'] = $include_documents_info;
 
         return $this;
     }

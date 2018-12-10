@@ -75,16 +75,23 @@ class WebhookInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "application_display_name"
+     * Test attribute "resource_id"
      */
-    public function testPropertyApplicationDisplayName()
+    public function testPropertyResourceId()
     {
     }
 
     /**
-     * Test attribute "application_name"
+     * Test attribute "webhook_url_info"
      */
-    public function testPropertyApplicationName()
+    public function testPropertyWebhookUrlInfo()
+    {
+    }
+
+    /**
+     * Test attribute "webhook_conditional_params"
+     */
+    public function testPropertyWebhookConditionalParams()
     {
     }
 
@@ -92,6 +99,34 @@ class WebhookInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "created"
      */
     public function testPropertyCreated()
+    {
+    }
+
+    /**
+     * Test attribute "webhook_subscription_events"
+     */
+    public function testPropertyWebhookSubscriptionEvents()
+    {
+    }
+
+    /**
+     * Test attribute "application_display_name"
+     */
+    public function testPropertyApplicationDisplayName()
+    {
+    }
+
+    /**
+     * Test attribute "scope"
+     */
+    public function testPropertyScope()
+    {
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
     {
     }
 
@@ -110,16 +145,16 @@ class WebhookInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "state"
      */
-    public function testPropertyName()
+    public function testPropertyState()
     {
     }
 
     /**
-     * Test attribute "resource_id"
+     * Test attribute "application_name"
      */
-    public function testPropertyResourceId()
+    public function testPropertyApplicationName()
     {
     }
 
@@ -131,44 +166,9 @@ class WebhookInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "scope"
-     */
-    public function testPropertyScope()
-    {
-    }
-
-    /**
-     * Test attribute "state"
-     */
-    public function testPropertyState()
-    {
-    }
-
-    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "webhook_conditional_params"
-     */
-    public function testPropertyWebhookConditionalParams()
-    {
-    }
-
-    /**
-     * Test attribute "webhook_subscription_events"
-     */
-    public function testPropertyWebhookSubscriptionEvents()
-    {
-    }
-
-    /**
-     * Test attribute "webhook_url_info"
-     */
-    public function testPropertyWebhookUrlInfo()
     {
     }
 }

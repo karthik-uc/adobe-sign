@@ -56,8 +56,8 @@ class MegaSignSecurityOption implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'external_authentication_method' => 'string',
-        'external_password' => 'string',
         'internal_authentication_method' => 'string',
+        'external_password' => 'string',
         'internal_password' => 'string',
         'open_password' => 'string'
     ];
@@ -69,8 +69,8 @@ class MegaSignSecurityOption implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'external_authentication_method' => null,
-        'external_password' => null,
         'internal_authentication_method' => null,
+        'external_password' => null,
         'internal_password' => null,
         'open_password' => null
     ];
@@ -103,8 +103,8 @@ class MegaSignSecurityOption implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'external_authentication_method' => 'externalAuthenticationMethod',
-        'external_password' => 'externalPassword',
         'internal_authentication_method' => 'internalAuthenticationMethod',
+        'external_password' => 'externalPassword',
         'internal_password' => 'internalPassword',
         'open_password' => 'openPassword'
     ];
@@ -116,8 +116,8 @@ class MegaSignSecurityOption implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'external_authentication_method' => 'setExternalAuthenticationMethod',
-        'external_password' => 'setExternalPassword',
         'internal_authentication_method' => 'setInternalAuthenticationMethod',
+        'external_password' => 'setExternalPassword',
         'internal_password' => 'setInternalPassword',
         'open_password' => 'setOpenPassword'
     ];
@@ -129,8 +129,8 @@ class MegaSignSecurityOption implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'external_authentication_method' => 'getExternalAuthenticationMethod',
-        'external_password' => 'getExternalPassword',
         'internal_authentication_method' => 'getInternalAuthenticationMethod',
+        'external_password' => 'getExternalPassword',
         'internal_password' => 'getInternalPassword',
         'open_password' => 'getOpenPassword'
     ];
@@ -234,8 +234,8 @@ class MegaSignSecurityOption implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['external_authentication_method'] = isset($data['external_authentication_method']) ? $data['external_authentication_method'] : null;
-        $this->container['external_password'] = isset($data['external_password']) ? $data['external_password'] : null;
         $this->container['internal_authentication_method'] = isset($data['internal_authentication_method']) ? $data['internal_authentication_method'] : null;
+        $this->container['external_password'] = isset($data['external_password']) ? $data['external_password'] : null;
         $this->container['internal_password'] = isset($data['internal_password']) ? $data['internal_password'] : null;
         $this->container['open_password'] = isset($data['open_password']) ? $data['open_password'] : null;
     }
@@ -314,30 +314,6 @@ class MegaSignSecurityOption implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets external_password
-     *
-     * @return string
-     */
-    public function getExternalPassword()
-    {
-        return $this->container['external_password'];
-    }
-
-    /**
-     * Sets external_password
-     *
-     * @param string $external_password The secondary password that will be used to protect signing the document for internal signers. Note that Adobe Sign will never show this password to anyone, so you will need to separately communicate it to any relevant parties. This password is applied only if password protection is specified for internal signers or all signers
-     *
-     * @return $this
-     */
-    public function setExternalPassword($external_password)
-    {
-        $this->container['external_password'] = $external_password;
-
-        return $this;
-    }
-
-    /**
      * Gets internal_authentication_method
      *
      * @return string
@@ -366,6 +342,30 @@ class MegaSignSecurityOption implements ModelInterface, ArrayAccess
             );
         }
         $this->container['internal_authentication_method'] = $internal_authentication_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_password
+     *
+     * @return string
+     */
+    public function getExternalPassword()
+    {
+        return $this->container['external_password'];
+    }
+
+    /**
+     * Sets external_password
+     *
+     * @param string $external_password The secondary password that will be used to protect signing the document for internal signers. Note that Adobe Sign will never show this password to anyone, so you will need to separately communicate it to any relevant parties. This password is applied only if password protection is specified for internal signers or all signers
+     *
+     * @return $this
+     */
+    public function setExternalPassword($external_password)
+    {
+        $this->container['external_password'] = $external_password;
 
         return $this;
     }

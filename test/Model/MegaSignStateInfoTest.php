@@ -75,16 +75,16 @@ class MegaSignStateInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "mega_sign_cancellation_info"
+     * Test attribute "state"
      */
-    public function testPropertyMegaSignCancellationInfo()
+    public function testPropertyState()
     {
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "mega_sign_cancellation_info"
      */
-    public function testPropertyState()
+    public function testPropertyMegaSignCancellationInfo()
     {
     }
 }

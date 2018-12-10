@@ -82,9 +82,37 @@ class WidgetInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "auth_failure_info"
+     * Test attribute "creator_email"
      */
-    public function testPropertyAuthFailureInfo()
+    public function testPropertyCreatorEmail()
+    {
+    }
+
+    /**
+     * Test attribute "locale"
+     */
+    public function testPropertyLocale()
+    {
+    }
+
+    /**
+     * Test attribute "vaulting_info"
+     */
+    public function testPropertyVaultingInfo()
+    {
+    }
+
+    /**
+     * Test attribute "security_option"
+     */
+    public function testPropertySecurityOption()
+    {
+    }
+
+    /**
+     * Test attribute "widget_participant_set_info"
+     */
+    public function testPropertyWidgetParticipantSetInfo()
     {
     }
 
@@ -96,13 +124,6 @@ class WidgetInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "completion_info"
-     */
-    public function testPropertyCompletionInfo()
-    {
-    }
-
-    /**
      * Test attribute "created_date"
      */
     public function testPropertyCreatedDate()
@@ -110,9 +131,23 @@ class WidgetInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "creator_email"
+     * Test attribute "name"
      */
-    public function testPropertyCreatorEmail()
+    public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "completion_info"
+     */
+    public function testPropertyCompletionInfo()
+    {
+    }
+
+    /**
+     * Test attribute "auth_failure_info"
+     */
+    public function testPropertyAuthFailureInfo()
     {
     }
 
@@ -131,27 +166,6 @@ class WidgetInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "locale"
-     */
-    public function testPropertyLocale()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "security_option"
-     */
-    public function testPropertySecurityOption()
-    {
-    }
-
-    /**
      * Test attribute "state"
      */
     public function testPropertyState()
@@ -162,20 +176,6 @@ class WidgetInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "vaulting_info"
-     */
-    public function testPropertyVaultingInfo()
-    {
-    }
-
-    /**
-     * Test attribute "widget_participant_set_info"
-     */
-    public function testPropertyWidgetParticipantSetInfo()
     {
     }
 }

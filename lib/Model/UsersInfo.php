@@ -55,8 +55,8 @@ class UsersInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => '\Adobe\ESign\\Model\PageInfo',
-        'user_info_list' => '\Adobe\ESign\\Model\UserInfo[]'
+        'user_info_list' => '\Adobe\ESign\\Model\UserInfo[]',
+        'page' => '\Adobe\ESign\\Model\PageInfo'
     ];
 
     /**
@@ -65,8 +65,8 @@ class UsersInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => null,
-        'user_info_list' => null
+        'user_info_list' => null,
+        'page' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class UsersInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'page',
-        'user_info_list' => 'userInfoList'
+        'user_info_list' => 'userInfoList',
+        'page' => 'page'
     ];
 
     /**
@@ -106,8 +106,8 @@ class UsersInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'user_info_list' => 'setUserInfoList'
+        'user_info_list' => 'setUserInfoList',
+        'page' => 'setPage'
     ];
 
     /**
@@ -116,8 +116,8 @@ class UsersInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'user_info_list' => 'getUserInfoList'
+        'user_info_list' => 'getUserInfoList',
+        'page' => 'getPage'
     ];
 
     /**
@@ -180,8 +180,8 @@ class UsersInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['user_info_list'] = isset($data['user_info_list']) ? $data['user_info_list'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class UsersInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
-     *
-     * @return \Adobe\ESign\\Model\PageInfo
-     */
-    public function getPage()
-    {
-        return $this->container['page'];
-    }
-
-    /**
-     * Sets page
-     *
-     * @param \Adobe\ESign\\Model\PageInfo $page Pagination information for navigating through the response
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        $this->container['page'] = $page;
-
-        return $this;
-    }
-
-    /**
      * Gets user_info_list
      *
      * @return \Adobe\ESign\\Model\UserInfo[]
@@ -252,6 +228,30 @@ class UsersInfo implements ModelInterface, ArrayAccess
     public function setUserInfoList($user_info_list)
     {
         $this->container['user_info_list'] = $user_info_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets page
+     *
+     * @return \Adobe\ESign\\Model\PageInfo
+     */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+     * Sets page
+     *
+     * @param \Adobe\ESign\\Model\PageInfo $page Pagination information for navigating through the response
+     *
+     * @return $this
+     */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
 
         return $this;
     }

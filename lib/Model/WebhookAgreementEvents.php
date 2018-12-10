@@ -56,9 +56,9 @@ class WebhookAgreementEvents implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_detailed_info' => 'bool',
-        'include_documents_info' => 'bool',
         'include_participants_info' => 'bool',
-        'include_signed_documents' => 'bool'
+        'include_signed_documents' => 'bool',
+        'include_documents_info' => 'bool'
     ];
 
     /**
@@ -68,9 +68,9 @@ class WebhookAgreementEvents implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_detailed_info' => null,
-        'include_documents_info' => null,
         'include_participants_info' => null,
-        'include_signed_documents' => null
+        'include_signed_documents' => null,
+        'include_documents_info' => null
     ];
 
     /**
@@ -101,9 +101,9 @@ class WebhookAgreementEvents implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'include_detailed_info' => 'includeDetailedInfo',
-        'include_documents_info' => 'includeDocumentsInfo',
         'include_participants_info' => 'includeParticipantsInfo',
-        'include_signed_documents' => 'includeSignedDocuments'
+        'include_signed_documents' => 'includeSignedDocuments',
+        'include_documents_info' => 'includeDocumentsInfo'
     ];
 
     /**
@@ -113,9 +113,9 @@ class WebhookAgreementEvents implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'include_detailed_info' => 'setIncludeDetailedInfo',
-        'include_documents_info' => 'setIncludeDocumentsInfo',
         'include_participants_info' => 'setIncludeParticipantsInfo',
-        'include_signed_documents' => 'setIncludeSignedDocuments'
+        'include_signed_documents' => 'setIncludeSignedDocuments',
+        'include_documents_info' => 'setIncludeDocumentsInfo'
     ];
 
     /**
@@ -125,9 +125,9 @@ class WebhookAgreementEvents implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'include_detailed_info' => 'getIncludeDetailedInfo',
-        'include_documents_info' => 'getIncludeDocumentsInfo',
         'include_participants_info' => 'getIncludeParticipantsInfo',
-        'include_signed_documents' => 'getIncludeSignedDocuments'
+        'include_signed_documents' => 'getIncludeSignedDocuments',
+        'include_documents_info' => 'getIncludeDocumentsInfo'
     ];
 
     /**
@@ -191,9 +191,9 @@ class WebhookAgreementEvents implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_detailed_info'] = isset($data['include_detailed_info']) ? $data['include_detailed_info'] : null;
-        $this->container['include_documents_info'] = isset($data['include_documents_info']) ? $data['include_documents_info'] : null;
         $this->container['include_participants_info'] = isset($data['include_participants_info']) ? $data['include_participants_info'] : null;
         $this->container['include_signed_documents'] = isset($data['include_signed_documents']) ? $data['include_signed_documents'] : null;
+        $this->container['include_documents_info'] = isset($data['include_documents_info']) ? $data['include_documents_info'] : null;
     }
 
     /**
@@ -245,30 +245,6 @@ class WebhookAgreementEvents implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets include_documents_info
-     *
-     * @return bool
-     */
-    public function getIncludeDocumentsInfo()
-    {
-        return $this->container['include_documents_info'];
-    }
-
-    /**
-     * Sets include_documents_info
-     *
-     * @param bool $include_documents_info Determines whether document info will be returned in the response payload
-     *
-     * @return $this
-     */
-    public function setIncludeDocumentsInfo($include_documents_info)
-    {
-        $this->container['include_documents_info'] = $include_documents_info;
-
-        return $this;
-    }
-
-    /**
      * Gets include_participants_info
      *
      * @return bool
@@ -312,6 +288,30 @@ class WebhookAgreementEvents implements ModelInterface, ArrayAccess
     public function setIncludeSignedDocuments($include_signed_documents)
     {
         $this->container['include_signed_documents'] = $include_signed_documents;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_documents_info
+     *
+     * @return bool
+     */
+    public function getIncludeDocumentsInfo()
+    {
+        return $this->container['include_documents_info'];
+    }
+
+    /**
+     * Sets include_documents_info
+     *
+     * @param bool $include_documents_info Determines whether document info will be returned in the response payload
+     *
+     * @return $this
+     */
+    public function setIncludeDocumentsInfo($include_documents_info)
+    {
+        $this->container['include_documents_info'] = $include_documents_info;
 
         return $this;
     }

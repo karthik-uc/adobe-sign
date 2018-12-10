@@ -55,9 +55,9 @@ class MegaSignChildAgreementsFileInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'child_agreements_info_file_id' => 'string',
+        'transient_document_id' => 'string',
         'file_type' => 'string',
-        'transient_document_id' => 'string'
+        'child_agreements_info_file_id' => 'string'
     ];
 
     /**
@@ -66,9 +66,9 @@ class MegaSignChildAgreementsFileInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'child_agreements_info_file_id' => null,
+        'transient_document_id' => null,
         'file_type' => null,
-        'transient_document_id' => null
+        'child_agreements_info_file_id' => null
     ];
 
     /**
@@ -98,9 +98,9 @@ class MegaSignChildAgreementsFileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'child_agreements_info_file_id' => 'childAgreementsInfoFileId',
+        'transient_document_id' => 'transientDocumentId',
         'file_type' => 'fileType',
-        'transient_document_id' => 'transientDocumentId'
+        'child_agreements_info_file_id' => 'childAgreementsInfoFileId'
     ];
 
     /**
@@ -109,9 +109,9 @@ class MegaSignChildAgreementsFileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'child_agreements_info_file_id' => 'setChildAgreementsInfoFileId',
+        'transient_document_id' => 'setTransientDocumentId',
         'file_type' => 'setFileType',
-        'transient_document_id' => 'setTransientDocumentId'
+        'child_agreements_info_file_id' => 'setChildAgreementsInfoFileId'
     ];
 
     /**
@@ -120,9 +120,9 @@ class MegaSignChildAgreementsFileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'child_agreements_info_file_id' => 'getChildAgreementsInfoFileId',
+        'transient_document_id' => 'getTransientDocumentId',
         'file_type' => 'getFileType',
-        'transient_document_id' => 'getTransientDocumentId'
+        'child_agreements_info_file_id' => 'getChildAgreementsInfoFileId'
     ];
 
     /**
@@ -198,9 +198,9 @@ class MegaSignChildAgreementsFileInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['child_agreements_info_file_id'] = isset($data['child_agreements_info_file_id']) ? $data['child_agreements_info_file_id'] : null;
-        $this->container['file_type'] = isset($data['file_type']) ? $data['file_type'] : null;
         $this->container['transient_document_id'] = isset($data['transient_document_id']) ? $data['transient_document_id'] : null;
+        $this->container['file_type'] = isset($data['file_type']) ? $data['file_type'] : null;
+        $this->container['child_agreements_info_file_id'] = isset($data['child_agreements_info_file_id']) ? $data['child_agreements_info_file_id'] : null;
     }
 
     /**
@@ -236,25 +236,25 @@ class MegaSignChildAgreementsFileInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets child_agreements_info_file_id
+     * Gets transient_document_id
      *
      * @return string
      */
-    public function getChildAgreementsInfoFileId()
+    public function getTransientDocumentId()
     {
-        return $this->container['child_agreements_info_file_id'];
+        return $this->container['transient_document_id'];
     }
 
     /**
-     * Sets child_agreements_info_file_id
+     * Sets transient_document_id
      *
-     * @param string $child_agreements_info_file_id id of the file containg information about the existing childAgreementsInfo associated with the megaSign. Will be ignored in POST call and in case of GET call, this is the only thing that will be returned. The content of the file can be fetched through GET /megaSigns/{megaSignId}/childAgreementsInfo/{childAgreementsInfoFileId} endpoint.
+     * @param string $transient_document_id Transient id of the input file which contains participantSetsInfos. Currently only csv format is suppported. More details about CSV format <a href='https://www.adobe.com/go/documentcloud_megasigncsv'>here</a>
      *
      * @return $this
      */
-    public function setChildAgreementsInfoFileId($child_agreements_info_file_id)
+    public function setTransientDocumentId($transient_document_id)
     {
-        $this->container['child_agreements_info_file_id'] = $child_agreements_info_file_id;
+        $this->container['transient_document_id'] = $transient_document_id;
 
         return $this;
     }
@@ -293,25 +293,25 @@ class MegaSignChildAgreementsFileInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets transient_document_id
+     * Gets child_agreements_info_file_id
      *
      * @return string
      */
-    public function getTransientDocumentId()
+    public function getChildAgreementsInfoFileId()
     {
-        return $this->container['transient_document_id'];
+        return $this->container['child_agreements_info_file_id'];
     }
 
     /**
-     * Sets transient_document_id
+     * Sets child_agreements_info_file_id
      *
-     * @param string $transient_document_id Transient id of the input file which contains participantSetsInfos. Currently only csv format is suppported. More details about CSV format <a href='https://www.adobe.com/go/documentcloud_megasigncsv'>here</a>
+     * @param string $child_agreements_info_file_id id of the file containg information about the existing childAgreementsInfo associated with the megaSign. Will be ignored in POST call and in case of GET call, this is the only thing that will be returned. The content of the file can be fetched through GET /megaSigns/{megaSignId}/childAgreementsInfo/{childAgreementsInfoFileId} endpoint.
      *
      * @return $this
      */
-    public function setTransientDocumentId($transient_document_id)
+    public function setChildAgreementsInfoFileId($child_agreements_info_file_id)
     {
-        $this->container['transient_document_id'] = $transient_document_id;
+        $this->container['child_agreements_info_file_id'] = $child_agreements_info_file_id;
 
         return $this;
     }

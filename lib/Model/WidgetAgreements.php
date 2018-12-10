@@ -55,8 +55,8 @@ class WidgetAgreements implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => '\Adobe\ESign\\Model\PageInfo',
-        'user_agreement_list' => '\Adobe\ESign\\Model\WidgetAgreement[]'
+        'user_agreement_list' => '\Adobe\ESign\\Model\WidgetAgreement[]',
+        'page' => '\Adobe\ESign\\Model\PageInfo'
     ];
 
     /**
@@ -65,8 +65,8 @@ class WidgetAgreements implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => null,
-        'user_agreement_list' => null
+        'user_agreement_list' => null,
+        'page' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class WidgetAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'page',
-        'user_agreement_list' => 'userAgreementList'
+        'user_agreement_list' => 'userAgreementList',
+        'page' => 'page'
     ];
 
     /**
@@ -106,8 +106,8 @@ class WidgetAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'user_agreement_list' => 'setUserAgreementList'
+        'user_agreement_list' => 'setUserAgreementList',
+        'page' => 'setPage'
     ];
 
     /**
@@ -116,8 +116,8 @@ class WidgetAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'user_agreement_list' => 'getUserAgreementList'
+        'user_agreement_list' => 'getUserAgreementList',
+        'page' => 'getPage'
     ];
 
     /**
@@ -180,8 +180,8 @@ class WidgetAgreements implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['user_agreement_list'] = isset($data['user_agreement_list']) ? $data['user_agreement_list'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class WidgetAgreements implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
-     *
-     * @return \Adobe\ESign\\Model\PageInfo
-     */
-    public function getPage()
-    {
-        return $this->container['page'];
-    }
-
-    /**
-     * Sets page
-     *
-     * @param \Adobe\ESign\\Model\PageInfo $page Pagination information for navigating through the response
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        $this->container['page'] = $page;
-
-        return $this;
-    }
-
-    /**
      * Gets user_agreement_list
      *
      * @return \Adobe\ESign\\Model\WidgetAgreement[]
@@ -252,6 +228,30 @@ class WidgetAgreements implements ModelInterface, ArrayAccess
     public function setUserAgreementList($user_agreement_list)
     {
         $this->container['user_agreement_list'] = $user_agreement_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets page
+     *
+     * @return \Adobe\ESign\\Model\PageInfo
+     */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+     * Sets page
+     *
+     * @param \Adobe\ESign\\Model\PageInfo $page Pagination information for navigating through the response
+     *
+     * @return $this
+     */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
 
         return $this;
     }

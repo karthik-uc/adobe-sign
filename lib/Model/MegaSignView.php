@@ -55,9 +55,9 @@ class MegaSignView implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'is_current' => 'bool',
         'embedded_code' => 'string',
         'expiration' => '\DateTime',
-        'is_current' => 'bool',
         'url' => 'string'
     ];
 
@@ -67,9 +67,9 @@ class MegaSignView implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'is_current' => null,
         'embedded_code' => null,
         'expiration' => 'date',
-        'is_current' => null,
         'url' => null
     ];
 
@@ -100,9 +100,9 @@ class MegaSignView implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'is_current' => 'isCurrent',
         'embedded_code' => 'embeddedCode',
         'expiration' => 'expiration',
-        'is_current' => 'isCurrent',
         'url' => 'url'
     ];
 
@@ -112,9 +112,9 @@ class MegaSignView implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'is_current' => 'setIsCurrent',
         'embedded_code' => 'setEmbeddedCode',
         'expiration' => 'setExpiration',
-        'is_current' => 'setIsCurrent',
         'url' => 'setUrl'
     ];
 
@@ -124,9 +124,9 @@ class MegaSignView implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'is_current' => 'getIsCurrent',
         'embedded_code' => 'getEmbeddedCode',
         'expiration' => 'getExpiration',
-        'is_current' => 'getIsCurrent',
         'url' => 'getUrl'
     ];
 
@@ -190,9 +190,9 @@ class MegaSignView implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['is_current'] = isset($data['is_current']) ? $data['is_current'] : null;
         $this->container['embedded_code'] = isset($data['embedded_code']) ? $data['embedded_code'] : null;
         $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
-        $this->container['is_current'] = isset($data['is_current']) ? $data['is_current'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
@@ -219,6 +219,30 @@ class MegaSignView implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets is_current
+     *
+     * @return bool
+     */
+    public function getIsCurrent()
+    {
+        return $this->container['is_current'];
+    }
+
+    /**
+     * Sets is_current
+     *
+     * @param bool $is_current True if this view is the current view
+     *
+     * @return $this
+     */
+    public function setIsCurrent($is_current)
+    {
+        $this->container['is_current'] = $is_current;
+
+        return $this;
+    }
 
     /**
      * Gets embedded_code
@@ -264,30 +288,6 @@ class MegaSignView implements ModelInterface, ArrayAccess
     public function setExpiration($expiration)
     {
         $this->container['expiration'] = $expiration;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_current
-     *
-     * @return bool
-     */
-    public function getIsCurrent()
-    {
-        return $this->container['is_current'];
-    }
-
-    /**
-     * Sets is_current
-     *
-     * @param bool $is_current True if this view is the current view
-     *
-     * @return $this
-     */
-    public function setIsCurrent($is_current)
-    {
-        $this->container['is_current'] = $is_current;
 
         return $this;
     }

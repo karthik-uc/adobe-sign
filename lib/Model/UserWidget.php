@@ -55,13 +55,13 @@ class UserWidget implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
         'hidden' => 'bool',
-        'javascript' => 'string',
         'modified_date' => '\DateTime',
         'name' => 'string',
-        'status' => 'string',
-        'url' => 'string'
+        'id' => 'string',
+        'javascript' => 'string',
+        'url' => 'string',
+        'status' => 'string'
     ];
 
     /**
@@ -70,13 +70,13 @@ class UserWidget implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
         'hidden' => null,
-        'javascript' => null,
         'modified_date' => 'date',
         'name' => null,
-        'status' => null,
-        'url' => null
+        'id' => null,
+        'javascript' => null,
+        'url' => null,
+        'status' => null
     ];
 
     /**
@@ -106,13 +106,13 @@ class UserWidget implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
         'hidden' => 'hidden',
-        'javascript' => 'javascript',
         'modified_date' => 'modifiedDate',
         'name' => 'name',
-        'status' => 'status',
-        'url' => 'url'
+        'id' => 'id',
+        'javascript' => 'javascript',
+        'url' => 'url',
+        'status' => 'status'
     ];
 
     /**
@@ -121,13 +121,13 @@ class UserWidget implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'hidden' => 'setHidden',
-        'javascript' => 'setJavascript',
         'modified_date' => 'setModifiedDate',
         'name' => 'setName',
-        'status' => 'setStatus',
-        'url' => 'setUrl'
+        'id' => 'setId',
+        'javascript' => 'setJavascript',
+        'url' => 'setUrl',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -136,13 +136,13 @@ class UserWidget implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'hidden' => 'getHidden',
-        'javascript' => 'getJavascript',
         'modified_date' => 'getModifiedDate',
         'name' => 'getName',
-        'status' => 'getStatus',
-        'url' => 'getUrl'
+        'id' => 'getId',
+        'javascript' => 'getJavascript',
+        'url' => 'getUrl',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -224,13 +224,13 @@ class UserWidget implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['hidden'] = isset($data['hidden']) ? $data['hidden'] : null;
-        $this->container['javascript'] = isset($data['javascript']) ? $data['javascript'] : null;
         $this->container['modified_date'] = isset($data['modified_date']) ? $data['modified_date'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['javascript'] = isset($data['javascript']) ? $data['javascript'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -266,30 +266,6 @@ class UserWidget implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id The unique identifier of a widget
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets hidden
      *
      * @return bool
@@ -309,30 +285,6 @@ class UserWidget implements ModelInterface, ArrayAccess
     public function setHidden($hidden)
     {
         $this->container['hidden'] = $hidden;
-
-        return $this;
-    }
-
-    /**
-     * Gets javascript
-     *
-     * @return string
-     */
-    public function getJavascript()
-    {
-        return $this->container['javascript'];
-    }
-
-    /**
-     * Sets javascript
-     *
-     * @param string $javascript The embedded javascript code of the widget
-     *
-     * @return $this
-     */
-    public function setJavascript($javascript)
-    {
-        $this->container['javascript'] = $javascript;
 
         return $this;
     }
@@ -386,6 +338,78 @@ class UserWidget implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id The unique identifier of a widget
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets javascript
+     *
+     * @return string
+     */
+    public function getJavascript()
+    {
+        return $this->container['javascript'];
+    }
+
+    /**
+     * Sets javascript
+     *
+     * @param string $javascript The embedded javascript code of the widget
+     *
+     * @return $this
+     */
+    public function setJavascript($javascript)
+    {
+        $this->container['javascript'] = $javascript;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     *
+     * @param string $url The hosted url of the widget
+     *
+     * @return $this
+     */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
      * Gets status
      *
      * @return string
@@ -414,30 +438,6 @@ class UserWidget implements ModelInterface, ArrayAccess
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets url
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->container['url'];
-    }
-
-    /**
-     * Sets url
-     *
-     * @param string $url The hosted url of the widget
-     *
-     * @return $this
-     */
-    public function setUrl($url)
-    {
-        $this->container['url'] = $url;
 
         return $this;
     }

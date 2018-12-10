@@ -75,9 +75,9 @@ class MegaSignCreationInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ccs"
+     * Test attribute "first_reminder_delay"
      */
-    public function testPropertyCcs()
+    public function testPropertyFirstReminderDelay()
     {
     }
 
@@ -89,16 +89,9 @@ class MegaSignCreationInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_date"
+     * Test attribute "signature_type"
      */
-    public function testPropertyCreatedDate()
-    {
-    }
-
-    /**
-     * Test attribute "expiration_time"
-     */
-    public function testPropertyExpirationTime()
+    public function testPropertySignatureType()
     {
     }
 
@@ -106,27 +99,6 @@ class MegaSignCreationInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "external_id"
      */
     public function testPropertyExternalId()
-    {
-    }
-
-    /**
-     * Test attribute "file_infos"
-     */
-    public function testPropertyFileInfos()
-    {
-    }
-
-    /**
-     * Test attribute "first_reminder_delay"
-     */
-    public function testPropertyFirstReminderDelay()
-    {
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
     {
     }
 
@@ -145,9 +117,16 @@ class MegaSignCreationInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "vaulting_info"
      */
-    public function testPropertyName()
+    public function testPropertyVaultingInfo()
+    {
+    }
+
+    /**
+     * Test attribute "security_option"
+     */
+    public function testPropertySecurityOption()
     {
     }
 
@@ -166,9 +145,23 @@ class MegaSignCreationInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "security_option"
+     * Test attribute "ccs"
      */
-    public function testPropertySecurityOption()
+    public function testPropertyCcs()
+    {
+    }
+
+    /**
+     * Test attribute "created_date"
+     */
+    public function testPropertyCreatedDate()
+    {
+    }
+
+    /**
+     * Test attribute "expiration_time"
+     */
+    public function testPropertyExpirationTime()
     {
     }
 
@@ -180,9 +173,23 @@ class MegaSignCreationInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "signature_type"
+     * Test attribute "name"
      */
-    public function testPropertySignatureType()
+    public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "file_infos"
+     */
+    public function testPropertyFileInfos()
+    {
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
     {
     }
 
@@ -197,13 +204,6 @@ class MegaSignCreationInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "vaulting_info"
-     */
-    public function testPropertyVaultingInfo()
     {
     }
 }

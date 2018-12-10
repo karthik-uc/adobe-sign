@@ -55,10 +55,10 @@ class WidgetView implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'embedded_code' => 'string',
-        'expiration' => '\DateTime',
         'is_current' => 'bool',
+        'embedded_code' => 'string',
         'name' => 'string',
+        'expiration' => '\DateTime',
         'url' => 'string'
     ];
 
@@ -68,10 +68,10 @@ class WidgetView implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'embedded_code' => null,
-        'expiration' => 'date',
         'is_current' => null,
+        'embedded_code' => null,
         'name' => null,
+        'expiration' => 'date',
         'url' => null
     ];
 
@@ -102,10 +102,10 @@ class WidgetView implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'embedded_code' => 'embeddedCode',
-        'expiration' => 'expiration',
         'is_current' => 'isCurrent',
+        'embedded_code' => 'embeddedCode',
         'name' => 'name',
+        'expiration' => 'expiration',
         'url' => 'url'
     ];
 
@@ -115,10 +115,10 @@ class WidgetView implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'embedded_code' => 'setEmbeddedCode',
-        'expiration' => 'setExpiration',
         'is_current' => 'setIsCurrent',
+        'embedded_code' => 'setEmbeddedCode',
         'name' => 'setName',
+        'expiration' => 'setExpiration',
         'url' => 'setUrl'
     ];
 
@@ -128,10 +128,10 @@ class WidgetView implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'embedded_code' => 'getEmbeddedCode',
-        'expiration' => 'getExpiration',
         'is_current' => 'getIsCurrent',
+        'embedded_code' => 'getEmbeddedCode',
         'name' => 'getName',
+        'expiration' => 'getExpiration',
         'url' => 'getUrl'
     ];
 
@@ -218,10 +218,10 @@ class WidgetView implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['embedded_code'] = isset($data['embedded_code']) ? $data['embedded_code'] : null;
-        $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
         $this->container['is_current'] = isset($data['is_current']) ? $data['is_current'] : null;
+        $this->container['embedded_code'] = isset($data['embedded_code']) ? $data['embedded_code'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
@@ -258,54 +258,6 @@ class WidgetView implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets embedded_code
-     *
-     * @return string
-     */
-    public function getEmbeddedCode()
-    {
-        return $this->container['embedded_code'];
-    }
-
-    /**
-     * Sets embedded_code
-     *
-     * @param string $embedded_code Embedded code of url of resource
-     *
-     * @return $this
-     */
-    public function setEmbeddedCode($embedded_code)
-    {
-        $this->container['embedded_code'] = $embedded_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets expiration
-     *
-     * @return \DateTime
-     */
-    public function getExpiration()
-    {
-        return $this->container['expiration'];
-    }
-
-    /**
-     * Sets expiration
-     *
-     * @param \DateTime $expiration Expiration of user url
-     *
-     * @return $this
-     */
-    public function setExpiration($expiration)
-    {
-        $this->container['expiration'] = $expiration;
-
-        return $this;
-    }
-
-    /**
      * Gets is_current
      *
      * @return bool
@@ -325,6 +277,30 @@ class WidgetView implements ModelInterface, ArrayAccess
     public function setIsCurrent($is_current)
     {
         $this->container['is_current'] = $is_current;
+
+        return $this;
+    }
+
+    /**
+     * Gets embedded_code
+     *
+     * @return string
+     */
+    public function getEmbeddedCode()
+    {
+        return $this->container['embedded_code'];
+    }
+
+    /**
+     * Sets embedded_code
+     *
+     * @param string $embedded_code Embedded code of url of resource
+     *
+     * @return $this
+     */
+    public function setEmbeddedCode($embedded_code)
+    {
+        $this->container['embedded_code'] = $embedded_code;
 
         return $this;
     }
@@ -358,6 +334,30 @@ class WidgetView implements ModelInterface, ArrayAccess
             );
         }
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets expiration
+     *
+     * @return \DateTime
+     */
+    public function getExpiration()
+    {
+        return $this->container['expiration'];
+    }
+
+    /**
+     * Sets expiration
+     *
+     * @param \DateTime $expiration Expiration of user url
+     *
+     * @return $this
+     */
+    public function setExpiration($expiration)
+    {
+        $this->container['expiration'] = $expiration;
 
         return $this;
     }

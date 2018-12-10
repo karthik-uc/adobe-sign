@@ -75,13 +75,6 @@ class WidgetMembersInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "additional_participant_sets"
-     */
-    public function testPropertyAdditionalParticipantSets()
-    {
-    }
-
-    /**
      * Test attribute "ccs_info"
      */
     public function testPropertyCcsInfo()
@@ -89,9 +82,16 @@ class WidgetMembersInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "creator_info"
+     * Test attribute "additional_participant_sets"
      */
-    public function testPropertyCreatorInfo()
+    public function testPropertyAdditionalParticipantSets()
+    {
+    }
+
+    /**
+     * Test attribute "widget_participant_set"
+     */
+    public function testPropertyWidgetParticipantSet()
     {
     }
 
@@ -103,9 +103,9 @@ class WidgetMembersInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "widget_participant_set"
+     * Test attribute "creator_info"
      */
-    public function testPropertyWidgetParticipantSet()
+    public function testPropertyCreatorInfo()
     {
     }
 }

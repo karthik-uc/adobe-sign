@@ -55,8 +55,8 @@ class WidgetParticipantSetInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'member_infos' => '\Adobe\ESign\\Model\ParticipantSetMemberInfo[]',
-        'role' => 'string'
+        'role' => 'string',
+        'member_infos' => '\Adobe\ESign\\Model\ParticipantSetMemberInfo[]'
     ];
 
     /**
@@ -65,8 +65,8 @@ class WidgetParticipantSetInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'member_infos' => null,
-        'role' => null
+        'role' => null,
+        'member_infos' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class WidgetParticipantSetInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'member_infos' => 'memberInfos',
-        'role' => 'role'
+        'role' => 'role',
+        'member_infos' => 'memberInfos'
     ];
 
     /**
@@ -106,8 +106,8 @@ class WidgetParticipantSetInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'member_infos' => 'setMemberInfos',
-        'role' => 'setRole'
+        'role' => 'setRole',
+        'member_infos' => 'setMemberInfos'
     ];
 
     /**
@@ -116,8 +116,8 @@ class WidgetParticipantSetInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'member_infos' => 'getMemberInfos',
-        'role' => 'getRole'
+        'role' => 'getRole',
+        'member_infos' => 'getMemberInfos'
     ];
 
     /**
@@ -211,8 +211,8 @@ class WidgetParticipantSetInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['member_infos'] = isset($data['member_infos']) ? $data['member_infos'] : null;
         $this->container['role'] = isset($data['role']) ? $data['role'] : null;
+        $this->container['member_infos'] = isset($data['member_infos']) ? $data['member_infos'] : null;
     }
 
     /**
@@ -248,30 +248,6 @@ class WidgetParticipantSetInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets member_infos
-     *
-     * @return \Adobe\ESign\\Model\ParticipantSetMemberInfo[]
-     */
-    public function getMemberInfos()
-    {
-        return $this->container['member_infos'];
-    }
-
-    /**
-     * Sets member_infos
-     *
-     * @param \Adobe\ESign\\Model\ParticipantSetMemberInfo[] $member_infos Array of ParticipantInfo objects, containing participant - specific data (email, e.g.). All participants in the array belong to the same set. Currently we are supporting only one member in the set. Since the email of the widget signer is unknown at the time of widget creation, the email should be left empty and its optional security options should be provided.
-     *
-     * @return $this
-     */
-    public function setMemberInfos($member_infos)
-    {
-        $this->container['member_infos'] = $member_infos;
-
-        return $this;
-    }
-
-    /**
      * Gets role
      *
      * @return string
@@ -300,6 +276,30 @@ class WidgetParticipantSetInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['role'] = $role;
+
+        return $this;
+    }
+
+    /**
+     * Gets member_infos
+     *
+     * @return \Adobe\ESign\\Model\ParticipantSetMemberInfo[]
+     */
+    public function getMemberInfos()
+    {
+        return $this->container['member_infos'];
+    }
+
+    /**
+     * Sets member_infos
+     *
+     * @param \Adobe\ESign\\Model\ParticipantSetMemberInfo[] $member_infos Array of ParticipantInfo objects, containing participant - specific data (email, e.g.). All participants in the array belong to the same set. Currently we are supporting only one member in the set. Since the email of the widget signer is unknown at the time of widget creation, the email should be left empty and its optional security options should be provided.
+     *
+     * @return $this
+     */
+    public function setMemberInfos($member_infos)
+    {
+        $this->container['member_infos'] = $member_infos;
 
         return $this;
     }

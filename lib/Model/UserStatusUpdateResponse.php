@@ -56,8 +56,8 @@ class UserStatusUpdateResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'code' => 'string',
-        'message' => 'string',
-        'state' => 'string'
+        'state' => 'string',
+        'message' => 'string'
     ];
 
     /**
@@ -67,8 +67,8 @@ class UserStatusUpdateResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'code' => null,
-        'message' => null,
-        'state' => null
+        'state' => null,
+        'message' => null
     ];
 
     /**
@@ -99,8 +99,8 @@ class UserStatusUpdateResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'code' => 'code',
-        'message' => 'message',
-        'state' => 'state'
+        'state' => 'state',
+        'message' => 'message'
     ];
 
     /**
@@ -110,8 +110,8 @@ class UserStatusUpdateResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'code' => 'setCode',
-        'message' => 'setMessage',
-        'state' => 'setState'
+        'state' => 'setState',
+        'message' => 'setMessage'
     ];
 
     /**
@@ -121,8 +121,8 @@ class UserStatusUpdateResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'code' => 'getCode',
-        'message' => 'getMessage',
-        'state' => 'getState'
+        'state' => 'getState',
+        'message' => 'getMessage'
     ];
 
     /**
@@ -228,8 +228,8 @@ class UserStatusUpdateResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -306,30 +306,6 @@ class UserStatusUpdateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets message
-     *
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param string $message String result message if there was no error
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
      * Gets state
      *
      * @return string
@@ -358,6 +334,30 @@ class UserStatusUpdateResponse implements ModelInterface, ArrayAccess
             );
         }
         $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets message
+     *
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+     * Sets message
+     *
+     * @param string $message String result message if there was no error
+     *
+     * @return $this
+     */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
 
         return $this;
     }

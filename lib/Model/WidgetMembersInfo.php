@@ -55,11 +55,11 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'additional_participant_sets' => '\Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo[]',
         'ccs_info' => '\Adobe\ESign\\Model\CCParticipantInfo[]',
-        'creator_info' => '\Adobe\ESign\\Model\SenderInfo',
+        'additional_participant_sets' => '\Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo[]',
+        'widget_participant_set' => '\Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo',
         'shares_info' => '\Adobe\ESign\\Model\ShareParticipantInfo[]',
-        'widget_participant_set' => '\Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo'
+        'creator_info' => '\Adobe\ESign\\Model\SenderInfo'
     ];
 
     /**
@@ -68,11 +68,11 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'additional_participant_sets' => null,
         'ccs_info' => null,
-        'creator_info' => null,
+        'additional_participant_sets' => null,
+        'widget_participant_set' => null,
         'shares_info' => null,
-        'widget_participant_set' => null
+        'creator_info' => null
     ];
 
     /**
@@ -102,11 +102,11 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'additional_participant_sets' => 'additionalParticipantSets',
         'ccs_info' => 'ccsInfo',
-        'creator_info' => 'creatorInfo',
+        'additional_participant_sets' => 'additionalParticipantSets',
+        'widget_participant_set' => 'widgetParticipantSet',
         'shares_info' => 'sharesInfo',
-        'widget_participant_set' => 'widgetParticipantSet'
+        'creator_info' => 'creatorInfo'
     ];
 
     /**
@@ -115,11 +115,11 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'additional_participant_sets' => 'setAdditionalParticipantSets',
         'ccs_info' => 'setCcsInfo',
-        'creator_info' => 'setCreatorInfo',
+        'additional_participant_sets' => 'setAdditionalParticipantSets',
+        'widget_participant_set' => 'setWidgetParticipantSet',
         'shares_info' => 'setSharesInfo',
-        'widget_participant_set' => 'setWidgetParticipantSet'
+        'creator_info' => 'setCreatorInfo'
     ];
 
     /**
@@ -128,11 +128,11 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'additional_participant_sets' => 'getAdditionalParticipantSets',
         'ccs_info' => 'getCcsInfo',
-        'creator_info' => 'getCreatorInfo',
+        'additional_participant_sets' => 'getAdditionalParticipantSets',
+        'widget_participant_set' => 'getWidgetParticipantSet',
         'shares_info' => 'getSharesInfo',
-        'widget_participant_set' => 'getWidgetParticipantSet'
+        'creator_info' => 'getCreatorInfo'
     ];
 
     /**
@@ -195,11 +195,11 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['additional_participant_sets'] = isset($data['additional_participant_sets']) ? $data['additional_participant_sets'] : null;
         $this->container['ccs_info'] = isset($data['ccs_info']) ? $data['ccs_info'] : null;
-        $this->container['creator_info'] = isset($data['creator_info']) ? $data['creator_info'] : null;
-        $this->container['shares_info'] = isset($data['shares_info']) ? $data['shares_info'] : null;
+        $this->container['additional_participant_sets'] = isset($data['additional_participant_sets']) ? $data['additional_participant_sets'] : null;
         $this->container['widget_participant_set'] = isset($data['widget_participant_set']) ? $data['widget_participant_set'] : null;
+        $this->container['shares_info'] = isset($data['shares_info']) ? $data['shares_info'] : null;
+        $this->container['creator_info'] = isset($data['creator_info']) ? $data['creator_info'] : null;
     }
 
     /**
@@ -227,30 +227,6 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets additional_participant_sets
-     *
-     * @return \Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo[]
-     */
-    public function getAdditionalParticipantSets()
-    {
-        return $this->container['additional_participant_sets'];
-    }
-
-    /**
-     * Sets additional_participant_sets
-     *
-     * @param \Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo[] $additional_participant_sets Information about the widget additional participant Sets
-     *
-     * @return $this
-     */
-    public function setAdditionalParticipantSets($additional_participant_sets)
-    {
-        $this->container['additional_participant_sets'] = $additional_participant_sets;
-
-        return $this;
-    }
-
-    /**
      * Gets ccs_info
      *
      * @return \Adobe\ESign\\Model\CCParticipantInfo[]
@@ -275,25 +251,49 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets creator_info
+     * Gets additional_participant_sets
      *
-     * @return \Adobe\ESign\\Model\SenderInfo
+     * @return \Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo[]
      */
-    public function getCreatorInfo()
+    public function getAdditionalParticipantSets()
     {
-        return $this->container['creator_info'];
+        return $this->container['additional_participant_sets'];
     }
 
     /**
-     * Sets creator_info
+     * Sets additional_participant_sets
      *
-     * @param \Adobe\ESign\\Model\SenderInfo $creator_info Information of the creator of the widget.
+     * @param \Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo[] $additional_participant_sets Information about the widget additional participant Sets
      *
      * @return $this
      */
-    public function setCreatorInfo($creator_info)
+    public function setAdditionalParticipantSets($additional_participant_sets)
     {
-        $this->container['creator_info'] = $creator_info;
+        $this->container['additional_participant_sets'] = $additional_participant_sets;
+
+        return $this;
+    }
+
+    /**
+     * Gets widget_participant_set
+     *
+     * @return \Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo
+     */
+    public function getWidgetParticipantSet()
+    {
+        return $this->container['widget_participant_set'];
+    }
+
+    /**
+     * Sets widget_participant_set
+     *
+     * @param \Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo $widget_participant_set Information about the widget participant Set
+     *
+     * @return $this
+     */
+    public function setWidgetParticipantSet($widget_participant_set)
+    {
+        $this->container['widget_participant_set'] = $widget_participant_set;
 
         return $this;
     }
@@ -323,25 +323,25 @@ class WidgetMembersInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets widget_participant_set
+     * Gets creator_info
      *
-     * @return \Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo
+     * @return \Adobe\ESign\\Model\SenderInfo
      */
-    public function getWidgetParticipantSet()
+    public function getCreatorInfo()
     {
-        return $this->container['widget_participant_set'];
+        return $this->container['creator_info'];
     }
 
     /**
-     * Sets widget_participant_set
+     * Sets creator_info
      *
-     * @param \Adobe\ESign\\Model\DetailedWidgetParticipantSetInfo $widget_participant_set Information about the widget participant Set
+     * @param \Adobe\ESign\\Model\SenderInfo $creator_info Information of the creator of the widget.
      *
      * @return $this
      */
-    public function setWidgetParticipantSet($widget_participant_set)
+    public function setCreatorInfo($creator_info)
     {
-        $this->container['widget_participant_set'] = $widget_participant_set;
+        $this->container['creator_info'] = $creator_info;
 
         return $this;
     }

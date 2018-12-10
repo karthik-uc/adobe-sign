@@ -75,72 +75,9 @@ class MegasignEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "acting_user_email"
-     */
-    public function testPropertyActingUserEmail()
-    {
-    }
-
-    /**
-     * Test attribute "acting_user_ip_address"
-     */
-    public function testPropertyActingUserIpAddress()
-    {
-    }
-
-    /**
-     * Test attribute "acting_user_name"
-     */
-    public function testPropertyActingUserName()
-    {
-    }
-
-    /**
-     * Test attribute "comment"
-     */
-    public function testPropertyComment()
-    {
-    }
-
-    /**
      * Test attribute "date"
      */
     public function testPropertyDate()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "device_location"
-     */
-    public function testPropertyDeviceLocation()
-    {
-    }
-
-    /**
-     * Test attribute "device_phone_number"
-     */
-    public function testPropertyDevicePhoneNumber()
-    {
-    }
-
-    /**
-     * Test attribute "digital_signature_info"
-     */
-    public function testPropertyDigitalSignatureInfo()
-    {
-    }
-
-    /**
-     * Test attribute "initiating_user_email"
-     */
-    public function testPropertyInitiatingUserEmail()
     {
     }
 
@@ -152,30 +89,30 @@ class MegasignEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "acting_user_name"
+     */
+    public function testPropertyActingUserName()
+    {
+    }
+
+    /**
+     * Test attribute "acting_user_ip_address"
+     */
+    public function testPropertyActingUserIpAddress()
+    {
+    }
+
+    /**
      * Test attribute "participant_email"
      */
     public function testPropertyParticipantEmail()
-    {
-    }
-
-    /**
-     * Test attribute "participant_id"
-     */
-    public function testPropertyParticipantId()
-    {
-    }
-
-    /**
-     * Test attribute "participant_role"
-     */
-    public function testPropertyParticipantRole()
-    {
-    }
-
-    /**
-     * Test attribute "synchronization_id"
-     */
-    public function testPropertySynchronizationId()
     {
     }
 
@@ -187,9 +124,58 @@ class MegasignEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "participant_role"
+     */
+    public function testPropertyParticipantRole()
+    {
+    }
+
+    /**
      * Test attribute "vault_event_id"
      */
     public function testPropertyVaultEventId()
+    {
+    }
+
+    /**
+     * Test attribute "participant_id"
+     */
+    public function testPropertyParticipantId()
+    {
+    }
+
+    /**
+     * Test attribute "version_id"
+     */
+    public function testPropertyVersionId()
+    {
+    }
+
+    /**
+     * Test attribute "acting_user_email"
+     */
+    public function testPropertyActingUserEmail()
+    {
+    }
+
+    /**
+     * Test attribute "device_phone_number"
+     */
+    public function testPropertyDevicePhoneNumber()
+    {
+    }
+
+    /**
+     * Test attribute "initiating_user_email"
+     */
+    public function testPropertyInitiatingUserEmail()
+    {
+    }
+
+    /**
+     * Test attribute "digital_signature_info"
+     */
+    public function testPropertyDigitalSignatureInfo()
     {
     }
 
@@ -201,9 +187,23 @@ class MegasignEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "version_id"
+     * Test attribute "comment"
      */
-    public function testPropertyVersionId()
+    public function testPropertyComment()
+    {
+    }
+
+    /**
+     * Test attribute "synchronization_id"
+     */
+    public function testPropertySynchronizationId()
+    {
+    }
+
+    /**
+     * Test attribute "device_location"
+     */
+    public function testPropertyDeviceLocation()
     {
     }
 }

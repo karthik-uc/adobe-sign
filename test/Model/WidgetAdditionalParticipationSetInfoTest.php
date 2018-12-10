@@ -75,6 +75,13 @@ class WidgetAdditionalParticipationSetInfoTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
+     * Test attribute "role"
+     */
+    public function testPropertyRole()
+    {
+    }
+
+    /**
      * Test attribute "member_infos"
      */
     public function testPropertyMemberInfos()
@@ -85,13 +92,6 @@ class WidgetAdditionalParticipationSetInfoTest extends \PHPUnit_Framework_TestCa
      * Test attribute "order"
      */
     public function testPropertyOrder()
-    {
-    }
-
-    /**
-     * Test attribute "role"
-     */
-    public function testPropertyRole()
     {
     }
 }

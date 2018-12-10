@@ -55,9 +55,10 @@ class WebhookConditionalParams implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'webhook_agreement_events' => '\Adobe\ESign\\Model\WebhookAgreementEvents',
+        'webhook_widget_events' => '\Adobe\ESign\\Model\WebhookWidgetEvents',
         'webhook_mega_sign_events' => '\Adobe\ESign\\Model\WebhookMegaSignEvents',
-        'webhook_widget_events' => '\Adobe\ESign\\Model\WebhookWidgetEvents'
+        'webhook_library_document_events' => '\Adobe\ESign\\Model\WebhookLibraryDocumentEvents',
+        'webhook_agreement_events' => '\Adobe\ESign\\Model\WebhookAgreementEvents'
     ];
 
     /**
@@ -66,9 +67,10 @@ class WebhookConditionalParams implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'webhook_agreement_events' => null,
+        'webhook_widget_events' => null,
         'webhook_mega_sign_events' => null,
-        'webhook_widget_events' => null
+        'webhook_library_document_events' => null,
+        'webhook_agreement_events' => null
     ];
 
     /**
@@ -98,9 +100,10 @@ class WebhookConditionalParams implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'webhook_agreement_events' => 'webhookAgreementEvents',
+        'webhook_widget_events' => 'webhookWidgetEvents',
         'webhook_mega_sign_events' => 'webhookMegaSignEvents',
-        'webhook_widget_events' => 'webhookWidgetEvents'
+        'webhook_library_document_events' => 'webhookLibraryDocumentEvents',
+        'webhook_agreement_events' => 'webhookAgreementEvents'
     ];
 
     /**
@@ -109,9 +112,10 @@ class WebhookConditionalParams implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'webhook_agreement_events' => 'setWebhookAgreementEvents',
+        'webhook_widget_events' => 'setWebhookWidgetEvents',
         'webhook_mega_sign_events' => 'setWebhookMegaSignEvents',
-        'webhook_widget_events' => 'setWebhookWidgetEvents'
+        'webhook_library_document_events' => 'setWebhookLibraryDocumentEvents',
+        'webhook_agreement_events' => 'setWebhookAgreementEvents'
     ];
 
     /**
@@ -120,9 +124,10 @@ class WebhookConditionalParams implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'webhook_agreement_events' => 'getWebhookAgreementEvents',
+        'webhook_widget_events' => 'getWebhookWidgetEvents',
         'webhook_mega_sign_events' => 'getWebhookMegaSignEvents',
-        'webhook_widget_events' => 'getWebhookWidgetEvents'
+        'webhook_library_document_events' => 'getWebhookLibraryDocumentEvents',
+        'webhook_agreement_events' => 'getWebhookAgreementEvents'
     ];
 
     /**
@@ -185,9 +190,10 @@ class WebhookConditionalParams implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['webhook_agreement_events'] = isset($data['webhook_agreement_events']) ? $data['webhook_agreement_events'] : null;
-        $this->container['webhook_mega_sign_events'] = isset($data['webhook_mega_sign_events']) ? $data['webhook_mega_sign_events'] : null;
         $this->container['webhook_widget_events'] = isset($data['webhook_widget_events']) ? $data['webhook_widget_events'] : null;
+        $this->container['webhook_mega_sign_events'] = isset($data['webhook_mega_sign_events']) ? $data['webhook_mega_sign_events'] : null;
+        $this->container['webhook_library_document_events'] = isset($data['webhook_library_document_events']) ? $data['webhook_library_document_events'] : null;
+        $this->container['webhook_agreement_events'] = isset($data['webhook_agreement_events']) ? $data['webhook_agreement_events'] : null;
     }
 
     /**
@@ -215,25 +221,25 @@ class WebhookConditionalParams implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets webhook_agreement_events
+     * Gets webhook_widget_events
      *
-     * @return \Adobe\ESign\\Model\WebhookAgreementEvents
+     * @return \Adobe\ESign\\Model\WebhookWidgetEvents
      */
-    public function getWebhookAgreementEvents()
+    public function getWebhookWidgetEvents()
     {
-        return $this->container['webhook_agreement_events'];
+        return $this->container['webhook_widget_events'];
     }
 
     /**
-     * Sets webhook_agreement_events
+     * Sets webhook_widget_events
      *
-     * @param \Adobe\ESign\\Model\WebhookAgreementEvents $webhook_agreement_events Conditional parameters for webhook agreement events
+     * @param \Adobe\ESign\\Model\WebhookWidgetEvents $webhook_widget_events Conditional parameters for webhook widget events
      *
      * @return $this
      */
-    public function setWebhookAgreementEvents($webhook_agreement_events)
+    public function setWebhookWidgetEvents($webhook_widget_events)
     {
-        $this->container['webhook_agreement_events'] = $webhook_agreement_events;
+        $this->container['webhook_widget_events'] = $webhook_widget_events;
 
         return $this;
     }
@@ -263,25 +269,49 @@ class WebhookConditionalParams implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets webhook_widget_events
+     * Gets webhook_library_document_events
      *
-     * @return \Adobe\ESign\\Model\WebhookWidgetEvents
+     * @return \Adobe\ESign\\Model\WebhookLibraryDocumentEvents
      */
-    public function getWebhookWidgetEvents()
+    public function getWebhookLibraryDocumentEvents()
     {
-        return $this->container['webhook_widget_events'];
+        return $this->container['webhook_library_document_events'];
     }
 
     /**
-     * Sets webhook_widget_events
+     * Sets webhook_library_document_events
      *
-     * @param \Adobe\ESign\\Model\WebhookWidgetEvents $webhook_widget_events Conditional parameters for webhook widget events
+     * @param \Adobe\ESign\\Model\WebhookLibraryDocumentEvents $webhook_library_document_events Conditional parameters for webhook library document events
      *
      * @return $this
      */
-    public function setWebhookWidgetEvents($webhook_widget_events)
+    public function setWebhookLibraryDocumentEvents($webhook_library_document_events)
     {
-        $this->container['webhook_widget_events'] = $webhook_widget_events;
+        $this->container['webhook_library_document_events'] = $webhook_library_document_events;
+
+        return $this;
+    }
+
+    /**
+     * Gets webhook_agreement_events
+     *
+     * @return \Adobe\ESign\\Model\WebhookAgreementEvents
+     */
+    public function getWebhookAgreementEvents()
+    {
+        return $this->container['webhook_agreement_events'];
+    }
+
+    /**
+     * Sets webhook_agreement_events
+     *
+     * @param \Adobe\ESign\\Model\WebhookAgreementEvents $webhook_agreement_events Conditional parameters for webhook agreement events
+     *
+     * @return $this
+     */
+    public function setWebhookAgreementEvents($webhook_agreement_events)
+    {
+        $this->container['webhook_agreement_events'] = $webhook_agreement_events;
 
         return $this;
     }

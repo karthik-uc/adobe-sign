@@ -55,8 +55,8 @@ class UserWidgets implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => '\Adobe\ESign\\Model\PageInfo',
-        'user_widget_list' => '\Adobe\ESign\\Model\UserWidget[]'
+        'user_widget_list' => '\Adobe\ESign\\Model\UserWidget[]',
+        'page' => '\Adobe\ESign\\Model\PageInfo'
     ];
 
     /**
@@ -65,8 +65,8 @@ class UserWidgets implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => null,
-        'user_widget_list' => null
+        'user_widget_list' => null,
+        'page' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class UserWidgets implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'page',
-        'user_widget_list' => 'userWidgetList'
+        'user_widget_list' => 'userWidgetList',
+        'page' => 'page'
     ];
 
     /**
@@ -106,8 +106,8 @@ class UserWidgets implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'user_widget_list' => 'setUserWidgetList'
+        'user_widget_list' => 'setUserWidgetList',
+        'page' => 'setPage'
     ];
 
     /**
@@ -116,8 +116,8 @@ class UserWidgets implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'user_widget_list' => 'getUserWidgetList'
+        'user_widget_list' => 'getUserWidgetList',
+        'page' => 'getPage'
     ];
 
     /**
@@ -180,8 +180,8 @@ class UserWidgets implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['user_widget_list'] = isset($data['user_widget_list']) ? $data['user_widget_list'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class UserWidgets implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
-     *
-     * @return \Adobe\ESign\\Model\PageInfo
-     */
-    public function getPage()
-    {
-        return $this->container['page'];
-    }
-
-    /**
-     * Sets page
-     *
-     * @param \Adobe\ESign\\Model\PageInfo $page Pagination information for navigating through the response
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        $this->container['page'] = $page;
-
-        return $this;
-    }
-
-    /**
      * Gets user_widget_list
      *
      * @return \Adobe\ESign\\Model\UserWidget[]
@@ -252,6 +228,30 @@ class UserWidgets implements ModelInterface, ArrayAccess
     public function setUserWidgetList($user_widget_list)
     {
         $this->container['user_widget_list'] = $user_widget_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets page
+     *
+     * @return \Adobe\ESign\\Model\PageInfo
+     */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+     * Sets page
+     *
+     * @param \Adobe\ESign\\Model\PageInfo $page Pagination information for navigating through the response
+     *
+     * @return $this
+     */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
 
         return $this;
     }

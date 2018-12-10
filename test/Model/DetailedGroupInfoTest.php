@@ -82,16 +82,16 @@ class DetailedGroupInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "name"
      */
-    public function testPropertyId()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "id"
      */
-    public function testPropertyName()
+    public function testPropertyId()
     {
     }
 }

@@ -55,10 +55,10 @@ class DetailedWidgetParticipantSetInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'role' => 'string',
         'id' => 'string',
         'member_infos' => '\Adobe\ESign\\Model\DetailedParticipantInfo[]',
-        'order' => 'int',
-        'role' => 'string'
+        'order' => 'int'
     ];
 
     /**
@@ -67,10 +67,10 @@ class DetailedWidgetParticipantSetInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'role' => null,
         'id' => null,
         'member_infos' => null,
-        'order' => null,
-        'role' => null
+        'order' => null
     ];
 
     /**
@@ -100,10 +100,10 @@ class DetailedWidgetParticipantSetInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'role' => 'role',
         'id' => 'id',
         'member_infos' => 'memberInfos',
-        'order' => 'order',
-        'role' => 'role'
+        'order' => 'order'
     ];
 
     /**
@@ -112,10 +112,10 @@ class DetailedWidgetParticipantSetInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'role' => 'setRole',
         'id' => 'setId',
         'member_infos' => 'setMemberInfos',
-        'order' => 'setOrder',
-        'role' => 'setRole'
+        'order' => 'setOrder'
     ];
 
     /**
@@ -124,10 +124,10 @@ class DetailedWidgetParticipantSetInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'role' => 'getRole',
         'id' => 'getId',
         'member_infos' => 'getMemberInfos',
-        'order' => 'getOrder',
-        'role' => 'getRole'
+        'order' => 'getOrder'
     ];
 
     /**
@@ -225,10 +225,10 @@ class DetailedWidgetParticipantSetInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['member_infos'] = isset($data['member_infos']) ? $data['member_infos'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
     }
 
     /**
@@ -262,6 +262,39 @@ class DetailedWidgetParticipantSetInfo implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets role
+     *
+     * @return string
+     */
+    public function getRole()
+    {
+        return $this->container['role'];
+    }
+
+    /**
+     * Sets role
+     *
+     * @param string $role Role assumed by all participants in the set (signer, approver etc.). This cannot be changed as part of the PUT call.
+     *
+     * @return $this
+     */
+    public function setRole($role)
+    {
+        $allowedValues = $this->getRoleAllowableValues();
+        if (!is_null($role) && !in_array($role, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'role', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['role'] = $role;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -331,39 +364,6 @@ class DetailedWidgetParticipantSetInfo implements ModelInterface, ArrayAccess
     public function setOrder($order)
     {
         $this->container['order'] = $order;
-
-        return $this;
-    }
-
-    /**
-     * Gets role
-     *
-     * @return string
-     */
-    public function getRole()
-    {
-        return $this->container['role'];
-    }
-
-    /**
-     * Sets role
-     *
-     * @param string $role Role assumed by all participants in the set (signer, approver etc.). This cannot be changed as part of the PUT call.
-     *
-     * @return $this
-     */
-    public function setRole($role)
-    {
-        $allowedValues = $this->getRoleAllowableValues();
-        if (!is_null($role) && !in_array($role, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'role', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['role'] = $role;
 
         return $this;
     }

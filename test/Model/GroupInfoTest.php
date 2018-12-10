@@ -75,16 +75,16 @@ class GroupInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "group_id"
+     * Test attribute "group_name"
      */
-    public function testPropertyGroupId()
+    public function testPropertyGroupName()
     {
     }
 
     /**
-     * Test attribute "group_name"
+     * Test attribute "group_id"
      */
-    public function testPropertyGroupName()
+    public function testPropertyGroupId()
     {
     }
 }

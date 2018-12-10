@@ -75,23 +75,16 @@ class WidgetAgreementTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "hidden"
+     */
+    public function testPropertyHidden()
+    {
+    }
+
+    /**
      * Test attribute "display_date"
      */
     public function testPropertyDisplayDate()
-    {
-    }
-
-    /**
-     * Test attribute "display_participant_set_infos"
-     */
-    public function testPropertyDisplayParticipantSetInfos()
-    {
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
     {
     }
 
@@ -103,9 +96,16 @@ class WidgetAgreementTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "hidden"
+     * Test attribute "name"
      */
-    public function testPropertyHidden()
+    public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "display_participant_set_infos"
+     */
+    public function testPropertyDisplayParticipantSetInfos()
     {
     }
 
@@ -117,9 +117,9 @@ class WidgetAgreementTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "id"
      */
-    public function testPropertyName()
+    public function testPropertyId()
     {
     }
 

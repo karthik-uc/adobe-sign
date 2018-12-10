@@ -55,8 +55,8 @@ class MegaSignStateInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'mega_sign_cancellation_info' => '\Adobe\ESign\\Model\AgreementCancellationInfo',
-        'state' => 'string'
+        'state' => 'string',
+        'mega_sign_cancellation_info' => '\Adobe\ESign\\Model\AgreementCancellationInfo'
     ];
 
     /**
@@ -65,8 +65,8 @@ class MegaSignStateInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'mega_sign_cancellation_info' => null,
-        'state' => null
+        'state' => null,
+        'mega_sign_cancellation_info' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class MegaSignStateInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'mega_sign_cancellation_info' => 'megaSignCancellationInfo',
-        'state' => 'state'
+        'state' => 'state',
+        'mega_sign_cancellation_info' => 'megaSignCancellationInfo'
     ];
 
     /**
@@ -106,8 +106,8 @@ class MegaSignStateInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'mega_sign_cancellation_info' => 'setMegaSignCancellationInfo',
-        'state' => 'setState'
+        'state' => 'setState',
+        'mega_sign_cancellation_info' => 'setMegaSignCancellationInfo'
     ];
 
     /**
@@ -116,8 +116,8 @@ class MegaSignStateInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'mega_sign_cancellation_info' => 'getMegaSignCancellationInfo',
-        'state' => 'getState'
+        'state' => 'getState',
+        'mega_sign_cancellation_info' => 'getMegaSignCancellationInfo'
     ];
 
     /**
@@ -193,8 +193,8 @@ class MegaSignStateInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['mega_sign_cancellation_info'] = isset($data['mega_sign_cancellation_info']) ? $data['mega_sign_cancellation_info'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['mega_sign_cancellation_info'] = isset($data['mega_sign_cancellation_info']) ? $data['mega_sign_cancellation_info'] : null;
     }
 
     /**
@@ -230,30 +230,6 @@ class MegaSignStateInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets mega_sign_cancellation_info
-     *
-     * @return \Adobe\ESign\\Model\AgreementCancellationInfo
-     */
-    public function getMegaSignCancellationInfo()
-    {
-        return $this->container['mega_sign_cancellation_info'];
-    }
-
-    /**
-     * Sets mega_sign_cancellation_info
-     *
-     * @param \Adobe\ESign\\Model\AgreementCancellationInfo $mega_sign_cancellation_info Cancellation information for the agreement. Mandatory while cancelling a megaSign
-     *
-     * @return $this
-     */
-    public function setMegaSignCancellationInfo($mega_sign_cancellation_info)
-    {
-        $this->container['mega_sign_cancellation_info'] = $mega_sign_cancellation_info;
-
-        return $this;
-    }
-
-    /**
      * Gets state
      *
      * @return string
@@ -282,6 +258,30 @@ class MegaSignStateInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets mega_sign_cancellation_info
+     *
+     * @return \Adobe\ESign\\Model\AgreementCancellationInfo
+     */
+    public function getMegaSignCancellationInfo()
+    {
+        return $this->container['mega_sign_cancellation_info'];
+    }
+
+    /**
+     * Sets mega_sign_cancellation_info
+     *
+     * @param \Adobe\ESign\\Model\AgreementCancellationInfo $mega_sign_cancellation_info Cancellation information for the agreement. Mandatory while cancelling a megaSign
+     *
+     * @return $this
+     */
+    public function setMegaSignCancellationInfo($mega_sign_cancellation_info)
+    {
+        $this->container['mega_sign_cancellation_info'] = $mega_sign_cancellation_info;
 
         return $this;
     }

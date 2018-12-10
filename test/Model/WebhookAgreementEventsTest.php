@@ -82,13 +82,6 @@ class WebhookAgreementEventsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_documents_info"
-     */
-    public function testPropertyIncludeDocumentsInfo()
-    {
-    }
-
-    /**
      * Test attribute "include_participants_info"
      */
     public function testPropertyIncludeParticipantsInfo()
@@ -99,6 +92,13 @@ class WebhookAgreementEventsTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_signed_documents"
      */
     public function testPropertyIncludeSignedDocuments()
+    {
+    }
+
+    /**
+     * Test attribute "include_documents_info"
+     */
+    public function testPropertyIncludeDocumentsInfo()
     {
     }
 }

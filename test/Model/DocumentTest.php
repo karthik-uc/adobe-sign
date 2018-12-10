@@ -75,6 +75,20 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "num_pages"
+     */
+    public function testPropertyNumPages()
+    {
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
@@ -92,20 +106,6 @@ class DocumentTest extends \PHPUnit_Framework_TestCase
      * Test attribute "mime_type"
      */
     public function testPropertyMimeType()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "num_pages"
-     */
-    public function testPropertyNumPages()
     {
     }
 }

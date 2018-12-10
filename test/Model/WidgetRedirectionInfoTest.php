@@ -75,16 +75,16 @@ class WidgetRedirectionInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "deframe"
+     * Test attribute "delay"
      */
-    public function testPropertyDeframe()
+    public function testPropertyDelay()
     {
     }
 
     /**
-     * Test attribute "delay"
+     * Test attribute "deframe"
      */
-    public function testPropertyDelay()
+    public function testPropertyDeframe()
     {
     }
 

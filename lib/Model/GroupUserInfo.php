@@ -55,12 +55,12 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'company' => 'string',
-        'email' => 'string',
         'first_name' => 'string',
-        'id' => 'string',
+        'last_name' => 'string',
         'is_group_admin' => 'bool',
-        'last_name' => 'string'
+        'company' => 'string',
+        'id' => 'string',
+        'email' => 'string'
     ];
 
     /**
@@ -69,12 +69,12 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'company' => null,
-        'email' => null,
         'first_name' => null,
-        'id' => null,
+        'last_name' => null,
         'is_group_admin' => null,
-        'last_name' => null
+        'company' => null,
+        'id' => null,
+        'email' => null
     ];
 
     /**
@@ -104,12 +104,12 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'company' => 'company',
-        'email' => 'email',
         'first_name' => 'firstName',
-        'id' => 'id',
+        'last_name' => 'lastName',
         'is_group_admin' => 'isGroupAdmin',
-        'last_name' => 'lastName'
+        'company' => 'company',
+        'id' => 'id',
+        'email' => 'email'
     ];
 
     /**
@@ -118,12 +118,12 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'company' => 'setCompany',
-        'email' => 'setEmail',
         'first_name' => 'setFirstName',
-        'id' => 'setId',
+        'last_name' => 'setLastName',
         'is_group_admin' => 'setIsGroupAdmin',
-        'last_name' => 'setLastName'
+        'company' => 'setCompany',
+        'id' => 'setId',
+        'email' => 'setEmail'
     ];
 
     /**
@@ -132,12 +132,12 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'company' => 'getCompany',
-        'email' => 'getEmail',
         'first_name' => 'getFirstName',
-        'id' => 'getId',
+        'last_name' => 'getLastName',
         'is_group_admin' => 'getIsGroupAdmin',
-        'last_name' => 'getLastName'
+        'company' => 'getCompany',
+        'id' => 'getId',
+        'email' => 'getEmail'
     ];
 
     /**
@@ -200,12 +200,12 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['company'] = isset($data['company']) ? $data['company'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['is_group_admin'] = isset($data['is_group_admin']) ? $data['is_group_admin'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['is_group_admin'] = isset($data['is_group_admin']) ? $data['is_group_admin'] : null;
+        $this->container['company'] = isset($data['company']) ? $data['company'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -233,54 +233,6 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets company
-     *
-     * @return string
-     */
-    public function getCompany()
-    {
-        return $this->container['company'];
-    }
-
-    /**
-     * Sets company
-     *
-     * @param string $company The name of company of the user
-     *
-     * @return $this
-     */
-    public function setCompany($company)
-    {
-        $this->container['company'] = $company;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string $email The email address of the user
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
      * Gets first_name
      *
      * @return string
@@ -305,25 +257,25 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets id
+     * Gets last_name
      *
      * @return string
      */
-    public function getId()
+    public function getLastName()
     {
-        return $this->container['id'];
+        return $this->container['last_name'];
     }
 
     /**
-     * Sets id
+     * Sets last_name
      *
-     * @param string $id A unique identifier of the user resource for REST APIs. This identifier can not be used in SOAP APIs
+     * @param string $last_name The last name of the user
      *
      * @return $this
      */
-    public function setId($id)
+    public function setLastName($last_name)
     {
-        $this->container['id'] = $id;
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }
@@ -353,25 +305,73 @@ class GroupUserInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets last_name
+     * Gets company
      *
      * @return string
      */
-    public function getLastName()
+    public function getCompany()
     {
-        return $this->container['last_name'];
+        return $this->container['company'];
     }
 
     /**
-     * Sets last_name
+     * Sets company
      *
-     * @param string $last_name The last name of the user
+     * @param string $company The name of company of the user
      *
      * @return $this
      */
-    public function setLastName($last_name)
+    public function setCompany($company)
     {
-        $this->container['last_name'] = $last_name;
+        $this->container['company'] = $company;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id A unique identifier of the user resource for REST APIs. This identifier can not be used in SOAP APIs
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     *
+     * @param string $email The email address of the user
+     *
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
 
         return $this;
     }

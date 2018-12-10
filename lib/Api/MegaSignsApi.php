@@ -1012,7 +1012,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1034,7 +1034,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1114,7 +1114,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1139,7 +1139,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1194,7 +1194,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2545,7 +2545,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2566,7 +2566,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2645,7 +2645,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2669,7 +2669,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2723,7 +2723,7 @@ class MegaSignsApi
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -55,8 +55,8 @@ class WidgetStateInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'state' => 'string',
-        'widget_in_active_info' => '\Adobe\ESign\\Model\WidgetInActiveInfo'
+        'widget_in_active_info' => '\Adobe\ESign\\Model\WidgetInActiveInfo',
+        'state' => 'string'
     ];
 
     /**
@@ -65,8 +65,8 @@ class WidgetStateInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'state' => null,
-        'widget_in_active_info' => null
+        'widget_in_active_info' => null,
+        'state' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class WidgetStateInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'state' => 'state',
-        'widget_in_active_info' => 'widgetInActiveInfo'
+        'widget_in_active_info' => 'widgetInActiveInfo',
+        'state' => 'state'
     ];
 
     /**
@@ -106,8 +106,8 @@ class WidgetStateInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'state' => 'setState',
-        'widget_in_active_info' => 'setWidgetInActiveInfo'
+        'widget_in_active_info' => 'setWidgetInActiveInfo',
+        'state' => 'setState'
     ];
 
     /**
@@ -116,8 +116,8 @@ class WidgetStateInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'state' => 'getState',
-        'widget_in_active_info' => 'getWidgetInActiveInfo'
+        'widget_in_active_info' => 'getWidgetInActiveInfo',
+        'state' => 'getState'
     ];
 
     /**
@@ -199,8 +199,8 @@ class WidgetStateInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['widget_in_active_info'] = isset($data['widget_in_active_info']) ? $data['widget_in_active_info'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
     }
 
     /**
@@ -236,6 +236,30 @@ class WidgetStateInfo implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets widget_in_active_info
+     *
+     * @return \Adobe\ESign\\Model\WidgetInActiveInfo
+     */
+    public function getWidgetInActiveInfo()
+    {
+        return $this->container['widget_in_active_info'];
+    }
+
+    /**
+     * Sets widget_in_active_info
+     *
+     * @param \Adobe\ESign\\Model\WidgetInActiveInfo $widget_in_active_info Specify custom message which will be displayed  to the user or the URL to which user will be redirected when the widget is accessed in disabled state. This can be specified only in PUT request
+     *
+     * @return $this
+     */
+    public function setWidgetInActiveInfo($widget_in_active_info)
+    {
+        $this->container['widget_in_active_info'] = $widget_in_active_info;
+
+        return $this;
+    }
+
+    /**
      * Gets state
      *
      * @return string
@@ -264,30 +288,6 @@ class WidgetStateInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets widget_in_active_info
-     *
-     * @return \Adobe\ESign\\Model\WidgetInActiveInfo
-     */
-    public function getWidgetInActiveInfo()
-    {
-        return $this->container['widget_in_active_info'];
-    }
-
-    /**
-     * Sets widget_in_active_info
-     *
-     * @param \Adobe\ESign\\Model\WidgetInActiveInfo $widget_in_active_info Specify custom message which will be displayed  to the user or the URL to which user will be redirected when the widget is accessed in disabled state. This can be specified only in PUT request
-     *
-     * @return $this
-     */
-    public function setWidgetInActiveInfo($widget_in_active_info)
-    {
-        $this->container['widget_in_active_info'] = $widget_in_active_info;
 
         return $this;
     }

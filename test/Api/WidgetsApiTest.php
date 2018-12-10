@@ -220,6 +220,16 @@ class WidgetsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for updateWidgetNoteForApiUser
+     *
+     * Updates the latest note of a widget for the API user..
+     *
+     */
+    public function testUpdateWidgetNoteForApiUser()
+    {
+    }
+
+    /**
      * Test case for updateWidgetState
      *
      * Updates the state of a widget identified by widgetId in the path..

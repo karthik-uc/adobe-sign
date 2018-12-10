@@ -55,13 +55,13 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'display_date' => '\DateTime',
-        'display_participant_set_infos' => '\Adobe\ESign\\Model\DisplayWidgetParticipantSetInfo[]',
-        'id' => 'string',
-        'esign' => 'bool',
         'hidden' => 'bool',
-        'latest_version_id' => 'string',
+        'display_date' => '\DateTime',
+        'esign' => 'bool',
         'name' => 'string',
+        'display_participant_set_infos' => '\Adobe\ESign\\Model\DisplayWidgetParticipantSetInfo[]',
+        'latest_version_id' => 'string',
+        'id' => 'string',
         'status' => 'string'
     ];
 
@@ -71,13 +71,13 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'display_date' => 'date',
-        'display_participant_set_infos' => null,
-        'id' => null,
-        'esign' => null,
         'hidden' => null,
-        'latest_version_id' => null,
+        'display_date' => 'date',
+        'esign' => null,
         'name' => null,
+        'display_participant_set_infos' => null,
+        'latest_version_id' => null,
+        'id' => null,
         'status' => null
     ];
 
@@ -108,13 +108,13 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'display_date' => 'displayDate',
-        'display_participant_set_infos' => 'displayParticipantSetInfos',
-        'id' => 'id',
-        'esign' => 'esign',
         'hidden' => 'hidden',
-        'latest_version_id' => 'latestVersionId',
+        'display_date' => 'displayDate',
+        'esign' => 'esign',
         'name' => 'name',
+        'display_participant_set_infos' => 'displayParticipantSetInfos',
+        'latest_version_id' => 'latestVersionId',
+        'id' => 'id',
         'status' => 'status'
     ];
 
@@ -124,13 +124,13 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'display_date' => 'setDisplayDate',
-        'display_participant_set_infos' => 'setDisplayParticipantSetInfos',
-        'id' => 'setId',
-        'esign' => 'setEsign',
         'hidden' => 'setHidden',
-        'latest_version_id' => 'setLatestVersionId',
+        'display_date' => 'setDisplayDate',
+        'esign' => 'setEsign',
         'name' => 'setName',
+        'display_participant_set_infos' => 'setDisplayParticipantSetInfos',
+        'latest_version_id' => 'setLatestVersionId',
+        'id' => 'setId',
         'status' => 'setStatus'
     ];
 
@@ -140,13 +140,13 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'display_date' => 'getDisplayDate',
-        'display_participant_set_infos' => 'getDisplayParticipantSetInfos',
-        'id' => 'getId',
-        'esign' => 'getEsign',
         'hidden' => 'getHidden',
-        'latest_version_id' => 'getLatestVersionId',
+        'display_date' => 'getDisplayDate',
+        'esign' => 'getEsign',
         'name' => 'getName',
+        'display_participant_set_infos' => 'getDisplayParticipantSetInfos',
+        'latest_version_id' => 'getLatestVersionId',
+        'id' => 'getId',
         'status' => 'getStatus'
     ];
 
@@ -267,13 +267,13 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['display_date'] = isset($data['display_date']) ? $data['display_date'] : null;
-        $this->container['display_participant_set_infos'] = isset($data['display_participant_set_infos']) ? $data['display_participant_set_infos'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['esign'] = isset($data['esign']) ? $data['esign'] : null;
         $this->container['hidden'] = isset($data['hidden']) ? $data['hidden'] : null;
-        $this->container['latest_version_id'] = isset($data['latest_version_id']) ? $data['latest_version_id'] : null;
+        $this->container['display_date'] = isset($data['display_date']) ? $data['display_date'] : null;
+        $this->container['esign'] = isset($data['esign']) ? $data['esign'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['display_participant_set_infos'] = isset($data['display_participant_set_infos']) ? $data['display_participant_set_infos'] : null;
+        $this->container['latest_version_id'] = isset($data['latest_version_id']) ? $data['latest_version_id'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
@@ -310,6 +310,30 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets hidden
+     *
+     * @return bool
+     */
+    public function getHidden()
+    {
+        return $this->container['hidden'];
+    }
+
+    /**
+     * Sets hidden
+     *
+     * @param bool $hidden True if agreement is hidden for the user
+     *
+     * @return $this
+     */
+    public function setHidden($hidden)
+    {
+        $this->container['hidden'] = $hidden;
+
+        return $this;
+    }
+
+    /**
      * Gets display_date
      *
      * @return \DateTime
@@ -329,54 +353,6 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
     public function setDisplayDate($display_date)
     {
         $this->container['display_date'] = $display_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets display_participant_set_infos
-     *
-     * @return \Adobe\ESign\\Model\DisplayWidgetParticipantSetInfo[]
-     */
-    public function getDisplayParticipantSetInfos()
-    {
-        return $this->container['display_participant_set_infos'];
-    }
-
-    /**
-     * Sets display_participant_set_infos
-     *
-     * @param \Adobe\ESign\\Model\DisplayWidgetParticipantSetInfo[] $display_participant_set_infos The most relevant current user set for the agreement. It is typically the next signer if the agreement is from the current user, or the sender if received from another user
-     *
-     * @return $this
-     */
-    public function setDisplayParticipantSetInfos($display_participant_set_infos)
-    {
-        $this->container['display_participant_set_infos'] = $display_participant_set_infos;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id The unique identifier of the agreement.If provided in POST, it will simply be ignored
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
 
         return $this;
     }
@@ -406,25 +382,49 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets hidden
+     * Gets name
      *
-     * @return bool
+     * @return string
      */
-    public function getHidden()
+    public function getName()
     {
-        return $this->container['hidden'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets hidden
+     * Sets name
      *
-     * @param bool $hidden True if agreement is hidden for the user
+     * @param string $name Name of the Agreement
      *
      * @return $this
      */
-    public function setHidden($hidden)
+    public function setName($name)
     {
-        $this->container['hidden'] = $hidden;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_participant_set_infos
+     *
+     * @return \Adobe\ESign\\Model\DisplayWidgetParticipantSetInfo[]
+     */
+    public function getDisplayParticipantSetInfos()
+    {
+        return $this->container['display_participant_set_infos'];
+    }
+
+    /**
+     * Sets display_participant_set_infos
+     *
+     * @param \Adobe\ESign\\Model\DisplayWidgetParticipantSetInfo[] $display_participant_set_infos The most relevant current user set for the agreement. It is typically the next signer if the agreement is from the current user, or the sender if received from another user
+     *
+     * @return $this
+     */
+    public function setDisplayParticipantSetInfos($display_participant_set_infos)
+    {
+        $this->container['display_participant_set_infos'] = $display_participant_set_infos;
 
         return $this;
     }
@@ -454,25 +454,25 @@ class WidgetAgreement implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets name
+     * Gets id
      *
      * @return string
      */
-    public function getName()
+    public function getId()
     {
-        return $this->container['name'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets name
+     * Sets id
      *
-     * @param string $name Name of the Agreement
+     * @param string $id The unique identifier of the agreement.If provided in POST, it will simply be ignored
      *
      * @return $this
      */
-    public function setName($name)
+    public function setId($id)
     {
-        $this->container['name'] = $name;
+        $this->container['id'] = $id;
 
         return $this;
     }

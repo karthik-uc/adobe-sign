@@ -55,8 +55,8 @@ class WidgetRedirectionInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'deframe' => 'bool',
         'delay' => 'int',
+        'deframe' => 'bool',
         'url' => 'string'
     ];
 
@@ -66,8 +66,8 @@ class WidgetRedirectionInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'deframe' => null,
         'delay' => null,
+        'deframe' => null,
         'url' => null
     ];
 
@@ -98,8 +98,8 @@ class WidgetRedirectionInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'deframe' => 'deframe',
         'delay' => 'delay',
+        'deframe' => 'deframe',
         'url' => 'url'
     ];
 
@@ -109,8 +109,8 @@ class WidgetRedirectionInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'deframe' => 'setDeframe',
         'delay' => 'setDelay',
+        'deframe' => 'setDeframe',
         'url' => 'setUrl'
     ];
 
@@ -120,8 +120,8 @@ class WidgetRedirectionInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'deframe' => 'getDeframe',
         'delay' => 'getDelay',
+        'deframe' => 'getDeframe',
         'url' => 'getUrl'
     ];
 
@@ -185,8 +185,8 @@ class WidgetRedirectionInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['deframe'] = isset($data['deframe']) ? $data['deframe'] : null;
         $this->container['delay'] = isset($data['delay']) ? $data['delay'] : null;
+        $this->container['deframe'] = isset($data['deframe']) ? $data['deframe'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
@@ -215,30 +215,6 @@ class WidgetRedirectionInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets deframe
-     *
-     * @return bool
-     */
-    public function getDeframe()
-    {
-        return $this->container['deframe'];
-    }
-
-    /**
-     * Sets deframe
-     *
-     * @param bool $deframe If deframe is false, the resultant page will be shown inside the widget frame. If deframe is true, the resultant page will be shown in the full browser window.   Note that in the case of embedded widgets, browser security restrictions do not permit automatic redirection in the full browser window, so if deframe is true the user will instead just see a link to the success page. We recommend this scenario be avoided - in other words, setting deframe to false is recommended for embedded widgets
-     *
-     * @return $this
-     */
-    public function setDeframe($deframe)
-    {
-        $this->container['deframe'] = $deframe;
-
-        return $this;
-    }
-
-    /**
      * Gets delay
      *
      * @return int
@@ -258,6 +234,30 @@ class WidgetRedirectionInfo implements ModelInterface, ArrayAccess
     public function setDelay($delay)
     {
         $this->container['delay'] = $delay;
+
+        return $this;
+    }
+
+    /**
+     * Gets deframe
+     *
+     * @return bool
+     */
+    public function getDeframe()
+    {
+        return $this->container['deframe'];
+    }
+
+    /**
+     * Sets deframe
+     *
+     * @param bool $deframe If deframe is false, the resultant page will be shown inside the widget frame. If deframe is true, the resultant page will be shown in the full browser window.   Note that in the case of embedded widgets, browser security restrictions do not permit automatic redirection in the full browser window, so if deframe is true the user will instead just see a link to the success page. We recommend this scenario be avoided - in other words, setting deframe to false is recommended for embedded widgets
+     *
+     * @return $this
+     */
+    public function setDeframe($deframe)
+    {
+        $this->container['deframe'] = $deframe;
 
         return $this;
     }

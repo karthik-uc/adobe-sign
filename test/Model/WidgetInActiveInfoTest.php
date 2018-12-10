@@ -75,16 +75,16 @@ class WidgetInActiveInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "redirect_url"
      */
-    public function testPropertyMessage()
+    public function testPropertyRedirectUrl()
     {
     }
 
     /**
-     * Test attribute "redirect_url"
+     * Test attribute "message"
      */
-    public function testPropertyRedirectUrl()
+    public function testPropertyMessage()
     {
     }
 }

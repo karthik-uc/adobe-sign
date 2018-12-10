@@ -962,9 +962,9 @@ class WebhooksApi
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  bool $show_in_active_webhooks A query parameter to fetch all the inactive webhooks along with the active webhooks. (optional)
      * @param  string $scope Scope of webhook. The possible values are ACCOUNT, GROUP, USER or RESOURCE (optional)
-     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET and MEGASIGN. (optional)
+     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET, MEGASIGN and LIBRARY_DOCUMENT. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -986,9 +986,9 @@ class WebhooksApi
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  bool $show_in_active_webhooks A query parameter to fetch all the inactive webhooks along with the active webhooks. (optional)
      * @param  string $scope Scope of webhook. The possible values are ACCOUNT, GROUP, USER or RESOURCE (optional)
-     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET and MEGASIGN. (optional)
+     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET, MEGASIGN and LIBRARY_DOCUMENT. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1068,9 +1068,9 @@ class WebhooksApi
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  bool $show_in_active_webhooks A query parameter to fetch all the inactive webhooks along with the active webhooks. (optional)
      * @param  string $scope Scope of webhook. The possible values are ACCOUNT, GROUP, USER or RESOURCE (optional)
-     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET and MEGASIGN. (optional)
+     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET, MEGASIGN and LIBRARY_DOCUMENT. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1095,9 +1095,9 @@ class WebhooksApi
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  bool $show_in_active_webhooks A query parameter to fetch all the inactive webhooks along with the active webhooks. (optional)
      * @param  string $scope Scope of webhook. The possible values are ACCOUNT, GROUP, USER or RESOURCE (optional)
-     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET and MEGASIGN. (optional)
+     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET, MEGASIGN and LIBRARY_DOCUMENT. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1152,9 +1152,9 @@ class WebhooksApi
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      * @param  bool $show_in_active_webhooks A query parameter to fetch all the inactive webhooks along with the active webhooks. (optional)
      * @param  string $scope Scope of webhook. The possible values are ACCOUNT, GROUP, USER or RESOURCE (optional)
-     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET and MEGASIGN. (optional)
+     * @param  string $resource_type The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET, MEGASIGN and LIBRARY_DOCUMENT. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

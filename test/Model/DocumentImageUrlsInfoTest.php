@@ -75,16 +75,16 @@ class DocumentImageUrlsInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "document_id"
+     * Test attribute "document_image_urls_list"
      */
-    public function testPropertyDocumentId()
+    public function testPropertyDocumentImageUrlsList()
     {
     }
 
     /**
-     * Test attribute "document_image_urls_list"
+     * Test attribute "document_id"
      */
-    public function testPropertyDocumentImageUrlsList()
+    public function testPropertyDocumentId()
     {
     }
 }

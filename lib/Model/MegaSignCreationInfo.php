@@ -55,25 +55,25 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ccs' => '\Adobe\ESign\\Model\MegaSignCcInfo[]',
-        'child_agreements_info' => '\Adobe\ESign\\Model\ChildAgreementsInfo',
-        'created_date' => '\DateTime',
-        'expiration_time' => '\Adobe\ESign\\Model\\DateTime',
-        'external_id' => '\Adobe\ESign\\Model\ExternalId',
-        'file_infos' => '\Adobe\ESign\\Model\FileInfo[]',
         'first_reminder_delay' => 'int',
-        'id' => 'string',
+        'child_agreements_info' => '\Adobe\ESign\\Model\ChildAgreementsInfo',
+        'signature_type' => 'string',
+        'external_id' => '\Adobe\ESign\\Model\ExternalId',
         'locale' => 'string',
         'message' => 'string',
-        'name' => 'string',
+        'vaulting_info' => '\Adobe\ESign\\Model\VaultingInfo',
+        'security_option' => '\Adobe\ESign\\Model\MegaSignSecurityOption',
         'post_sign_option' => '\Adobe\ESign\\Model\PostSignOption',
         'reminder_frequency' => 'string',
-        'security_option' => '\Adobe\ESign\\Model\MegaSignSecurityOption',
+        'ccs' => '\Adobe\ESign\\Model\MegaSignCcInfo[]',
+        'created_date' => '\DateTime',
+        'expiration_time' => '\Adobe\ESign\\Model\\DateTime',
         'sender_email' => 'string',
-        'signature_type' => 'string',
+        'name' => 'string',
+        'file_infos' => '\Adobe\ESign\\Model\FileInfo[]',
+        'id' => 'string',
         'state' => 'string',
-        'status' => 'string',
-        'vaulting_info' => '\Adobe\ESign\\Model\VaultingInfo'
+        'status' => 'string'
     ];
 
     /**
@@ -82,25 +82,25 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ccs' => null,
-        'child_agreements_info' => null,
-        'created_date' => 'date',
-        'expiration_time' => null,
-        'external_id' => null,
-        'file_infos' => null,
         'first_reminder_delay' => null,
-        'id' => null,
+        'child_agreements_info' => null,
+        'signature_type' => null,
+        'external_id' => null,
         'locale' => null,
         'message' => null,
-        'name' => null,
+        'vaulting_info' => null,
+        'security_option' => null,
         'post_sign_option' => null,
         'reminder_frequency' => null,
-        'security_option' => null,
+        'ccs' => null,
+        'created_date' => 'date',
+        'expiration_time' => null,
         'sender_email' => null,
-        'signature_type' => null,
+        'name' => null,
+        'file_infos' => null,
+        'id' => null,
         'state' => null,
-        'status' => null,
-        'vaulting_info' => null
+        'status' => null
     ];
 
     /**
@@ -130,25 +130,25 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ccs' => 'ccs',
-        'child_agreements_info' => 'childAgreementsInfo',
-        'created_date' => 'createdDate',
-        'expiration_time' => 'expirationTime',
-        'external_id' => 'externalId',
-        'file_infos' => 'fileInfos',
         'first_reminder_delay' => 'firstReminderDelay',
-        'id' => 'id',
+        'child_agreements_info' => 'childAgreementsInfo',
+        'signature_type' => 'signatureType',
+        'external_id' => 'externalId',
         'locale' => 'locale',
         'message' => 'message',
-        'name' => 'name',
+        'vaulting_info' => 'vaultingInfo',
+        'security_option' => 'securityOption',
         'post_sign_option' => 'postSignOption',
         'reminder_frequency' => 'reminderFrequency',
-        'security_option' => 'securityOption',
+        'ccs' => 'ccs',
+        'created_date' => 'createdDate',
+        'expiration_time' => 'expirationTime',
         'sender_email' => 'senderEmail',
-        'signature_type' => 'signatureType',
+        'name' => 'name',
+        'file_infos' => 'fileInfos',
+        'id' => 'id',
         'state' => 'state',
-        'status' => 'status',
-        'vaulting_info' => 'vaultingInfo'
+        'status' => 'status'
     ];
 
     /**
@@ -157,25 +157,25 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ccs' => 'setCcs',
-        'child_agreements_info' => 'setChildAgreementsInfo',
-        'created_date' => 'setCreatedDate',
-        'expiration_time' => 'setExpirationTime',
-        'external_id' => 'setExternalId',
-        'file_infos' => 'setFileInfos',
         'first_reminder_delay' => 'setFirstReminderDelay',
-        'id' => 'setId',
+        'child_agreements_info' => 'setChildAgreementsInfo',
+        'signature_type' => 'setSignatureType',
+        'external_id' => 'setExternalId',
         'locale' => 'setLocale',
         'message' => 'setMessage',
-        'name' => 'setName',
+        'vaulting_info' => 'setVaultingInfo',
+        'security_option' => 'setSecurityOption',
         'post_sign_option' => 'setPostSignOption',
         'reminder_frequency' => 'setReminderFrequency',
-        'security_option' => 'setSecurityOption',
+        'ccs' => 'setCcs',
+        'created_date' => 'setCreatedDate',
+        'expiration_time' => 'setExpirationTime',
         'sender_email' => 'setSenderEmail',
-        'signature_type' => 'setSignatureType',
+        'name' => 'setName',
+        'file_infos' => 'setFileInfos',
+        'id' => 'setId',
         'state' => 'setState',
-        'status' => 'setStatus',
-        'vaulting_info' => 'setVaultingInfo'
+        'status' => 'setStatus'
     ];
 
     /**
@@ -184,25 +184,25 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ccs' => 'getCcs',
-        'child_agreements_info' => 'getChildAgreementsInfo',
-        'created_date' => 'getCreatedDate',
-        'expiration_time' => 'getExpirationTime',
-        'external_id' => 'getExternalId',
-        'file_infos' => 'getFileInfos',
         'first_reminder_delay' => 'getFirstReminderDelay',
-        'id' => 'getId',
+        'child_agreements_info' => 'getChildAgreementsInfo',
+        'signature_type' => 'getSignatureType',
+        'external_id' => 'getExternalId',
         'locale' => 'getLocale',
         'message' => 'getMessage',
-        'name' => 'getName',
+        'vaulting_info' => 'getVaultingInfo',
+        'security_option' => 'getSecurityOption',
         'post_sign_option' => 'getPostSignOption',
         'reminder_frequency' => 'getReminderFrequency',
-        'security_option' => 'getSecurityOption',
+        'ccs' => 'getCcs',
+        'created_date' => 'getCreatedDate',
+        'expiration_time' => 'getExpirationTime',
         'sender_email' => 'getSenderEmail',
-        'signature_type' => 'getSignatureType',
+        'name' => 'getName',
+        'file_infos' => 'getFileInfos',
+        'id' => 'getId',
         'state' => 'getState',
-        'status' => 'getStatus',
-        'vaulting_info' => 'getVaultingInfo'
+        'status' => 'getStatus'
     ];
 
     /**
@@ -246,10 +246,14 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const REMINDER_FREQUENCY_DAILY_UNTIL_SIGNED = 'DAILY_UNTIL_SIGNED';
-    const REMINDER_FREQUENCY_WEEKLY_UNTIL_SIGNED = 'WEEKLY_UNTIL_SIGNED';
     const SIGNATURE_TYPE_ESIGN = 'ESIGN';
     const SIGNATURE_TYPE_WRITTEN = 'WRITTEN';
+    const REMINDER_FREQUENCY_DAILY_UNTIL_SIGNED = 'DAILY_UNTIL_SIGNED';
+    const REMINDER_FREQUENCY_WEEKDAILY_UNTIL_SIGNED = 'WEEKDAILY_UNTIL_SIGNED';
+    const REMINDER_FREQUENCY_EVERY_OTHER_DAY_UNTIL_SIGNED = 'EVERY_OTHER_DAY_UNTIL_SIGNED';
+    const REMINDER_FREQUENCY_EVERY_THIRD_DAY_UNTIL_SIGNED = 'EVERY_THIRD_DAY_UNTIL_SIGNED';
+    const REMINDER_FREQUENCY_EVERY_FIFTH_DAY_UNTIL_SIGNED = 'EVERY_FIFTH_DAY_UNTIL_SIGNED';
+    const REMINDER_FREQUENCY_WEEKLY_UNTIL_SIGNED = 'WEEKLY_UNTIL_SIGNED';
     const STATE_IN_PROCESS = 'IN_PROCESS';
     const STATUS_AUTHORING = 'AUTHORING';
     const STATUS_IN_PROCESS = 'IN_PROCESS';
@@ -265,11 +269,11 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getReminderFrequencyAllowableValues()
+    public function getSignatureTypeAllowableValues()
     {
         return [
-            self::REMINDER_FREQUENCY_DAILY_UNTIL_SIGNED,
-            self::REMINDER_FREQUENCY_WEEKLY_UNTIL_SIGNED,
+            self::SIGNATURE_TYPE_ESIGN,
+            self::SIGNATURE_TYPE_WRITTEN,
         ];
     }
     
@@ -278,11 +282,15 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getSignatureTypeAllowableValues()
+    public function getReminderFrequencyAllowableValues()
     {
         return [
-            self::SIGNATURE_TYPE_ESIGN,
-            self::SIGNATURE_TYPE_WRITTEN,
+            self::REMINDER_FREQUENCY_DAILY_UNTIL_SIGNED,
+            self::REMINDER_FREQUENCY_WEEKDAILY_UNTIL_SIGNED,
+            self::REMINDER_FREQUENCY_EVERY_OTHER_DAY_UNTIL_SIGNED,
+            self::REMINDER_FREQUENCY_EVERY_THIRD_DAY_UNTIL_SIGNED,
+            self::REMINDER_FREQUENCY_EVERY_FIFTH_DAY_UNTIL_SIGNED,
+            self::REMINDER_FREQUENCY_WEEKLY_UNTIL_SIGNED,
         ];
     }
     
@@ -331,25 +339,25 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ccs'] = isset($data['ccs']) ? $data['ccs'] : null;
-        $this->container['child_agreements_info'] = isset($data['child_agreements_info']) ? $data['child_agreements_info'] : null;
-        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
-        $this->container['expiration_time'] = isset($data['expiration_time']) ? $data['expiration_time'] : null;
-        $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
-        $this->container['file_infos'] = isset($data['file_infos']) ? $data['file_infos'] : null;
         $this->container['first_reminder_delay'] = isset($data['first_reminder_delay']) ? $data['first_reminder_delay'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['child_agreements_info'] = isset($data['child_agreements_info']) ? $data['child_agreements_info'] : null;
+        $this->container['signature_type'] = isset($data['signature_type']) ? $data['signature_type'] : null;
+        $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
         $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['vaulting_info'] = isset($data['vaulting_info']) ? $data['vaulting_info'] : null;
+        $this->container['security_option'] = isset($data['security_option']) ? $data['security_option'] : null;
         $this->container['post_sign_option'] = isset($data['post_sign_option']) ? $data['post_sign_option'] : null;
         $this->container['reminder_frequency'] = isset($data['reminder_frequency']) ? $data['reminder_frequency'] : null;
-        $this->container['security_option'] = isset($data['security_option']) ? $data['security_option'] : null;
+        $this->container['ccs'] = isset($data['ccs']) ? $data['ccs'] : null;
+        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
+        $this->container['expiration_time'] = isset($data['expiration_time']) ? $data['expiration_time'] : null;
         $this->container['sender_email'] = isset($data['sender_email']) ? $data['sender_email'] : null;
-        $this->container['signature_type'] = isset($data['signature_type']) ? $data['signature_type'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['file_infos'] = isset($data['file_infos']) ? $data['file_infos'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['vaulting_info'] = isset($data['vaulting_info']) ? $data['vaulting_info'] : null;
     }
 
     /**
@@ -361,18 +369,18 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getReminderFrequencyAllowableValues();
-        if (!is_null($this->container['reminder_frequency']) && !in_array($this->container['reminder_frequency'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'reminder_frequency', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
         $allowedValues = $this->getSignatureTypeAllowableValues();
         if (!is_null($this->container['signature_type']) && !in_array($this->container['signature_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'signature_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getReminderFrequencyAllowableValues();
+        if (!is_null($this->container['reminder_frequency']) && !in_array($this->container['reminder_frequency'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'reminder_frequency', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -409,25 +417,25 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets ccs
+     * Gets first_reminder_delay
      *
-     * @return \Adobe\ESign\\Model\MegaSignCcInfo[]
+     * @return int
      */
-    public function getCcs()
+    public function getFirstReminderDelay()
     {
-        return $this->container['ccs'];
+        return $this->container['first_reminder_delay'];
     }
 
     /**
-     * Sets ccs
+     * Sets first_reminder_delay
      *
-     * @param \Adobe\ESign\\Model\MegaSignCcInfo[] $ccs A list of one or more CCs that will be copied in the megasign transaction. The CCs will each receive an email at the beginning of the transaction and also when the final document is signed. The email addresses will also receive a copy of the document, attached as a PDF file
+     * @param int $first_reminder_delay Integer which specifies the delay in hours before sending the first reminder.<br>This is an optional field. The minimum value allowed is 1 hour and the maximum value can’t be more than the difference of agreement creation and expiry time of the agreement in hours.<br>If this is not specified but the reminder frequency is specified, then the first reminder will be sent based on frequency.<br>i.e. if the reminder is created with frequency specified as daily, the firstReminderDelay will be 24 hours. Cannot be updated in a PUT
      *
      * @return $this
      */
-    public function setCcs($ccs)
+    public function setFirstReminderDelay($first_reminder_delay)
     {
-        $this->container['ccs'] = $ccs;
+        $this->container['first_reminder_delay'] = $first_reminder_delay;
 
         return $this;
     }
@@ -457,49 +465,34 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets created_date
+     * Gets signature_type
      *
-     * @return \DateTime
+     * @return string
      */
-    public function getCreatedDate()
+    public function getSignatureType()
     {
-        return $this->container['created_date'];
+        return $this->container['signature_type'];
     }
 
     /**
-     * Sets created_date
+     * Sets signature_type
      *
-     * @param \DateTime $created_date Date when megasign was created. Format would be yyyy-MM-dd'T'HH:mm:ssZ. For example, e.g 2016-02-25T18:46:19Z represents UTC time
+     * @param string $signature_type Specifies the type of signature you would like to request - written or e-signature. The possible values are <br> ESIGN : Agreement needs to be signed electronically <br>, WRITTEN : Agreement will be signed using handwritten signature and signed document will be uploaded into the system
      *
      * @return $this
      */
-    public function setCreatedDate($created_date)
+    public function setSignatureType($signature_type)
     {
-        $this->container['created_date'] = $created_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets expiration_time
-     *
-     * @return \Adobe\ESign\\Model\\DateTime
-     */
-    public function getExpirationTime()
-    {
-        return $this->container['expiration_time'];
-    }
-
-    /**
-     * Sets expiration_time
-     *
-     * @param \Adobe\ESign\\Model\\DateTime $expiration_time Time after which Agreement expires and needs to be signed before it. Format should be yyyy-MM-dd'T'HH:mm:ssZ. For example, e.g 2016-02-25T18:46:19Z represents UTC time. Should not be provided in offline agreement creation.
-     *
-     * @return $this
-     */
-    public function setExpirationTime($expiration_time)
-    {
-        $this->container['expiration_time'] = $expiration_time;
+        $allowedValues = $this->getSignatureTypeAllowableValues();
+        if (!is_null($signature_type) && !in_array($signature_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'signature_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['signature_type'] = $signature_type;
 
         return $this;
     }
@@ -524,78 +517,6 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
     public function setExternalId($external_id)
     {
         $this->container['external_id'] = $external_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets file_infos
-     *
-     * @return \Adobe\ESign\\Model\FileInfo[]
-     */
-    public function getFileInfos()
-    {
-        return $this->container['file_infos'];
-    }
-
-    /**
-     * Sets file_infos
-     *
-     * @param \Adobe\ESign\\Model\FileInfo[] $file_infos A list of one or more files (or references to files) that will be sent out for signature. If more than one file is provided, they will be combined into one PDF before being sent out. Note: Only one of the four parameters in every FileInfo object must be specified
-     *
-     * @return $this
-     */
-    public function setFileInfos($file_infos)
-    {
-        $this->container['file_infos'] = $file_infos;
-
-        return $this;
-    }
-
-    /**
-     * Gets first_reminder_delay
-     *
-     * @return int
-     */
-    public function getFirstReminderDelay()
-    {
-        return $this->container['first_reminder_delay'];
-    }
-
-    /**
-     * Sets first_reminder_delay
-     *
-     * @param int $first_reminder_delay Integer which specifies the delay in hours before sending the first reminder.<br>This is an optional field. The minimum value allowed is 1 hour and the maximum value can’t be more than the difference of agreement creation and expiry time of the agreement in hours.<br>If this is not specified but the reminder frequency is specified, then the first reminder will be sent based on frequency.<br>i.e. if the reminder is created with frequency specified as daily, the firstReminderDelay will be 24 hours
-     *
-     * @return $this
-     */
-    public function setFirstReminderDelay($first_reminder_delay)
-    {
-        $this->container['first_reminder_delay'] = $first_reminder_delay;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id The unique identifier of megasign
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
 
         return $this;
     }
@@ -649,25 +570,49 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets name
+     * Gets vaulting_info
      *
-     * @return string
+     * @return \Adobe\ESign\\Model\VaultingInfo
      */
-    public function getName()
+    public function getVaultingInfo()
     {
-        return $this->container['name'];
+        return $this->container['vaulting_info'];
     }
 
     /**
-     * Sets name
+     * Sets vaulting_info
      *
-     * @param string $name The name of the agreement that will be used to identify it, in emails, website and other places
+     * @param \Adobe\ESign\\Model\VaultingInfo $vaulting_info Vaulting properties that allows Adobe Sign to securely store documents with a vault provider
      *
      * @return $this
      */
-    public function setName($name)
+    public function setVaultingInfo($vaulting_info)
     {
-        $this->container['name'] = $name;
+        $this->container['vaulting_info'] = $vaulting_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets security_option
+     *
+     * @return \Adobe\ESign\\Model\MegaSignSecurityOption
+     */
+    public function getSecurityOption()
+    {
+        return $this->container['security_option'];
+    }
+
+    /**
+     * Sets security_option
+     *
+     * @param \Adobe\ESign\\Model\MegaSignSecurityOption $security_option Optional security parameters for the megasign
+     *
+     * @return $this
+     */
+    public function setSecurityOption($security_option)
+    {
+        $this->container['security_option'] = $security_option;
 
         return $this;
     }
@@ -730,25 +675,73 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets security_option
+     * Gets ccs
      *
-     * @return \Adobe\ESign\\Model\MegaSignSecurityOption
+     * @return \Adobe\ESign\\Model\MegaSignCcInfo[]
      */
-    public function getSecurityOption()
+    public function getCcs()
     {
-        return $this->container['security_option'];
+        return $this->container['ccs'];
     }
 
     /**
-     * Sets security_option
+     * Sets ccs
      *
-     * @param \Adobe\ESign\\Model\MegaSignSecurityOption $security_option Optional security parameters for the megasign
+     * @param \Adobe\ESign\\Model\MegaSignCcInfo[] $ccs A list of one or more CCs that will be copied in the megasign transaction. The CCs will each receive an email at the beginning of the transaction and also when the final document is signed. The email addresses will also receive a copy of the document, attached as a PDF file
      *
      * @return $this
      */
-    public function setSecurityOption($security_option)
+    public function setCcs($ccs)
     {
-        $this->container['security_option'] = $security_option;
+        $this->container['ccs'] = $ccs;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_date
+     *
+     * @return \DateTime
+     */
+    public function getCreatedDate()
+    {
+        return $this->container['created_date'];
+    }
+
+    /**
+     * Sets created_date
+     *
+     * @param \DateTime $created_date Date when megasign was created. Format would be yyyy-MM-dd'T'HH:mm:ssZ. For example, e.g 2016-02-25T18:46:19Z represents UTC time
+     *
+     * @return $this
+     */
+    public function setCreatedDate($created_date)
+    {
+        $this->container['created_date'] = $created_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets expiration_time
+     *
+     * @return \Adobe\ESign\\Model\\DateTime
+     */
+    public function getExpirationTime()
+    {
+        return $this->container['expiration_time'];
+    }
+
+    /**
+     * Sets expiration_time
+     *
+     * @param \Adobe\ESign\\Model\\DateTime $expiration_time Time after which Agreement expires and needs to be signed before it. Format should be yyyy-MM-dd'T'HH:mm:ssZ. For example, e.g 2016-02-25T18:46:19Z represents UTC time. Should not be provided in offline agreement creation.
+     *
+     * @return $this
+     */
+    public function setExpirationTime($expiration_time)
+    {
+        $this->container['expiration_time'] = $expiration_time;
 
         return $this;
     }
@@ -778,34 +771,73 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets signature_type
+     * Gets name
      *
      * @return string
      */
-    public function getSignatureType()
+    public function getName()
     {
-        return $this->container['signature_type'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets signature_type
+     * Sets name
      *
-     * @param string $signature_type Specifies the type of signature you would like to request - written or e-signature. The possible values are <br> ESIGN : Agreement needs to be signed electronically <br>, WRITTEN : Agreement will be signed using handwritten signature and signed document will be uploaded into the system
+     * @param string $name The name of the agreement that will be used to identify it, in emails, website and other places
      *
      * @return $this
      */
-    public function setSignatureType($signature_type)
+    public function setName($name)
     {
-        $allowedValues = $this->getSignatureTypeAllowableValues();
-        if (!is_null($signature_type) && !in_array($signature_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'signature_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['signature_type'] = $signature_type;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets file_infos
+     *
+     * @return \Adobe\ESign\\Model\FileInfo[]
+     */
+    public function getFileInfos()
+    {
+        return $this->container['file_infos'];
+    }
+
+    /**
+     * Sets file_infos
+     *
+     * @param \Adobe\ESign\\Model\FileInfo[] $file_infos A list of one or more files (or references to files) that will be sent out for signature. If more than one file is provided, they will be combined into one PDF before being sent out. Note: Only one of the four parameters in every FileInfo object must be specified
+     *
+     * @return $this
+     */
+    public function setFileInfos($file_infos)
+    {
+        $this->container['file_infos'] = $file_infos;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id The unique identifier of megasign
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -872,30 +904,6 @@ class MegaSignCreationInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets vaulting_info
-     *
-     * @return \Adobe\ESign\\Model\VaultingInfo
-     */
-    public function getVaultingInfo()
-    {
-        return $this->container['vaulting_info'];
-    }
-
-    /**
-     * Sets vaulting_info
-     *
-     * @param \Adobe\ESign\\Model\VaultingInfo $vaulting_info Vaulting properties that allows Adobe Sign to securely store documents with a vault provider
-     *
-     * @return $this
-     */
-    public function setVaultingInfo($vaulting_info)
-    {
-        $this->container['vaulting_info'] = $vaulting_info;
 
         return $this;
     }

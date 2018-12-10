@@ -75,16 +75,16 @@ class URLFileInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "mime_type"
+     * Test attribute "name"
      */
-    public function testPropertyMimeType()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "mime_type"
      */
-    public function testPropertyName()
+    public function testPropertyMimeType()
     {
     }
 

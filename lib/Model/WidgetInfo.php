@@ -56,20 +56,20 @@ class WidgetInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'additional_participant_sets_info' => '\Adobe\ESign\\Model\WidgetAdditionalParticipationSetInfo[]',
-        'auth_failure_info' => '\Adobe\ESign\\Model\WidgetRedirectionInfo',
-        'ccs' => '\Adobe\ESign\\Model\WidgetCcInfo[]',
-        'completion_info' => '\Adobe\ESign\\Model\WidgetRedirectionInfo',
-        'created_date' => '\DateTime',
         'creator_email' => 'string',
+        'locale' => 'string',
+        'vaulting_info' => '\Adobe\ESign\\Model\VaultingInfo',
+        'security_option' => '\Adobe\ESign\\Model\SecurityOption',
+        'widget_participant_set_info' => '\Adobe\ESign\\Model\WidgetParticipantSetInfo',
+        'ccs' => '\Adobe\ESign\\Model\WidgetCcInfo[]',
+        'created_date' => '\DateTime',
+        'name' => 'string',
+        'completion_info' => '\Adobe\ESign\\Model\WidgetRedirectionInfo',
+        'auth_failure_info' => '\Adobe\ESign\\Model\WidgetRedirectionInfo',
         'file_infos' => '\Adobe\ESign\\Model\FileInfo[]',
         'id' => 'string',
-        'locale' => 'string',
-        'name' => 'string',
-        'security_option' => '\Adobe\ESign\\Model\SecurityOption',
         'state' => 'string',
-        'status' => 'string',
-        'vaulting_info' => '\Adobe\ESign\\Model\VaultingInfo',
-        'widget_participant_set_info' => '\Adobe\ESign\\Model\WidgetParticipantSetInfo'
+        'status' => 'string'
     ];
 
     /**
@@ -79,20 +79,20 @@ class WidgetInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'additional_participant_sets_info' => null,
-        'auth_failure_info' => null,
-        'ccs' => null,
-        'completion_info' => null,
-        'created_date' => 'date',
         'creator_email' => null,
+        'locale' => null,
+        'vaulting_info' => null,
+        'security_option' => null,
+        'widget_participant_set_info' => null,
+        'ccs' => null,
+        'created_date' => 'date',
+        'name' => null,
+        'completion_info' => null,
+        'auth_failure_info' => null,
         'file_infos' => null,
         'id' => null,
-        'locale' => null,
-        'name' => null,
-        'security_option' => null,
         'state' => null,
-        'status' => null,
-        'vaulting_info' => null,
-        'widget_participant_set_info' => null
+        'status' => null
     ];
 
     /**
@@ -123,20 +123,20 @@ class WidgetInfo implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'additional_participant_sets_info' => 'additionalParticipantSetsInfo',
-        'auth_failure_info' => 'authFailureInfo',
-        'ccs' => 'ccs',
-        'completion_info' => 'completionInfo',
-        'created_date' => 'createdDate',
         'creator_email' => 'creatorEmail',
+        'locale' => 'locale',
+        'vaulting_info' => 'vaultingInfo',
+        'security_option' => 'securityOption',
+        'widget_participant_set_info' => 'widgetParticipantSetInfo',
+        'ccs' => 'ccs',
+        'created_date' => 'createdDate',
+        'name' => 'name',
+        'completion_info' => 'completionInfo',
+        'auth_failure_info' => 'authFailureInfo',
         'file_infos' => 'fileInfos',
         'id' => 'id',
-        'locale' => 'locale',
-        'name' => 'name',
-        'security_option' => 'securityOption',
         'state' => 'state',
-        'status' => 'status',
-        'vaulting_info' => 'vaultingInfo',
-        'widget_participant_set_info' => 'widgetParticipantSetInfo'
+        'status' => 'status'
     ];
 
     /**
@@ -146,20 +146,20 @@ class WidgetInfo implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'additional_participant_sets_info' => 'setAdditionalParticipantSetsInfo',
-        'auth_failure_info' => 'setAuthFailureInfo',
-        'ccs' => 'setCcs',
-        'completion_info' => 'setCompletionInfo',
-        'created_date' => 'setCreatedDate',
         'creator_email' => 'setCreatorEmail',
+        'locale' => 'setLocale',
+        'vaulting_info' => 'setVaultingInfo',
+        'security_option' => 'setSecurityOption',
+        'widget_participant_set_info' => 'setWidgetParticipantSetInfo',
+        'ccs' => 'setCcs',
+        'created_date' => 'setCreatedDate',
+        'name' => 'setName',
+        'completion_info' => 'setCompletionInfo',
+        'auth_failure_info' => 'setAuthFailureInfo',
         'file_infos' => 'setFileInfos',
         'id' => 'setId',
-        'locale' => 'setLocale',
-        'name' => 'setName',
-        'security_option' => 'setSecurityOption',
         'state' => 'setState',
-        'status' => 'setStatus',
-        'vaulting_info' => 'setVaultingInfo',
-        'widget_participant_set_info' => 'setWidgetParticipantSetInfo'
+        'status' => 'setStatus'
     ];
 
     /**
@@ -169,20 +169,20 @@ class WidgetInfo implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'additional_participant_sets_info' => 'getAdditionalParticipantSetsInfo',
-        'auth_failure_info' => 'getAuthFailureInfo',
-        'ccs' => 'getCcs',
-        'completion_info' => 'getCompletionInfo',
-        'created_date' => 'getCreatedDate',
         'creator_email' => 'getCreatorEmail',
+        'locale' => 'getLocale',
+        'vaulting_info' => 'getVaultingInfo',
+        'security_option' => 'getSecurityOption',
+        'widget_participant_set_info' => 'getWidgetParticipantSetInfo',
+        'ccs' => 'getCcs',
+        'created_date' => 'getCreatedDate',
+        'name' => 'getName',
+        'completion_info' => 'getCompletionInfo',
+        'auth_failure_info' => 'getAuthFailureInfo',
         'file_infos' => 'getFileInfos',
         'id' => 'getId',
-        'locale' => 'getLocale',
-        'name' => 'getName',
-        'security_option' => 'getSecurityOption',
         'state' => 'getState',
-        'status' => 'getStatus',
-        'vaulting_info' => 'getVaultingInfo',
-        'widget_participant_set_info' => 'getWidgetParticipantSetInfo'
+        'status' => 'getStatus'
     ];
 
     /**
@@ -286,20 +286,20 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['additional_participant_sets_info'] = isset($data['additional_participant_sets_info']) ? $data['additional_participant_sets_info'] : null;
-        $this->container['auth_failure_info'] = isset($data['auth_failure_info']) ? $data['auth_failure_info'] : null;
-        $this->container['ccs'] = isset($data['ccs']) ? $data['ccs'] : null;
-        $this->container['completion_info'] = isset($data['completion_info']) ? $data['completion_info'] : null;
-        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
         $this->container['creator_email'] = isset($data['creator_email']) ? $data['creator_email'] : null;
+        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
+        $this->container['vaulting_info'] = isset($data['vaulting_info']) ? $data['vaulting_info'] : null;
+        $this->container['security_option'] = isset($data['security_option']) ? $data['security_option'] : null;
+        $this->container['widget_participant_set_info'] = isset($data['widget_participant_set_info']) ? $data['widget_participant_set_info'] : null;
+        $this->container['ccs'] = isset($data['ccs']) ? $data['ccs'] : null;
+        $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['completion_info'] = isset($data['completion_info']) ? $data['completion_info'] : null;
+        $this->container['auth_failure_info'] = isset($data['auth_failure_info']) ? $data['auth_failure_info'] : null;
         $this->container['file_infos'] = isset($data['file_infos']) ? $data['file_infos'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['security_option'] = isset($data['security_option']) ? $data['security_option'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['vaulting_info'] = isset($data['vaulting_info']) ? $data['vaulting_info'] : null;
-        $this->container['widget_participant_set_info'] = isset($data['widget_participant_set_info']) ? $data['widget_participant_set_info'] : null;
     }
 
     /**
@@ -367,25 +367,121 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets auth_failure_info
+     * Gets creator_email
      *
-     * @return \Adobe\ESign\\Model\WidgetRedirectionInfo
+     * @return string
      */
-    public function getAuthFailureInfo()
+    public function getCreatorEmail()
     {
-        return $this->container['auth_failure_info'];
+        return $this->container['creator_email'];
     }
 
     /**
-     * Sets auth_failure_info
+     * Sets creator_email
      *
-     * @param \Adobe\ESign\\Model\WidgetRedirectionInfo $auth_failure_info URL and associated properties for the error page the widget signer will be taken after failing to authenticate
+     * @param string $creator_email Email of widget creator. Only returned in GET response. Cannot be provided in POST/PUT request. If provided in POST, it will simply be ignored
      *
      * @return $this
      */
-    public function setAuthFailureInfo($auth_failure_info)
+    public function setCreatorEmail($creator_email)
     {
-        $this->container['auth_failure_info'] = $auth_failure_info;
+        $this->container['creator_email'] = $creator_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets locale
+     *
+     * @return string
+     */
+    public function getLocale()
+    {
+        return $this->container['locale'];
+    }
+
+    /**
+     * Sets locale
+     *
+     * @param string $locale The locale associated with this widget - specifies the language for the signing page and emails, for example en_US or fr_FR. If none specified, defaults to the language configured for the widget creator
+     *
+     * @return $this
+     */
+    public function setLocale($locale)
+    {
+        $this->container['locale'] = $locale;
+
+        return $this;
+    }
+
+    /**
+     * Gets vaulting_info
+     *
+     * @return \Adobe\ESign\\Model\VaultingInfo
+     */
+    public function getVaultingInfo()
+    {
+        return $this->container['vaulting_info'];
+    }
+
+    /**
+     * Sets vaulting_info
+     *
+     * @param \Adobe\ESign\\Model\VaultingInfo $vaulting_info Vaulting properties that allows Adobe Sign to securely store documents with a vault provider
+     *
+     * @return $this
+     */
+    public function setVaultingInfo($vaulting_info)
+    {
+        $this->container['vaulting_info'] = $vaulting_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets security_option
+     *
+     * @return \Adobe\ESign\\Model\SecurityOption
+     */
+    public function getSecurityOption()
+    {
+        return $this->container['security_option'];
+    }
+
+    /**
+     * Sets security_option
+     *
+     * @param \Adobe\ESign\\Model\SecurityOption $security_option Secondary security parameters for the widget
+     *
+     * @return $this
+     */
+    public function setSecurityOption($security_option)
+    {
+        $this->container['security_option'] = $security_option;
+
+        return $this;
+    }
+
+    /**
+     * Gets widget_participant_set_info
+     *
+     * @return \Adobe\ESign\\Model\WidgetParticipantSetInfo
+     */
+    public function getWidgetParticipantSetInfo()
+    {
+        return $this->container['widget_participant_set_info'];
+    }
+
+    /**
+     * Sets widget_participant_set_info
+     *
+     * @param \Adobe\ESign\\Model\WidgetParticipantSetInfo $widget_participant_set_info Represents widget participant for whom email should not be provided
+     *
+     * @return $this
+     */
+    public function setWidgetParticipantSetInfo($widget_participant_set_info)
+    {
+        $this->container['widget_participant_set_info'] = $widget_participant_set_info;
 
         return $this;
     }
@@ -415,30 +511,6 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets completion_info
-     *
-     * @return \Adobe\ESign\\Model\WidgetRedirectionInfo
-     */
-    public function getCompletionInfo()
-    {
-        return $this->container['completion_info'];
-    }
-
-    /**
-     * Sets completion_info
-     *
-     * @param \Adobe\ESign\\Model\WidgetRedirectionInfo $completion_info URL and associated properties for the success page the widget signer will be taken to after performing desired action on the widget
-     *
-     * @return $this
-     */
-    public function setCompletionInfo($completion_info)
-    {
-        $this->container['completion_info'] = $completion_info;
-
-        return $this;
-    }
-
-    /**
      * Gets created_date
      *
      * @return \DateTime
@@ -463,25 +535,73 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets creator_email
+     * Gets name
      *
      * @return string
      */
-    public function getCreatorEmail()
+    public function getName()
     {
-        return $this->container['creator_email'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets creator_email
+     * Sets name
      *
-     * @param string $creator_email Email of widget creator. Only returned in GET response. Cannot be provided in POST/PUT request. If provided in POST, it will simply be ignored
+     * @param string $name The name of the widget that will be used to identify it, in emails, website and other places
      *
      * @return $this
      */
-    public function setCreatorEmail($creator_email)
+    public function setName($name)
     {
-        $this->container['creator_email'] = $creator_email;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets completion_info
+     *
+     * @return \Adobe\ESign\\Model\WidgetRedirectionInfo
+     */
+    public function getCompletionInfo()
+    {
+        return $this->container['completion_info'];
+    }
+
+    /**
+     * Sets completion_info
+     *
+     * @param \Adobe\ESign\\Model\WidgetRedirectionInfo $completion_info URL and associated properties for the success page the widget signer will be taken to after performing desired action on the widget
+     *
+     * @return $this
+     */
+    public function setCompletionInfo($completion_info)
+    {
+        $this->container['completion_info'] = $completion_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets auth_failure_info
+     *
+     * @return \Adobe\ESign\\Model\WidgetRedirectionInfo
+     */
+    public function getAuthFailureInfo()
+    {
+        return $this->container['auth_failure_info'];
+    }
+
+    /**
+     * Sets auth_failure_info
+     *
+     * @param \Adobe\ESign\\Model\WidgetRedirectionInfo $auth_failure_info URL and associated properties for the error page the widget signer will be taken after failing to authenticate
+     *
+     * @return $this
+     */
+    public function setAuthFailureInfo($auth_failure_info)
+    {
+        $this->container['auth_failure_info'] = $auth_failure_info;
 
         return $this;
     }
@@ -530,78 +650,6 @@ class WidgetInfo implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets locale
-     *
-     * @return string
-     */
-    public function getLocale()
-    {
-        return $this->container['locale'];
-    }
-
-    /**
-     * Sets locale
-     *
-     * @param string $locale The locale associated with this widget - specifies the language for the signing page and emails, for example en_US or fr_FR. If none specified, defaults to the language configured for the widget creator
-     *
-     * @return $this
-     */
-    public function setLocale($locale)
-    {
-        $this->container['locale'] = $locale;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name The name of the widget that will be used to identify it, in emails, website and other places
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets security_option
-     *
-     * @return \Adobe\ESign\\Model\SecurityOption
-     */
-    public function getSecurityOption()
-    {
-        return $this->container['security_option'];
-    }
-
-    /**
-     * Sets security_option
-     *
-     * @param \Adobe\ESign\\Model\SecurityOption $security_option Secondary security parameters for the widget
-     *
-     * @return $this
-     */
-    public function setSecurityOption($security_option)
-    {
-        $this->container['security_option'] = $security_option;
 
         return $this;
     }
@@ -668,54 +716,6 @@ class WidgetInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets vaulting_info
-     *
-     * @return \Adobe\ESign\\Model\VaultingInfo
-     */
-    public function getVaultingInfo()
-    {
-        return $this->container['vaulting_info'];
-    }
-
-    /**
-     * Sets vaulting_info
-     *
-     * @param \Adobe\ESign\\Model\VaultingInfo $vaulting_info Vaulting properties that allows Adobe Sign to securely store documents with a vault provider
-     *
-     * @return $this
-     */
-    public function setVaultingInfo($vaulting_info)
-    {
-        $this->container['vaulting_info'] = $vaulting_info;
-
-        return $this;
-    }
-
-    /**
-     * Gets widget_participant_set_info
-     *
-     * @return \Adobe\ESign\\Model\WidgetParticipantSetInfo
-     */
-    public function getWidgetParticipantSetInfo()
-    {
-        return $this->container['widget_participant_set_info'];
-    }
-
-    /**
-     * Sets widget_participant_set_info
-     *
-     * @param \Adobe\ESign\\Model\WidgetParticipantSetInfo $widget_participant_set_info Represents widget participant for whom email should not be provided
-     *
-     * @return $this
-     */
-    public function setWidgetParticipantSetInfo($widget_participant_set_info)
-    {
-        $this->container['widget_participant_set_info'] = $widget_participant_set_info;
 
         return $this;
     }
