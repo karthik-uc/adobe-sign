@@ -6,6 +6,6 @@
     }
   ],
   "require": {
-    
+    "esign/agreements": "*"
   }
 }

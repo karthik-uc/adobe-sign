@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/UniCourt/adobe-sign.git"
+      "url": "https://github.com/esign/users.git"
     }
   ],
   "require": {
-    "UniCourt/adobe-sign": "*@dev"
+    "esign/users": "*@dev"
   }
 }
 ```
