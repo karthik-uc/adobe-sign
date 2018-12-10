@@ -1,6 +1,6 @@
 <?php
 /**
- * PageInfo
+ * CommonViewConfiguration
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PageInfo Class Doc Comment
+ * CommonViewConfiguration Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PageInfo implements ModelInterface, ArrayAccess
+class CommonViewConfiguration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class PageInfo implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PageInfo';
+    protected static $swaggerModelName = 'CommonViewConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,7 +55,9 @@ class PageInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'next_cursor' => 'string'
+        'auto_login_user' => 'bool',
+        'no_chrome' => 'bool',
+        'locale' => 'string'
     ];
 
     /**
@@ -64,7 +66,9 @@ class PageInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'next_cursor' => null
+        'auto_login_user' => null,
+        'no_chrome' => null,
+        'locale' => null
     ];
 
     /**
@@ -94,7 +98,9 @@ class PageInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_cursor' => 'nextCursor'
+        'auto_login_user' => 'autoLoginUser',
+        'no_chrome' => 'noChrome',
+        'locale' => 'locale'
     ];
 
     /**
@@ -103,7 +109,9 @@ class PageInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'next_cursor' => 'setNextCursor'
+        'auto_login_user' => 'setAutoLoginUser',
+        'no_chrome' => 'setNoChrome',
+        'locale' => 'setLocale'
     ];
 
     /**
@@ -112,7 +120,9 @@ class PageInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'next_cursor' => 'getNextCursor'
+        'auto_login_user' => 'getAutoLoginUser',
+        'no_chrome' => 'getNoChrome',
+        'locale' => 'getLocale'
     ];
 
     /**
@@ -175,7 +185,9 @@ class PageInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_cursor'] = isset($data['next_cursor']) ? $data['next_cursor'] : null;
+        $this->container['auto_login_user'] = isset($data['auto_login_user']) ? $data['auto_login_user'] : null;
+        $this->container['no_chrome'] = isset($data['no_chrome']) ? $data['no_chrome'] : null;
+        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
     }
 
     /**
@@ -203,25 +215,73 @@ class PageInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets next_cursor
+     * Gets auto_login_user
      *
-     * @return string
+     * @return bool
      */
-    public function getNextCursor()
+    public function getAutoLoginUser()
     {
-        return $this->container['next_cursor'];
+        return $this->container['auto_login_user'];
     }
 
     /**
-     * Sets next_cursor
+     * Sets auto_login_user
      *
-     * @param string $next_cursor Used to navigate to the next page. If not returned, there are no further pages.
+     * @param bool $auto_login_user Auto LogIn Flag. If true, the URL returned will automatically log the user in. If false, the URL returned will require the credentials. By default its value is false
      *
      * @return $this
      */
-    public function setNextCursor($next_cursor)
+    public function setAutoLoginUser($auto_login_user)
     {
-        $this->container['next_cursor'] = $next_cursor;
+        $this->container['auto_login_user'] = $auto_login_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets no_chrome
+     *
+     * @return bool
+     */
+    public function getNoChrome()
+    {
+        return $this->container['no_chrome'];
+    }
+
+    /**
+     * Sets no_chrome
+     *
+     * @param bool $no_chrome No Chrome Flag. If true, the embedded page is shown without a navigation header or footer. If false, the standard page header and footer will be present. By default its value is false
+     *
+     * @return $this
+     */
+    public function setNoChrome($no_chrome)
+    {
+        $this->container['no_chrome'] = $no_chrome;
+
+        return $this;
+    }
+
+    /**
+     * Gets locale
+     *
+     * @return string
+     */
+    public function getLocale()
+    {
+        return $this->container['locale'];
+    }
+
+    /**
+     * Sets locale
+     *
+     * @param string $locale Message template locale
+     *
+     * @return $this
+     */
+    public function setLocale($locale)
+    {
+        $this->container['locale'] = $locale;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * CommonViewConfiguration
+ * URLFileInfo
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * CommonViewConfiguration Class Doc Comment
+ * URLFileInfo Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CommonViewConfiguration implements ModelInterface, ArrayAccess
+class URLFileInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CommonViewConfiguration';
+    protected static $swaggerModelName = 'URLFileInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,9 +55,9 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'auto_login_user' => 'bool',
-        'locale' => 'string',
-        'no_chrome' => 'bool'
+        'name' => 'string',
+        'mime_type' => 'string',
+        'url' => 'string'
     ];
 
     /**
@@ -66,9 +66,9 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'auto_login_user' => null,
-        'locale' => null,
-        'no_chrome' => null
+        'name' => null,
+        'mime_type' => null,
+        'url' => null
     ];
 
     /**
@@ -98,9 +98,9 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'auto_login_user' => 'autoLoginUser',
-        'locale' => 'locale',
-        'no_chrome' => 'noChrome'
+        'name' => 'name',
+        'mime_type' => 'mimeType',
+        'url' => 'url'
     ];
 
     /**
@@ -109,9 +109,9 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'auto_login_user' => 'setAutoLoginUser',
-        'locale' => 'setLocale',
-        'no_chrome' => 'setNoChrome'
+        'name' => 'setName',
+        'mime_type' => 'setMimeType',
+        'url' => 'setUrl'
     ];
 
     /**
@@ -120,9 +120,9 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'auto_login_user' => 'getAutoLoginUser',
-        'locale' => 'getLocale',
-        'no_chrome' => 'getNoChrome'
+        'name' => 'getName',
+        'mime_type' => 'getMimeType',
+        'url' => 'getUrl'
     ];
 
     /**
@@ -185,9 +185,9 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['auto_login_user'] = isset($data['auto_login_user']) ? $data['auto_login_user'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['no_chrome'] = isset($data['no_chrome']) ? $data['no_chrome'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['mime_type'] = isset($data['mime_type']) ? $data['mime_type'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
     /**
@@ -215,73 +215,73 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets auto_login_user
-     *
-     * @return bool
-     */
-    public function getAutoLoginUser()
-    {
-        return $this->container['auto_login_user'];
-    }
-
-    /**
-     * Sets auto_login_user
-     *
-     * @param bool $auto_login_user Auto LogIn Flag. If true, the URL returned will automatically log the user in. If false, the URL returned will require the credentials. By default its value is false
-     *
-     * @return $this
-     */
-    public function setAutoLoginUser($auto_login_user)
-    {
-        $this->container['auto_login_user'] = $auto_login_user;
-
-        return $this;
-    }
-
-    /**
-     * Gets locale
+     * Gets name
      *
      * @return string
      */
-    public function getLocale()
+    public function getName()
     {
-        return $this->container['locale'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets locale
+     * Sets name
      *
-     * @param string $locale Message template locale
+     * @param string $name The original system file name of the document being sent
      *
      * @return $this
      */
-    public function setLocale($locale)
+    public function setName($name)
     {
-        $this->container['locale'] = $locale;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets no_chrome
+     * Gets mime_type
      *
-     * @return bool
+     * @return string
      */
-    public function getNoChrome()
+    public function getMimeType()
     {
-        return $this->container['no_chrome'];
+        return $this->container['mime_type'];
     }
 
     /**
-     * Sets no_chrome
+     * Sets mime_type
      *
-     * @param bool $no_chrome No Chrome Flag. If true, the embedded page is shown without a navigation header or footer. If false, the standard page header and footer will be present. By default its value is false
+     * @param string $mime_type The mime type of the referenced file, used to determine if the file can be accepted and the necessary conversion steps can be performed
      *
      * @return $this
      */
-    public function setNoChrome($no_chrome)
+    public function setMimeType($mime_type)
     {
-        $this->container['no_chrome'] = $no_chrome;
+        $this->container['mime_type'] = $mime_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     *
+     * @param string $url A publicly accessible URL for retrieving the raw file content
+     *
+     * @return $this
+     */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
 
         return $this;
     }

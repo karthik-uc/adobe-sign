@@ -1,6 +1,6 @@
 <?php
 /**
- * Document
+ * DocumentImageUrlsInfo
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * Document Class Doc Comment
+ * DocumentImageUrlsInfo Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Document implements ModelInterface, ArrayAccess
+class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class Document implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Document';
+    protected static $swaggerModelName = 'DocumentImageUrlsInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,11 +55,8 @@ class Document implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'label' => 'string',
-        'mime_type' => 'string',
-        'name' => 'string',
-        'num_pages' => 'int'
+        'document_image_urls_list' => '\Swagger\Client\Model\DocumentImageUrls[]',
+        'document_id' => 'string'
     ];
 
     /**
@@ -68,11 +65,8 @@ class Document implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'label' => null,
-        'mime_type' => null,
-        'name' => null,
-        'num_pages' => null
+        'document_image_urls_list' => null,
+        'document_id' => null
     ];
 
     /**
@@ -102,11 +96,8 @@ class Document implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'label' => 'label',
-        'mime_type' => 'mimeType',
-        'name' => 'name',
-        'num_pages' => 'numPages'
+        'document_image_urls_list' => 'documentImageUrlsList',
+        'document_id' => 'documentId'
     ];
 
     /**
@@ -115,11 +106,8 @@ class Document implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'label' => 'setLabel',
-        'mime_type' => 'setMimeType',
-        'name' => 'setName',
-        'num_pages' => 'setNumPages'
+        'document_image_urls_list' => 'setDocumentImageUrlsList',
+        'document_id' => 'setDocumentId'
     ];
 
     /**
@@ -128,11 +116,8 @@ class Document implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'label' => 'getLabel',
-        'mime_type' => 'getMimeType',
-        'name' => 'getName',
-        'num_pages' => 'getNumPages'
+        'document_image_urls_list' => 'getDocumentImageUrlsList',
+        'document_id' => 'getDocumentId'
     ];
 
     /**
@@ -195,11 +180,8 @@ class Document implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['mime_type'] = isset($data['mime_type']) ? $data['mime_type'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['num_pages'] = isset($data['num_pages']) ? $data['num_pages'] : null;
+        $this->container['document_image_urls_list'] = isset($data['document_image_urls_list']) ? $data['document_image_urls_list'] : null;
+        $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
     }
 
     /**
@@ -227,121 +209,49 @@ class Document implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets document_image_urls_list
      *
-     * @return string
+     * @return \Swagger\Client\Model\DocumentImageUrls[]
      */
-    public function getId()
+    public function getDocumentImageUrlsList()
     {
-        return $this->container['id'];
+        return $this->container['document_image_urls_list'];
     }
 
     /**
-     * Sets id
+     * Sets document_image_urls_list
      *
-     * @param string $id ID of the document. In case of PUT call, this is the only field that is accepted in Document structure. Name and mimeType are ignored in case of PUT call
+     * @param \Swagger\Client\Model\DocumentImageUrls[] $document_image_urls_list A list of documents image URLs.
      *
      * @return $this
      */
-    public function setId($id)
+    public function setDocumentImageUrlsList($document_image_urls_list)
     {
-        $this->container['id'] = $id;
+        $this->container['document_image_urls_list'] = $document_image_urls_list;
 
         return $this;
     }
 
     /**
-     * Gets label
+     * Gets document_id
      *
      * @return string
      */
-    public function getLabel()
+    public function getDocumentId()
     {
-        return $this->container['label'];
+        return $this->container['document_id'];
     }
 
     /**
-     * Sets label
+     * Sets document_id
      *
-     * @param string $label Label of the document
+     * @param string $document_id Id of the document
      *
      * @return $this
      */
-    public function setLabel($label)
+    public function setDocumentId($document_id)
     {
-        $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets mime_type
-     *
-     * @return string
-     */
-    public function getMimeType()
-    {
-        return $this->container['mime_type'];
-    }
-
-    /**
-     * Sets mime_type
-     *
-     * @param string $mime_type mimeType of the original file. This is returned in GET but not accepted back in PUT
-     *
-     * @return $this
-     */
-    public function setMimeType($mime_type)
-    {
-        $this->container['mime_type'] = $mime_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Name of the original document uploaded. This is returned in GET but not accepted back in PUT
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets num_pages
-     *
-     * @return int
-     */
-    public function getNumPages()
-    {
-        return $this->container['num_pages'];
-    }
-
-    /**
-     * Sets num_pages
-     *
-     * @param int $num_pages Number of pages in the document
-     *
-     * @return $this
-     */
-    public function setNumPages($num_pages)
-    {
-        $this->container['num_pages'] = $num_pages;
+        $this->container['document_id'] = $document_id;
 
         return $this;
     }
