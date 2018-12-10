@@ -81,7 +81,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://upstreamtest.na2.echosign.com/api/rest/v6*
+All URIs are relative to *https://secure.na1.echosign.com/api/rest/v6*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

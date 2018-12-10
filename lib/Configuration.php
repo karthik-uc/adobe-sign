@@ -79,7 +79,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://upstreamtest.na2.echosign.com/api/rest/v6';
+    protected $host = 'https://secure.na1.echosign.com/api/rest/v6';
 
     /**
      * User agent of the HTTP request, set to "PHP-Swagger" by default

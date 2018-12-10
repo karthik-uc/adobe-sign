@@ -1,6 +1,6 @@
 # Adobe\ESign\\GroupsApi
 
-All URIs are relative to *https://upstreamtest.na2.echosign.com/api/rest/v6*
+All URIs are relative to *https://secure.na1.echosign.com/api/rest/v6*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
