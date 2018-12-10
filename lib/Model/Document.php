@@ -55,11 +55,11 @@ class Document implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'num_pages' => 'int',
-        'name' => 'string',
         'id' => 'string',
         'label' => 'string',
-        'mime_type' => 'string'
+        'mime_type' => 'string',
+        'name' => 'string',
+        'num_pages' => 'int'
     ];
 
     /**
@@ -68,11 +68,11 @@ class Document implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'num_pages' => null,
-        'name' => null,
         'id' => null,
         'label' => null,
-        'mime_type' => null
+        'mime_type' => null,
+        'name' => null,
+        'num_pages' => null
     ];
 
     /**
@@ -102,11 +102,11 @@ class Document implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'num_pages' => 'numPages',
-        'name' => 'name',
         'id' => 'id',
         'label' => 'label',
-        'mime_type' => 'mimeType'
+        'mime_type' => 'mimeType',
+        'name' => 'name',
+        'num_pages' => 'numPages'
     ];
 
     /**
@@ -115,11 +115,11 @@ class Document implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'num_pages' => 'setNumPages',
-        'name' => 'setName',
         'id' => 'setId',
         'label' => 'setLabel',
-        'mime_type' => 'setMimeType'
+        'mime_type' => 'setMimeType',
+        'name' => 'setName',
+        'num_pages' => 'setNumPages'
     ];
 
     /**
@@ -128,11 +128,11 @@ class Document implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'num_pages' => 'getNumPages',
-        'name' => 'getName',
         'id' => 'getId',
         'label' => 'getLabel',
-        'mime_type' => 'getMimeType'
+        'mime_type' => 'getMimeType',
+        'name' => 'getName',
+        'num_pages' => 'getNumPages'
     ];
 
     /**
@@ -195,11 +195,11 @@ class Document implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['num_pages'] = isset($data['num_pages']) ? $data['num_pages'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
         $this->container['mime_type'] = isset($data['mime_type']) ? $data['mime_type'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['num_pages'] = isset($data['num_pages']) ? $data['num_pages'] : null;
     }
 
     /**
@@ -225,54 +225,6 @@ class Document implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets num_pages
-     *
-     * @return int
-     */
-    public function getNumPages()
-    {
-        return $this->container['num_pages'];
-    }
-
-    /**
-     * Sets num_pages
-     *
-     * @param int $num_pages Number of pages in the document
-     *
-     * @return $this
-     */
-    public function setNumPages($num_pages)
-    {
-        $this->container['num_pages'] = $num_pages;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Name of the original document uploaded. This is returned in GET but not accepted back in PUT
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
 
     /**
      * Gets id
@@ -342,6 +294,54 @@ class Document implements ModelInterface, ArrayAccess
     public function setMimeType($mime_type)
     {
         $this->container['mime_type'] = $mime_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name Name of the original document uploaded. This is returned in GET but not accepted back in PUT
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets num_pages
+     *
+     * @return int
+     */
+    public function getNumPages()
+    {
+        return $this->container['num_pages'];
+    }
+
+    /**
+     * Sets num_pages
+     *
+     * @param int $num_pages Number of pages in the document
+     *
+     * @return $this
+     */
+    public function setNumPages($num_pages)
+    {
+        $this->container['num_pages'] = $num_pages;
 
         return $this;
     }

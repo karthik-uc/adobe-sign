@@ -215,7 +215,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
      * Sets next_cursor
      *
-     * @param string $next_cursor Used to navigate to the next page. If not returned, there are no further pages.
+     * @param string $next_cursor Used to navigate to the next page. If not returned, there are no further pages.
      *
      * @return $this
      */

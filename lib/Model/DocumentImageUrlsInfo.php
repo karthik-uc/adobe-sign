@@ -55,8 +55,8 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'document_image_urls_list' => '\Swagger\Client\Model\DocumentImageUrls[]',
-        'document_id' => 'string'
+        'document_id' => 'string',
+        'document_image_urls_list' => '\Swagger\Client\Model\DocumentImageUrls[]'
     ];
 
     /**
@@ -65,8 +65,8 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'document_image_urls_list' => null,
-        'document_id' => null
+        'document_id' => null,
+        'document_image_urls_list' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'document_image_urls_list' => 'documentImageUrlsList',
-        'document_id' => 'documentId'
+        'document_id' => 'documentId',
+        'document_image_urls_list' => 'documentImageUrlsList'
     ];
 
     /**
@@ -106,8 +106,8 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'document_image_urls_list' => 'setDocumentImageUrlsList',
-        'document_id' => 'setDocumentId'
+        'document_id' => 'setDocumentId',
+        'document_image_urls_list' => 'setDocumentImageUrlsList'
     ];
 
     /**
@@ -116,8 +116,8 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'document_image_urls_list' => 'getDocumentImageUrlsList',
-        'document_id' => 'getDocumentId'
+        'document_id' => 'getDocumentId',
+        'document_image_urls_list' => 'getDocumentImageUrlsList'
     ];
 
     /**
@@ -180,8 +180,8 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['document_image_urls_list'] = isset($data['document_image_urls_list']) ? $data['document_image_urls_list'] : null;
         $this->container['document_id'] = isset($data['document_id']) ? $data['document_id'] : null;
+        $this->container['document_image_urls_list'] = isset($data['document_image_urls_list']) ? $data['document_image_urls_list'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets document_image_urls_list
-     *
-     * @return \Swagger\Client\Model\DocumentImageUrls[]
-     */
-    public function getDocumentImageUrlsList()
-    {
-        return $this->container['document_image_urls_list'];
-    }
-
-    /**
-     * Sets document_image_urls_list
-     *
-     * @param \Swagger\Client\Model\DocumentImageUrls[] $document_image_urls_list A list of documents image URLs.
-     *
-     * @return $this
-     */
-    public function setDocumentImageUrlsList($document_image_urls_list)
-    {
-        $this->container['document_image_urls_list'] = $document_image_urls_list;
-
-        return $this;
-    }
-
-    /**
      * Gets document_id
      *
      * @return string
@@ -252,6 +228,30 @@ class DocumentImageUrlsInfo implements ModelInterface, ArrayAccess
     public function setDocumentId($document_id)
     {
         $this->container['document_id'] = $document_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets document_image_urls_list
+     *
+     * @return \Swagger\Client\Model\DocumentImageUrls[]
+     */
+    public function getDocumentImageUrlsList()
+    {
+        return $this->container['document_image_urls_list'];
+    }
+
+    /**
+     * Sets document_image_urls_list
+     *
+     * @param \Swagger\Client\Model\DocumentImageUrls[] $document_image_urls_list A list of documents image URLs.
+     *
+     * @return $this
+     */
+    public function setDocumentImageUrlsList($document_image_urls_list)
+    {
+        $this->container['document_image_urls_list'] = $document_image_urls_list;
 
         return $this;
     }

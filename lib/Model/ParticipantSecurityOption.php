@@ -55,8 +55,8 @@ class ParticipantSecurityOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'password' => 'string',
         'authentication_method' => 'string',
+        'password' => 'string',
         'phone_info' => '\Swagger\Client\Model\PhoneInfo'
     ];
 
@@ -66,8 +66,8 @@ class ParticipantSecurityOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'password' => null,
         'authentication_method' => null,
+        'password' => null,
         'phone_info' => null
     ];
 
@@ -98,8 +98,8 @@ class ParticipantSecurityOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'password' => 'password',
         'authentication_method' => 'authenticationMethod',
+        'password' => 'password',
         'phone_info' => 'phoneInfo'
     ];
 
@@ -109,8 +109,8 @@ class ParticipantSecurityOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'password' => 'setPassword',
         'authentication_method' => 'setAuthenticationMethod',
+        'password' => 'setPassword',
         'phone_info' => 'setPhoneInfo'
     ];
 
@@ -120,8 +120,8 @@ class ParticipantSecurityOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'password' => 'getPassword',
         'authentication_method' => 'getAuthenticationMethod',
+        'password' => 'getPassword',
         'phone_info' => 'getPhoneInfo'
     ];
 
@@ -208,8 +208,8 @@ class ParticipantSecurityOption implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['authentication_method'] = isset($data['authentication_method']) ? $data['authentication_method'] : null;
+        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['phone_info'] = isset($data['phone_info']) ? $data['phone_info'] : null;
     }
 
@@ -246,30 +246,6 @@ class ParticipantSecurityOption implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets password
-     *
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->container['password'];
-    }
-
-    /**
-     * Sets password
-     *
-     * @param string $password The password required for the participant to view and sign the document. Note that AdobeSign will never show this password to anyone, so you will need to separately communicate it to any relevant parties. The password will not be returned in GET call. In case of PUT call, password associated with Agreement resource will remain unchanged if no password is specified but authentication method is provided as PASSWORD
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        $this->container['password'] = $password;
-
-        return $this;
-    }
-
-    /**
      * Gets authentication_method
      *
      * @return string
@@ -298,6 +274,30 @@ class ParticipantSecurityOption implements ModelInterface, ArrayAccess
             );
         }
         $this->container['authentication_method'] = $authentication_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->container['password'];
+    }
+
+    /**
+     * Sets password
+     *
+     * @param string $password The password required for the participant to view and sign the document. Note that AdobeSign will never show this password to anyone, so you will need to separately communicate it to any relevant parties. The password will not be returned in GET call. In case of PUT call, password associated with Agreement resource will remain unchanged if no password is specified but authentication method is provided as PASSWORD
+     *
+     * @return $this
+     */
+    public function setPassword($password)
+    {
+        $this->container['password'] = $password;
 
         return $this;
     }

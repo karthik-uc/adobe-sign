@@ -55,9 +55,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
         'company' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'name' => 'string'
     ];
 
     /**
@@ -66,9 +66,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'name' => null,
         'company' => null,
-        'email' => null
+        'email' => null,
+        'name' => null
     ];
 
     /**
@@ -98,9 +98,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
         'company' => 'company',
-        'email' => 'email'
+        'email' => 'email',
+        'name' => 'name'
     ];
 
     /**
@@ -109,9 +109,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
         'company' => 'setCompany',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'name' => 'setName'
     ];
 
     /**
@@ -120,9 +120,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
         'company' => 'getCompany',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'name' => 'getName'
     ];
 
     /**
@@ -185,9 +185,9 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -213,30 +213,6 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Name captured during digital signing
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
 
     /**
      * Gets company
@@ -282,6 +258,30 @@ class DigitalSignatureInfo implements ModelInterface, ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name Name captured during digital signing
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }

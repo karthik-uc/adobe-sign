@@ -55,10 +55,10 @@ class CCParticipantInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'participant_id' => 'string',
-        'name' => 'string',
         'company' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'name' => 'string',
+        'participant_id' => 'string'
     ];
 
     /**
@@ -67,10 +67,10 @@ class CCParticipantInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'participant_id' => null,
-        'name' => null,
         'company' => null,
-        'email' => null
+        'email' => null,
+        'name' => null,
+        'participant_id' => null
     ];
 
     /**
@@ -100,10 +100,10 @@ class CCParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'participant_id' => 'participantId',
-        'name' => 'name',
         'company' => 'company',
-        'email' => 'email'
+        'email' => 'email',
+        'name' => 'name',
+        'participant_id' => 'participantId'
     ];
 
     /**
@@ -112,10 +112,10 @@ class CCParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'participant_id' => 'setParticipantId',
-        'name' => 'setName',
         'company' => 'setCompany',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'name' => 'setName',
+        'participant_id' => 'setParticipantId'
     ];
 
     /**
@@ -124,10 +124,10 @@ class CCParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'participant_id' => 'getParticipantId',
-        'name' => 'getName',
         'company' => 'getCompany',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'name' => 'getName',
+        'participant_id' => 'getParticipantId'
     ];
 
     /**
@@ -190,10 +190,10 @@ class CCParticipantInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['participant_id'] = isset($data['participant_id']) ? $data['participant_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['participant_id'] = isset($data['participant_id']) ? $data['participant_id'] : null;
     }
 
     /**
@@ -219,54 +219,6 @@ class CCParticipantInfo implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets participant_id
-     *
-     * @return string
-     */
-    public function getParticipantId()
-    {
-        return $this->container['participant_id'];
-    }
-
-    /**
-     * Sets participant_id
-     *
-     * @param string $participant_id The unique identifier of the CC participant of the agreement.
-     *
-     * @return $this
-     */
-    public function setParticipantId($participant_id)
-    {
-        $this->container['participant_id'] = $participant_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Name of the CC participant, if available.
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
 
     /**
      * Gets company
@@ -305,13 +257,61 @@ class CCParticipantInfo implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Email of the CC participant of the agreement
+     * @param string $email Email of the CC participant of the widget
      *
      * @return $this
      */
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name Name of the CC participant, if available.
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets participant_id
+     *
+     * @return string
+     */
+    public function getParticipantId()
+    {
+        return $this->container['participant_id'];
+    }
+
+    /**
+     * Sets participant_id
+     *
+     * @param string $participant_id The unique identifier of the CC participant of the widget.
+     *
+     * @return $this
+     */
+    public function setParticipantId($participant_id)
+    {
+        $this->container['participant_id'] = $participant_id;
 
         return $this;
     }

@@ -55,8 +55,8 @@ class PostSignOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'redirect_url' => 'string',
-        'redirect_delay' => 'int'
+        'redirect_delay' => 'int',
+        'redirect_url' => 'string'
     ];
 
     /**
@@ -65,8 +65,8 @@ class PostSignOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'redirect_url' => null,
-        'redirect_delay' => null
+        'redirect_delay' => null,
+        'redirect_url' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class PostSignOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'redirect_url' => 'redirectUrl',
-        'redirect_delay' => 'redirectDelay'
+        'redirect_delay' => 'redirectDelay',
+        'redirect_url' => 'redirectUrl'
     ];
 
     /**
@@ -106,8 +106,8 @@ class PostSignOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'redirect_url' => 'setRedirectUrl',
-        'redirect_delay' => 'setRedirectDelay'
+        'redirect_delay' => 'setRedirectDelay',
+        'redirect_url' => 'setRedirectUrl'
     ];
 
     /**
@@ -116,8 +116,8 @@ class PostSignOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'redirect_url' => 'getRedirectUrl',
-        'redirect_delay' => 'getRedirectDelay'
+        'redirect_delay' => 'getRedirectDelay',
+        'redirect_url' => 'getRedirectUrl'
     ];
 
     /**
@@ -180,8 +180,8 @@ class PostSignOption implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['redirect_url'] = isset($data['redirect_url']) ? $data['redirect_url'] : null;
         $this->container['redirect_delay'] = isset($data['redirect_delay']) ? $data['redirect_delay'] : null;
+        $this->container['redirect_url'] = isset($data['redirect_url']) ? $data['redirect_url'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class PostSignOption implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets redirect_url
-     *
-     * @return string
-     */
-    public function getRedirectUrl()
-    {
-        return $this->container['redirect_url'];
-    }
-
-    /**
-     * Sets redirect_url
-     *
-     * @param string $redirect_url A publicly accessible url to which the user will be sent after successfully completing the signing process
-     *
-     * @return $this
-     */
-    public function setRedirectUrl($redirect_url)
-    {
-        $this->container['redirect_url'] = $redirect_url;
-
-        return $this;
-    }
-
-    /**
      * Gets redirect_delay
      *
      * @return int
@@ -252,6 +228,30 @@ class PostSignOption implements ModelInterface, ArrayAccess
     public function setRedirectDelay($redirect_delay)
     {
         $this->container['redirect_delay'] = $redirect_delay;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_url
+     *
+     * @return string
+     */
+    public function getRedirectUrl()
+    {
+        return $this->container['redirect_url'];
+    }
+
+    /**
+     * Sets redirect_url
+     *
+     * @param string $redirect_url A publicly accessible url to which the user will be sent after successfully completing the signing process
+     *
+     * @return $this
+     */
+    public function setRedirectUrl($redirect_url)
+    {
+        $this->container['redirect_url'] = $redirect_url;
 
         return $this;
     }

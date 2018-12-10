@@ -55,9 +55,9 @@ class DisplayParticipantInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'full_name' => 'string',
         'company' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'full_name' => 'string'
     ];
 
     /**
@@ -66,9 +66,9 @@ class DisplayParticipantInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'full_name' => null,
         'company' => null,
-        'email' => null
+        'email' => null,
+        'full_name' => null
     ];
 
     /**
@@ -98,9 +98,9 @@ class DisplayParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'full_name' => 'fullName',
         'company' => 'company',
-        'email' => 'email'
+        'email' => 'email',
+        'full_name' => 'fullName'
     ];
 
     /**
@@ -109,9 +109,9 @@ class DisplayParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'full_name' => 'setFullName',
         'company' => 'setCompany',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'full_name' => 'setFullName'
     ];
 
     /**
@@ -120,9 +120,9 @@ class DisplayParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'full_name' => 'getFullName',
         'company' => 'getCompany',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'full_name' => 'getFullName'
     ];
 
     /**
@@ -185,9 +185,9 @@ class DisplayParticipantInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
     }
 
     /**
@@ -213,30 +213,6 @@ class DisplayParticipantInfo implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets full_name
-     *
-     * @return string
-     */
-    public function getFullName()
-    {
-        return $this->container['full_name'];
-    }
-
-    /**
-     * Sets full_name
-     *
-     * @param string $full_name Displays the full name of the user, if available.
-     *
-     * @return $this
-     */
-    public function setFullName($full_name)
-    {
-        $this->container['full_name'] = $full_name;
-
-        return $this;
-    }
 
     /**
      * Gets company
@@ -282,6 +258,30 @@ class DisplayParticipantInfo implements ModelInterface, ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_name
+     *
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->container['full_name'];
+    }
+
+    /**
+     * Sets full_name
+     *
+     * @param string $full_name Displays the full name of the user, if available.
+     *
+     * @return $this
+     */
+    public function setFullName($full_name)
+    {
+        $this->container['full_name'] = $full_name;
 
         return $this;
     }

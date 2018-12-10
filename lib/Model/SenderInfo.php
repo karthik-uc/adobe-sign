@@ -55,12 +55,11 @@ class SenderInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'participant_id' => 'string',
-        'name' => 'string',
-        'self' => 'bool',
         'company' => 'string',
         'email' => 'string',
-        'status' => 'string'
+        'name' => 'string',
+        'participant_id' => 'string',
+        'self' => 'bool'
     ];
 
     /**
@@ -69,12 +68,11 @@ class SenderInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'participant_id' => null,
-        'name' => null,
-        'self' => null,
         'company' => null,
         'email' => null,
-        'status' => null
+        'name' => null,
+        'participant_id' => null,
+        'self' => null
     ];
 
     /**
@@ -104,12 +102,11 @@ class SenderInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'participant_id' => 'participantId',
-        'name' => 'name',
-        'self' => 'self',
         'company' => 'company',
         'email' => 'email',
-        'status' => 'status'
+        'name' => 'name',
+        'participant_id' => 'participantId',
+        'self' => 'self'
     ];
 
     /**
@@ -118,12 +115,11 @@ class SenderInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'participant_id' => 'setParticipantId',
-        'name' => 'setName',
-        'self' => 'setSelf',
         'company' => 'setCompany',
         'email' => 'setEmail',
-        'status' => 'setStatus'
+        'name' => 'setName',
+        'participant_id' => 'setParticipantId',
+        'self' => 'setSelf'
     ];
 
     /**
@@ -132,12 +128,11 @@ class SenderInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'participant_id' => 'getParticipantId',
-        'name' => 'getName',
-        'self' => 'getSelf',
         'company' => 'getCompany',
         'email' => 'getEmail',
-        'status' => 'getStatus'
+        'name' => 'getName',
+        'participant_id' => 'getParticipantId',
+        'self' => 'getSelf'
     ];
 
     /**
@@ -181,43 +176,8 @@ class SenderInfo implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const STATUS_CANCELLED = 'CANCELLED';
-    const STATUS_COMPLETED = 'COMPLETED';
-    const STATUS_EXPIRED = 'EXPIRED';
-    const STATUS_NOT_YET_VISIBLE = 'NOT_YET_VISIBLE';
-    const STATUS_WAITING_FOR_AUTHORING = 'WAITING_FOR_AUTHORING';
-    const STATUS_WAITING_FOR_MY_DELEGATION = 'WAITING_FOR_MY_DELEGATION';
-    const STATUS_WAITING_FOR_MY_ACCEPTANCE = 'WAITING_FOR_MY_ACCEPTANCE';
-    const STATUS_WAITING_FOR_MY_ACKNOWLEDGEMENT = 'WAITING_FOR_MY_ACKNOWLEDGEMENT';
-    const STATUS_WAITING_FOR_MY_APPROVAL = 'WAITING_FOR_MY_APPROVAL';
-    const STATUS_WAITING_FOR_MY_FORM_FILLING = 'WAITING_FOR_MY_FORM_FILLING';
-    const STATUS_WAITING_FOR_MY_SIGNATURE = 'WAITING_FOR_MY_SIGNATURE';
-    const STATUS_WAITING_FOR_OTHERS = 'WAITING_FOR_OTHERS';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_CANCELLED,
-            self::STATUS_COMPLETED,
-            self::STATUS_EXPIRED,
-            self::STATUS_NOT_YET_VISIBLE,
-            self::STATUS_WAITING_FOR_AUTHORING,
-            self::STATUS_WAITING_FOR_MY_DELEGATION,
-            self::STATUS_WAITING_FOR_MY_ACCEPTANCE,
-            self::STATUS_WAITING_FOR_MY_ACKNOWLEDGEMENT,
-            self::STATUS_WAITING_FOR_MY_APPROVAL,
-            self::STATUS_WAITING_FOR_MY_FORM_FILLING,
-            self::STATUS_WAITING_FOR_MY_SIGNATURE,
-            self::STATUS_WAITING_FOR_OTHERS,
-        ];
-    }
     
 
     /**
@@ -235,12 +195,11 @@ class SenderInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['participant_id'] = isset($data['participant_id']) ? $data['participant_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['self'] = isset($data['self']) ? $data['self'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['participant_id'] = isset($data['participant_id']) ? $data['participant_id'] : null;
+        $this->container['self'] = isset($data['self']) ? $data['self'] : null;
     }
 
     /**
@@ -251,14 +210,6 @@ class SenderInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -276,78 +227,6 @@ class SenderInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets participant_id
-     *
-     * @return string
-     */
-    public function getParticipantId()
-    {
-        return $this->container['participant_id'];
-    }
-
-    /**
-     * Sets participant_id
-     *
-     * @param string $participant_id The unique identifier of the sender of the agreement.
-     *
-     * @return $this
-     */
-    public function setParticipantId($participant_id)
-    {
-        $this->container['participant_id'] = $participant_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Name of the sender, if available.
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets self
-     *
-     * @return bool
-     */
-    public function getSelf()
-    {
-        return $this->container['self'];
-    }
-
-    /**
-     * Sets self
-     *
-     * @param bool $self True if the sender is the same user that is calling the API.
-     *
-     * @return $this
-     */
-    public function setSelf($self)
-    {
-        $this->container['self'] = $self;
-
-        return $this;
-    }
-
-    /**
      * Gets company
      *
      * @return string
@@ -360,7 +239,7 @@ class SenderInfo implements ModelInterface, ArrayAccess
     /**
      * Sets company
      *
-     * @param string $company Company of the sender, if available.
+     * @param string $company Company of the creator, if available.
      *
      * @return $this
      */
@@ -384,7 +263,7 @@ class SenderInfo implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Email of the sender of the agreement.
+     * @param string $email Email of the creator of the widget.
      *
      * @return $this
      */
@@ -396,34 +275,73 @@ class SenderInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets status
+     * Gets name
      *
      * @return string
      */
-    public function getStatus()
+    public function getName()
     {
-        return $this->container['status'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets status
+     * Sets name
      *
-     * @param string $status The agreement status with respect to the participant set. This cannot be changed as part of the PUT call.
+     * @param string $name Name of the creator, if available.
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setName($name)
     {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets participant_id
+     *
+     * @return string
+     */
+    public function getParticipantId()
+    {
+        return $this->container['participant_id'];
+    }
+
+    /**
+     * Sets participant_id
+     *
+     * @param string $participant_id The unique identifier of the creator of the widget.
+     *
+     * @return $this
+     */
+    public function setParticipantId($participant_id)
+    {
+        $this->container['participant_id'] = $participant_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets self
+     *
+     * @return bool
+     */
+    public function getSelf()
+    {
+        return $this->container['self'];
+    }
+
+    /**
+     * Sets self
+     *
+     * @param bool $self True if the creator of the widget is the same user that is calling the API.
+     *
+     * @return $this
+     */
+    public function setSelf($self)
+    {
+        $this->container['self'] = $self;
 
         return $this;
     }

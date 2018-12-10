@@ -12,20 +12,15 @@ then
     exit;
 fi
 
-docker run --rm -v ${PWD}:/local/SwaggerClient-php \
-    swaggerapi/swagger-codegen-cli:2.4.0 generate \
-    --input-spec /local/SwaggerClient-php/json/libraryDocuments.json \
-    --lang $1 \
-    --output /local \
-    --git-user-id UniCourt \
-    --git-repo-id adobe-sign
-
-docker run --rm -v ${PWD}:/local/SwaggerClient-php \
-    swaggerapi/swagger-codegen-cli:2.4.0 generate \
-    --input-spec /local/SwaggerClient-php/json/agreements.json \
-    --lang $1 \
-    --output /local \
-    --git-user-id UniCourt \
-    --git-repo-id adobe-sign
+for i in $(find json -name "*.json")
+do
+    docker run --rm -v ${PWD}:/local/SwaggerClient-php \
+        swaggerapi/swagger-codegen-cli:2.4.0 generate \
+        --input-spec /local/SwaggerClient-php/$i \
+        --lang $1 \
+        --output /local \
+        --git-user-id UniCourt \
+        --git-repo-id adobe-sign
+done
 
 sudo chown -R $USER:$USER .

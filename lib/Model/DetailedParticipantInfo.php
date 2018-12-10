@@ -55,14 +55,14 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
-        'self' => 'bool',
         'company' => 'string',
-        'id' => 'string',
-        'fax' => 'string',
-        'private_message' => 'string',
         'email' => 'string',
+        'fax' => 'string',
+        'id' => 'string',
+        'name' => 'string',
+        'private_message' => 'string',
         'security_option' => '\Swagger\Client\Model\ParticipantSecurityOption',
+        'self' => 'bool',
         'status' => 'string'
     ];
 
@@ -72,14 +72,14 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'name' => null,
-        'self' => null,
         'company' => null,
-        'id' => null,
-        'fax' => null,
-        'private_message' => null,
         'email' => null,
+        'fax' => null,
+        'id' => null,
+        'name' => null,
+        'private_message' => null,
         'security_option' => null,
+        'self' => null,
         'status' => null
     ];
 
@@ -110,14 +110,14 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'self' => 'self',
         'company' => 'company',
-        'id' => 'id',
-        'fax' => 'fax',
-        'private_message' => 'privateMessage',
         'email' => 'email',
+        'fax' => 'fax',
+        'id' => 'id',
+        'name' => 'name',
+        'private_message' => 'privateMessage',
         'security_option' => 'securityOption',
+        'self' => 'self',
         'status' => 'status'
     ];
 
@@ -127,14 +127,14 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'self' => 'setSelf',
         'company' => 'setCompany',
-        'id' => 'setId',
-        'fax' => 'setFax',
-        'private_message' => 'setPrivateMessage',
         'email' => 'setEmail',
+        'fax' => 'setFax',
+        'id' => 'setId',
+        'name' => 'setName',
+        'private_message' => 'setPrivateMessage',
         'security_option' => 'setSecurityOption',
+        'self' => 'setSelf',
         'status' => 'setStatus'
     ];
 
@@ -144,14 +144,14 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'self' => 'getSelf',
         'company' => 'getCompany',
-        'id' => 'getId',
-        'fax' => 'getFax',
-        'private_message' => 'getPrivateMessage',
         'email' => 'getEmail',
+        'fax' => 'getFax',
+        'id' => 'getId',
+        'name' => 'getName',
+        'private_message' => 'getPrivateMessage',
         'security_option' => 'getSecurityOption',
+        'self' => 'getSelf',
         'status' => 'getStatus'
     ];
 
@@ -230,14 +230,14 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['self'] = isset($data['self']) ? $data['self'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['fax'] = isset($data['fax']) ? $data['fax'] : null;
-        $this->container['private_message'] = isset($data['private_message']) ? $data['private_message'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['fax'] = isset($data['fax']) ? $data['fax'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['private_message'] = isset($data['private_message']) ? $data['private_message'] : null;
         $this->container['security_option'] = isset($data['security_option']) ? $data['security_option'] : null;
+        $this->container['self'] = isset($data['self']) ? $data['self'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
@@ -274,54 +274,6 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name The name of the participant, if available. This cannot be changed as part of the PUT call.
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets self
-     *
-     * @return bool
-     */
-    public function getSelf()
-    {
-        return $this->container['self'];
-    }
-
-    /**
-     * Sets self
-     *
-     * @param bool $self True if this participant is the same user that is calling the API. Returned as part of Get. Ignored (not required) if modifying a participant set (PUT).
-     *
-     * @return $this
-     */
-    public function setSelf($self)
-    {
-        $this->container['self'] = $self;
-
-        return $this;
-    }
-
-    /**
      * Gets company
      *
      * @return string
@@ -341,78 +293,6 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
     public function setCompany($company)
     {
         $this->container['company'] = $company;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id The unique identifier of the participant. This will be returned as part of Get call but is not mandatory to be passed as part of PUT call for agreements/{id}/members/participantSets/{id}.
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets fax
-     *
-     * @return string
-     */
-    public function getFax()
-    {
-        return $this->container['fax'];
-    }
-
-    /**
-     * Sets fax
-     *
-     * @param string $fax Fax of the participant. New Agreements can not be created with fax option. This is only returned for legacy agreements created with fax as participants
-     *
-     * @return $this
-     */
-    public function setFax($fax)
-    {
-        $this->container['fax'] = $fax;
-
-        return $this;
-    }
-
-    /**
-     * Gets private_message
-     *
-     * @return string
-     */
-    public function getPrivateMessage()
-    {
-        return $this->container['private_message'];
-    }
-
-    /**
-     * Sets private_message
-     *
-     * @param string $private_message The private message of the participant, if available. This cannot be changed as part of the PUT call.
-     *
-     * @return $this
-     */
-    public function setPrivateMessage($private_message)
-    {
-        $this->container['private_message'] = $private_message;
 
         return $this;
     }
@@ -442,6 +322,102 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets fax
+     *
+     * @return string
+     */
+    public function getFax()
+    {
+        return $this->container['fax'];
+    }
+
+    /**
+     * Sets fax
+     *
+     * @param string $fax Fax of the participant. New Agreements can not be created with fax option. This is only returned for legacy agreements created with fax as participants
+     *
+     * @return $this
+     */
+    public function setFax($fax)
+    {
+        $this->container['fax'] = $fax;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id The unique identifier of the participant. This will be returned as part of Get call but is not mandatory to be passed as part of PUT call for agreements/{id}/members/participantSets/{id}.
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name The name of the participant, if available. This cannot be changed as part of the PUT call.
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets private_message
+     *
+     * @return string
+     */
+    public function getPrivateMessage()
+    {
+        return $this->container['private_message'];
+    }
+
+    /**
+     * Sets private_message
+     *
+     * @param string $private_message The private message of the participant, if available. This cannot be changed as part of the PUT call.
+     *
+     * @return $this
+     */
+    public function setPrivateMessage($private_message)
+    {
+        $this->container['private_message'] = $private_message;
+
+        return $this;
+    }
+
+    /**
      * Gets security_option
      *
      * @return \Swagger\Client\Model\ParticipantSecurityOption
@@ -461,6 +437,30 @@ class DetailedParticipantInfo implements ModelInterface, ArrayAccess
     public function setSecurityOption($security_option)
     {
         $this->container['security_option'] = $security_option;
+
+        return $this;
+    }
+
+    /**
+     * Gets self
+     *
+     * @return bool
+     */
+    public function getSelf()
+    {
+        return $this->container['self'];
+    }
+
+    /**
+     * Sets self
+     *
+     * @param bool $self True if this participant is the same user that is calling the API. Returned as part of Get. Ignored (not required) if modifying a participant set (PUT).
+     *
+     * @return $this
+     */
+    public function setSelf($self)
+    {
+        $this->container['self'] = $self;
 
         return $this;
     }

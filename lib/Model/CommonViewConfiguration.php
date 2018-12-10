@@ -56,8 +56,7 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'auto_login_user' => 'bool',
-        'no_chrome' => 'bool',
-        'locale' => 'string'
+        'no_chrome' => 'bool'
     ];
 
     /**
@@ -67,8 +66,7 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'auto_login_user' => null,
-        'no_chrome' => null,
-        'locale' => null
+        'no_chrome' => null
     ];
 
     /**
@@ -99,8 +97,7 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'auto_login_user' => 'autoLoginUser',
-        'no_chrome' => 'noChrome',
-        'locale' => 'locale'
+        'no_chrome' => 'noChrome'
     ];
 
     /**
@@ -110,8 +107,7 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'auto_login_user' => 'setAutoLoginUser',
-        'no_chrome' => 'setNoChrome',
-        'locale' => 'setLocale'
+        'no_chrome' => 'setNoChrome'
     ];
 
     /**
@@ -121,8 +117,7 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'auto_login_user' => 'getAutoLoginUser',
-        'no_chrome' => 'getNoChrome',
-        'locale' => 'getLocale'
+        'no_chrome' => 'getNoChrome'
     ];
 
     /**
@@ -187,7 +182,6 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
     {
         $this->container['auto_login_user'] = isset($data['auto_login_user']) ? $data['auto_login_user'] : null;
         $this->container['no_chrome'] = isset($data['no_chrome']) ? $data['no_chrome'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
     }
 
     /**
@@ -258,30 +252,6 @@ class CommonViewConfiguration implements ModelInterface, ArrayAccess
     public function setNoChrome($no_chrome)
     {
         $this->container['no_chrome'] = $no_chrome;
-
-        return $this;
-    }
-
-    /**
-     * Gets locale
-     *
-     * @return string
-     */
-    public function getLocale()
-    {
-        return $this->container['locale'];
-    }
-
-    /**
-     * Sets locale
-     *
-     * @param string $locale Message template locale
-     *
-     * @return $this
-     */
-    public function setLocale($locale)
-    {
-        $this->container['locale'] = $locale;
 
         return $this;
     }

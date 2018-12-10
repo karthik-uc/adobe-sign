@@ -55,10 +55,10 @@ class FileInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'transient_document_id' => 'string',
         'document' => '\Swagger\Client\Model\Document',
-        'library_document_id' => 'string',
         'label' => 'string',
+        'library_document_id' => 'string',
+        'transient_document_id' => 'string',
         'url_file_info' => '\Swagger\Client\Model\URLFileInfo'
     ];
 
@@ -68,10 +68,10 @@ class FileInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'transient_document_id' => null,
         'document' => null,
-        'library_document_id' => null,
         'label' => null,
+        'library_document_id' => null,
+        'transient_document_id' => null,
         'url_file_info' => null
     ];
 
@@ -102,10 +102,10 @@ class FileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'transient_document_id' => 'transientDocumentId',
         'document' => 'document',
-        'library_document_id' => 'libraryDocumentId',
         'label' => 'label',
+        'library_document_id' => 'libraryDocumentId',
+        'transient_document_id' => 'transientDocumentId',
         'url_file_info' => 'urlFileInfo'
     ];
 
@@ -115,10 +115,10 @@ class FileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'transient_document_id' => 'setTransientDocumentId',
         'document' => 'setDocument',
-        'library_document_id' => 'setLibraryDocumentId',
         'label' => 'setLabel',
+        'library_document_id' => 'setLibraryDocumentId',
+        'transient_document_id' => 'setTransientDocumentId',
         'url_file_info' => 'setUrlFileInfo'
     ];
 
@@ -128,10 +128,10 @@ class FileInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'transient_document_id' => 'getTransientDocumentId',
         'document' => 'getDocument',
-        'library_document_id' => 'getLibraryDocumentId',
         'label' => 'getLabel',
+        'library_document_id' => 'getLibraryDocumentId',
+        'transient_document_id' => 'getTransientDocumentId',
         'url_file_info' => 'getUrlFileInfo'
     ];
 
@@ -195,10 +195,10 @@ class FileInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['transient_document_id'] = isset($data['transient_document_id']) ? $data['transient_document_id'] : null;
         $this->container['document'] = isset($data['document']) ? $data['document'] : null;
-        $this->container['library_document_id'] = isset($data['library_document_id']) ? $data['library_document_id'] : null;
         $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['library_document_id'] = isset($data['library_document_id']) ? $data['library_document_id'] : null;
+        $this->container['transient_document_id'] = isset($data['transient_document_id']) ? $data['transient_document_id'] : null;
         $this->container['url_file_info'] = isset($data['url_file_info']) ? $data['url_file_info'] : null;
     }
 
@@ -227,30 +227,6 @@ class FileInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets transient_document_id
-     *
-     * @return string
-     */
-    public function getTransientDocumentId()
-    {
-        return $this->container['transient_document_id'];
-    }
-
-    /**
-     * Sets transient_document_id
-     *
-     * @param string $transient_document_id ID for a transient document that will be added to the agreement
-     *
-     * @return $this
-     */
-    public function setTransientDocumentId($transient_document_id)
-    {
-        $this->container['transient_document_id'] = $transient_document_id;
-
-        return $this;
-    }
-
-    /**
      * Gets document
      *
      * @return \Swagger\Client\Model\Document
@@ -263,13 +239,37 @@ class FileInfo implements ModelInterface, ArrayAccess
     /**
      * Sets document
      *
-     * @param \Swagger\Client\Model\Document $document A document that is associated with the agreement. This field cannot be provided in POST call. In case of GET call, this is the only field returned in the response
+     * @param \Swagger\Client\Model\Document $document A document that is associated with the widget. This field cannot be provided in POST call. In case of GET call, this is the only field returned in the response
      *
      * @return $this
      */
     public function setDocument($document)
     {
         $this->container['document'] = $document;
+
+        return $this;
+    }
+
+    /**
+     * Gets label
+     *
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+     * Sets label
+     *
+     * @param string $label The unique label value of a file info element. In case of custom workflow this will map a file to corresponding file element in workflow definition. This must be specified in case of custom workflow agreement creation request
+     *
+     * @return $this
+     */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
 
         return $this;
     }
@@ -299,25 +299,25 @@ class FileInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets label
+     * Gets transient_document_id
      *
      * @return string
      */
-    public function getLabel()
+    public function getTransientDocumentId()
     {
-        return $this->container['label'];
+        return $this->container['transient_document_id'];
     }
 
     /**
-     * Sets label
+     * Sets transient_document_id
      *
-     * @param string $label The unique label value of a file info element. In case of custom workflow this will map a file to corresponding file element in workflow definition. This must be specified in case of custom workflow agreement creation request
+     * @param string $transient_document_id ID for a transient document that will be added to the agreement
      *
      * @return $this
      */
-    public function setLabel($label)
+    public function setTransientDocumentId($transient_document_id)
     {
-        $this->container['label'] = $label;
+        $this->container['transient_document_id'] = $transient_document_id;
 
         return $this;
     }

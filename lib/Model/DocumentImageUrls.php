@@ -55,9 +55,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'image_size' => 'string',
         'image_ur_ls' => '\Swagger\Client\Model\PageImageUrl[]',
-        'images_available' => 'bool',
-        'image_size' => 'string'
+        'images_available' => 'bool'
     ];
 
     /**
@@ -66,9 +66,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'image_size' => null,
         'image_ur_ls' => null,
-        'images_available' => null,
-        'image_size' => null
+        'images_available' => null
     ];
 
     /**
@@ -98,9 +98,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'image_size' => 'imageSize',
         'image_ur_ls' => 'imageURLs',
-        'images_available' => 'imagesAvailable',
-        'image_size' => 'imageSize'
+        'images_available' => 'imagesAvailable'
     ];
 
     /**
@@ -109,9 +109,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'image_size' => 'setImageSize',
         'image_ur_ls' => 'setImageUrLs',
-        'images_available' => 'setImagesAvailable',
-        'image_size' => 'setImageSize'
+        'images_available' => 'setImagesAvailable'
     ];
 
     /**
@@ -120,9 +120,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'image_size' => 'getImageSize',
         'image_ur_ls' => 'getImageUrLs',
-        'images_available' => 'getImagesAvailable',
-        'image_size' => 'getImageSize'
+        'images_available' => 'getImagesAvailable'
     ];
 
     /**
@@ -214,9 +214,9 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['image_size'] = isset($data['image_size']) ? $data['image_size'] : null;
         $this->container['image_ur_ls'] = isset($data['image_ur_ls']) ? $data['image_ur_ls'] : null;
         $this->container['images_available'] = isset($data['images_available']) ? $data['images_available'] : null;
-        $this->container['image_size'] = isset($data['image_size']) ? $data['image_size'] : null;
     }
 
     /**
@@ -250,6 +250,39 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets image_size
+     *
+     * @return string
+     */
+    public function getImageSize()
+    {
+        return $this->container['image_size'];
+    }
+
+    /**
+     * Sets image_size
+     *
+     * @param string $image_size ImageSize corresponding to the imageUrl returned
+     *
+     * @return $this
+     */
+    public function setImageSize($image_size)
+    {
+        $allowedValues = $this->getImageSizeAllowableValues();
+        if (!is_null($image_size) && !in_array($image_size, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'image_size', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['image_size'] = $image_size;
+
+        return $this;
+    }
 
     /**
      * Gets image_ur_ls
@@ -295,39 +328,6 @@ class DocumentImageUrls implements ModelInterface, ArrayAccess
     public function setImagesAvailable($images_available)
     {
         $this->container['images_available'] = $images_available;
-
-        return $this;
-    }
-
-    /**
-     * Gets image_size
-     *
-     * @return string
-     */
-    public function getImageSize()
-    {
-        return $this->container['image_size'];
-    }
-
-    /**
-     * Sets image_size
-     *
-     * @param string $image_size ImageSize corresponding to the imageUrl returned
-     *
-     * @return $this
-     */
-    public function setImageSize($image_size)
-    {
-        $allowedValues = $this->getImageSizeAllowableValues();
-        if (!is_null($image_size) && !in_array($image_size, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'image_size', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['image_size'] = $image_size;
 
         return $this;
     }
