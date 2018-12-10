@@ -75,23 +75,23 @@ class DetailedParticipantInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "self"
+     */
+    public function testPropertySelf()
+    {
+    }
+
+    /**
      * Test attribute "company"
      */
     public function testPropertyCompany()
-    {
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-    }
-
-    /**
-     * Test attribute "fax"
-     */
-    public function testPropertyFax()
     {
     }
 
@@ -103,9 +103,9 @@ class DetailedParticipantInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "fax"
      */
-    public function testPropertyName()
+    public function testPropertyFax()
     {
     }
 
@@ -117,16 +117,16 @@ class DetailedParticipantInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "security_option"
+     * Test attribute "email"
      */
-    public function testPropertySecurityOption()
+    public function testPropertyEmail()
     {
     }
 
     /**
-     * Test attribute "self"
+     * Test attribute "security_option"
      */
-    public function testPropertySelf()
+    public function testPropertySecurityOption()
     {
     }
 

@@ -75,16 +75,9 @@ class SenderInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "company"
+     * Test attribute "participant_id"
      */
-    public function testPropertyCompany()
-    {
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
+    public function testPropertyParticipantId()
     {
     }
 
@@ -96,16 +89,23 @@ class SenderInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "participant_id"
+     * Test attribute "self"
      */
-    public function testPropertyParticipantId()
+    public function testPropertySelf()
     {
     }
 
     /**
-     * Test attribute "self"
+     * Test attribute "company"
      */
-    public function testPropertySelf()
+    public function testPropertyCompany()
+    {
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
     {
     }
 }

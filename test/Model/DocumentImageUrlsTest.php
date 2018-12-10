@@ -75,13 +75,6 @@ class DocumentImageUrlsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "image_size"
-     */
-    public function testPropertyImageSize()
-    {
-    }
-
-    /**
      * Test attribute "image_ur_ls"
      */
     public function testPropertyImageUrLs()
@@ -92,6 +85,13 @@ class DocumentImageUrlsTest extends \PHPUnit_Framework_TestCase
      * Test attribute "images_available"
      */
     public function testPropertyImagesAvailable()
+    {
+    }
+
+    /**
+     * Test attribute "image_size"
+     */
+    public function testPropertyImageSize()
     {
     }
 }

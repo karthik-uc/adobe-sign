@@ -75,16 +75,16 @@ class PhoneInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "country_code"
+     * Test attribute "phone"
      */
-    public function testPropertyCountryCode()
+    public function testPropertyPhone()
     {
     }
 
     /**
-     * Test attribute "phone"
+     * Test attribute "country_code"
      */
-    public function testPropertyPhone()
+    public function testPropertyCountryCode()
     {
     }
 }

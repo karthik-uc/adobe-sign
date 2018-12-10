@@ -75,16 +75,16 @@ class WidgetAgreementsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "user_agreement_list"
      */
-    public function testPropertyPage()
+    public function testPropertyUserAgreementList()
     {
     }
 
     /**
-     * Test attribute "user_agreement_list"
+     * Test attribute "page"
      */
-    public function testPropertyUserAgreementList()
+    public function testPropertyPage()
     {
     }
 }

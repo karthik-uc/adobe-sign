@@ -55,13 +55,13 @@ class UserWorkflow implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'created' => '\DateTime',
-        'description' => 'string',
-        'display_name' => 'string',
-        'id' => 'string',
-        'name' => 'string',
-        'scope' => 'string',
         'scope_id' => 'string',
+        'created' => '\DateTime',
+        'display_name' => 'string',
+        'scope' => 'string',
+        'name' => 'string',
+        'description' => 'string',
+        'id' => 'string',
         'status' => 'string'
     ];
 
@@ -71,13 +71,13 @@ class UserWorkflow implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'created' => 'date',
-        'description' => null,
-        'display_name' => null,
-        'id' => null,
-        'name' => null,
-        'scope' => null,
         'scope_id' => null,
+        'created' => 'date',
+        'display_name' => null,
+        'scope' => null,
+        'name' => null,
+        'description' => null,
+        'id' => null,
         'status' => null
     ];
 
@@ -108,13 +108,13 @@ class UserWorkflow implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'created' => 'created',
-        'description' => 'description',
-        'display_name' => 'displayName',
-        'id' => 'id',
-        'name' => 'name',
-        'scope' => 'scope',
         'scope_id' => 'scopeId',
+        'created' => 'created',
+        'display_name' => 'displayName',
+        'scope' => 'scope',
+        'name' => 'name',
+        'description' => 'description',
+        'id' => 'id',
         'status' => 'status'
     ];
 
@@ -124,13 +124,13 @@ class UserWorkflow implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'created' => 'setCreated',
-        'description' => 'setDescription',
-        'display_name' => 'setDisplayName',
-        'id' => 'setId',
-        'name' => 'setName',
-        'scope' => 'setScope',
         'scope_id' => 'setScopeId',
+        'created' => 'setCreated',
+        'display_name' => 'setDisplayName',
+        'scope' => 'setScope',
+        'name' => 'setName',
+        'description' => 'setDescription',
+        'id' => 'setId',
         'status' => 'setStatus'
     ];
 
@@ -140,13 +140,13 @@ class UserWorkflow implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'created' => 'getCreated',
-        'description' => 'getDescription',
-        'display_name' => 'getDisplayName',
-        'id' => 'getId',
-        'name' => 'getName',
-        'scope' => 'getScope',
         'scope_id' => 'getScopeId',
+        'created' => 'getCreated',
+        'display_name' => 'getDisplayName',
+        'scope' => 'getScope',
+        'name' => 'getName',
+        'description' => 'getDescription',
+        'id' => 'getId',
         'status' => 'getStatus'
     ];
 
@@ -242,13 +242,13 @@ class UserWorkflow implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['display_name'] = isset($data['display_name']) ? $data['display_name'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
         $this->container['scope_id'] = isset($data['scope_id']) ? $data['scope_id'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['display_name'] = isset($data['display_name']) ? $data['display_name'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
@@ -293,6 +293,30 @@ class UserWorkflow implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets scope_id
+     *
+     * @return string
+     */
+    public function getScopeId()
+    {
+        return $this->container['scope_id'];
+    }
+
+    /**
+     * Sets scope_id
+     *
+     * @param string $scope_id Identifier of scope. Currently it is applicable for scope GROUP only and the value will be groupId.
+     *
+     * @return $this
+     */
+    public function setScopeId($scope_id)
+    {
+        $this->container['scope_id'] = $scope_id;
+
+        return $this;
+    }
+
+    /**
      * Gets created
      *
      * @return \DateTime
@@ -317,30 +341,6 @@ class UserWorkflow implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description Description provided for this workflow at the time of its creation
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
      * Gets display_name
      *
      * @return string
@@ -360,54 +360,6 @@ class UserWorkflow implements ModelInterface, ArrayAccess
     public function setDisplayName($display_name)
     {
         $this->container['display_name'] = $display_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id The unique identifier of a workflow
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name The name of the workflow.
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
 
         return $this;
     }
@@ -446,25 +398,73 @@ class UserWorkflow implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets scope_id
+     * Gets name
      *
      * @return string
      */
-    public function getScopeId()
+    public function getName()
     {
-        return $this->container['scope_id'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets scope_id
+     * Sets name
      *
-     * @param string $scope_id Identifier of scope. Currently it is applicable for scope GROUP only and the value will be groupId.
+     * @param string $name The name of the workflow.
      *
      * @return $this
      */
-    public function setScopeId($scope_id)
+    public function setName($name)
     {
-        $this->container['scope_id'] = $scope_id;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description Description provided for this workflow at the time of its creation
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id The unique identifier of a workflow
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

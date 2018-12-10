@@ -75,23 +75,9 @@ class UserWidgetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-    }
-
-    /**
      * Test attribute "hidden"
      */
     public function testPropertyHidden()
-    {
-    }
-
-    /**
-     * Test attribute "javascript"
-     */
-    public function testPropertyJavascript()
     {
     }
 
@@ -110,9 +96,16 @@ class UserWidgetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "id"
      */
-    public function testPropertyStatus()
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "javascript"
+     */
+    public function testPropertyJavascript()
     {
     }
 
@@ -120,6 +113,13 @@ class UserWidgetTest extends \PHPUnit_Framework_TestCase
      * Test attribute "url"
      */
     public function testPropertyUrl()
+    {
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
     {
     }
 }

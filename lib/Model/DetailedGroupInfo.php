@@ -56,8 +56,8 @@ class DetailedGroupInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'created' => '\DateTime',
-        'id' => 'string',
-        'name' => 'string'
+        'name' => 'string',
+        'id' => 'string'
     ];
 
     /**
@@ -67,8 +67,8 @@ class DetailedGroupInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'created' => 'date',
-        'id' => null,
-        'name' => null
+        'name' => null,
+        'id' => null
     ];
 
     /**
@@ -99,8 +99,8 @@ class DetailedGroupInfo implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'created' => 'created',
-        'id' => 'id',
-        'name' => 'name'
+        'name' => 'name',
+        'id' => 'id'
     ];
 
     /**
@@ -110,8 +110,8 @@ class DetailedGroupInfo implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'created' => 'setCreated',
-        'id' => 'setId',
-        'name' => 'setName'
+        'name' => 'setName',
+        'id' => 'setId'
     ];
 
     /**
@@ -121,8 +121,8 @@ class DetailedGroupInfo implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'created' => 'getCreated',
-        'id' => 'getId',
-        'name' => 'getName'
+        'name' => 'getName',
+        'id' => 'getId'
     ];
 
     /**
@@ -186,8 +186,8 @@ class DetailedGroupInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -239,30 +239,6 @@ class DetailedGroupInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id The unique identifier of the Group. This will be returned as part of GET call but is not mandatory to be passed as part of PUT/POST call for groups/{groupId}
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      *
      * @return string
@@ -282,6 +258,30 @@ class DetailedGroupInfo implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id The unique identifier of the Group. This will be returned as part of GET call but is not mandatory to be passed as part of PUT/POST call for groups/{groupId}
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

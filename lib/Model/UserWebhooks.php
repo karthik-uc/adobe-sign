@@ -55,8 +55,8 @@ class UserWebhooks implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => '\Adobe\ESign\\Model\PageInfo',
-        'user_webhook_list' => '\Adobe\ESign\\Model\UserWebhook[]'
+        'user_webhook_list' => '\Adobe\ESign\\Model\UserWebhook[]',
+        'page' => '\Adobe\ESign\\Model\PageInfo'
     ];
 
     /**
@@ -65,8 +65,8 @@ class UserWebhooks implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => null,
-        'user_webhook_list' => null
+        'user_webhook_list' => null,
+        'page' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class UserWebhooks implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'page',
-        'user_webhook_list' => 'userWebhookList'
+        'user_webhook_list' => 'userWebhookList',
+        'page' => 'page'
     ];
 
     /**
@@ -106,8 +106,8 @@ class UserWebhooks implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'user_webhook_list' => 'setUserWebhookList'
+        'user_webhook_list' => 'setUserWebhookList',
+        'page' => 'setPage'
     ];
 
     /**
@@ -116,8 +116,8 @@ class UserWebhooks implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'user_webhook_list' => 'getUserWebhookList'
+        'user_webhook_list' => 'getUserWebhookList',
+        'page' => 'getPage'
     ];
 
     /**
@@ -180,8 +180,8 @@ class UserWebhooks implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['user_webhook_list'] = isset($data['user_webhook_list']) ? $data['user_webhook_list'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class UserWebhooks implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
-     *
-     * @return \Adobe\ESign\\Model\PageInfo
-     */
-    public function getPage()
-    {
-        return $this->container['page'];
-    }
-
-    /**
-     * Sets page
-     *
-     * @param \Adobe\ESign\\Model\PageInfo $page Pagination information for navigating through the response
-     *
-     * @return $this
-     */
-    public function setPage($page)
-    {
-        $this->container['page'] = $page;
-
-        return $this;
-    }
-
-    /**
      * Gets user_webhook_list
      *
      * @return \Adobe\ESign\\Model\UserWebhook[]
@@ -252,6 +228,30 @@ class UserWebhooks implements ModelInterface, ArrayAccess
     public function setUserWebhookList($user_webhook_list)
     {
         $this->container['user_webhook_list'] = $user_webhook_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets page
+     *
+     * @return \Adobe\ESign\\Model\PageInfo
+     */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+     * Sets page
+     *
+     * @param \Adobe\ESign\\Model\PageInfo $page Pagination information for navigating through the response
+     *
+     * @return $this
+     */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
 
         return $this;
     }

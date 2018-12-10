@@ -55,8 +55,8 @@ class WidgetInActiveInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'message' => 'string',
-        'redirect_url' => 'string'
+        'redirect_url' => 'string',
+        'message' => 'string'
     ];
 
     /**
@@ -65,8 +65,8 @@ class WidgetInActiveInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'message' => null,
-        'redirect_url' => null
+        'redirect_url' => null,
+        'message' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class WidgetInActiveInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message',
-        'redirect_url' => 'redirectUrl'
+        'redirect_url' => 'redirectUrl',
+        'message' => 'message'
     ];
 
     /**
@@ -106,8 +106,8 @@ class WidgetInActiveInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage',
-        'redirect_url' => 'setRedirectUrl'
+        'redirect_url' => 'setRedirectUrl',
+        'message' => 'setMessage'
     ];
 
     /**
@@ -116,8 +116,8 @@ class WidgetInActiveInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage',
-        'redirect_url' => 'getRedirectUrl'
+        'redirect_url' => 'getRedirectUrl',
+        'message' => 'getMessage'
     ];
 
     /**
@@ -180,8 +180,8 @@ class WidgetInActiveInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['redirect_url'] = isset($data['redirect_url']) ? $data['redirect_url'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class WidgetInActiveInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets message
-     *
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param string $message Display this custom message to the user when the widget is accessed. Note that this can contain wiki markup to include clickable links in the message. This is required if redirectUrl is not provided. Both message and redirectUrl can not be specified.
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
      * Gets redirect_url
      *
      * @return string
@@ -252,6 +228,30 @@ class WidgetInActiveInfo implements ModelInterface, ArrayAccess
     public function setRedirectUrl($redirect_url)
     {
         $this->container['redirect_url'] = $redirect_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets message
+     *
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+     * Sets message
+     *
+     * @param string $message Display this custom message to the user when the widget is accessed. Note that this can contain wiki markup to include clickable links in the message. This is required if redirectUrl is not provided. Both message and redirectUrl can not be specified.
+     *
+     * @return $this
+     */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
 
         return $this;
     }

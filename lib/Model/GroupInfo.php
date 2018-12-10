@@ -55,8 +55,8 @@ class GroupInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'group_id' => 'string',
-        'group_name' => 'string'
+        'group_name' => 'string',
+        'group_id' => 'string'
     ];
 
     /**
@@ -65,8 +65,8 @@ class GroupInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'group_id' => null,
-        'group_name' => null
+        'group_name' => null,
+        'group_id' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class GroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'group_id' => 'groupId',
-        'group_name' => 'groupName'
+        'group_name' => 'groupName',
+        'group_id' => 'groupId'
     ];
 
     /**
@@ -106,8 +106,8 @@ class GroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'group_id' => 'setGroupId',
-        'group_name' => 'setGroupName'
+        'group_name' => 'setGroupName',
+        'group_id' => 'setGroupId'
     ];
 
     /**
@@ -116,8 +116,8 @@ class GroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'group_id' => 'getGroupId',
-        'group_name' => 'getGroupName'
+        'group_name' => 'getGroupName',
+        'group_id' => 'getGroupId'
     ];
 
     /**
@@ -180,8 +180,8 @@ class GroupInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
         $this->container['group_name'] = isset($data['group_name']) ? $data['group_name'] : null;
+        $this->container['group_id'] = isset($data['group_id']) ? $data['group_id'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class GroupInfo implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets group_id
-     *
-     * @return string
-     */
-    public function getGroupId()
-    {
-        return $this->container['group_id'];
-    }
-
-    /**
-     * Sets group_id
-     *
-     * @param string $group_id Unique identifier of the group
-     *
-     * @return $this
-     */
-    public function setGroupId($group_id)
-    {
-        $this->container['group_id'] = $group_id;
-
-        return $this;
-    }
-
-    /**
      * Gets group_name
      *
      * @return string
@@ -252,6 +228,30 @@ class GroupInfo implements ModelInterface, ArrayAccess
     public function setGroupName($group_name)
     {
         $this->container['group_name'] = $group_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets group_id
+     *
+     * @return string
+     */
+    public function getGroupId()
+    {
+        return $this->container['group_id'];
+    }
+
+    /**
+     * Sets group_id
+     *
+     * @param string $group_id Unique identifier of the group
+     *
+     * @return $this
+     */
+    public function setGroupId($group_id)
+    {
+        $this->container['group_id'] = $group_id;
 
         return $this;
     }

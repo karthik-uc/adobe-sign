@@ -82,16 +82,16 @@ class UserStatusUpdateResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "state"
      */
-    public function testPropertyMessage()
+    public function testPropertyState()
     {
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "message"
      */
-    public function testPropertyState()
+    public function testPropertyMessage()
     {
     }
 }

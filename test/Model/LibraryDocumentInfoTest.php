@@ -82,9 +82,30 @@ class LibraryDocumentInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "template_types"
+     */
+    public function testPropertyTemplateTypes()
+    {
+    }
+
+    /**
      * Test attribute "creator_email"
      */
     public function testPropertyCreatorEmail()
+    {
+    }
+
+    /**
+     * Test attribute "sharing_mode"
+     */
+    public function testPropertySharingMode()
+    {
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
     {
     }
 
@@ -103,20 +124,6 @@ class LibraryDocumentInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "sharing_mode"
-     */
-    public function testPropertySharingMode()
-    {
-    }
-
-    /**
      * Test attribute "state"
      */
     public function testPropertyState()
@@ -127,13 +134,6 @@ class LibraryDocumentInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "template_types"
-     */
-    public function testPropertyTemplateTypes()
     {
     }
 }

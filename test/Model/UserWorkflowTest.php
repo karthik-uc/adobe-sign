@@ -75,16 +75,16 @@ class UserWorkflowTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created"
+     * Test attribute "scope_id"
      */
-    public function testPropertyCreated()
+    public function testPropertyScopeId()
     {
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "created"
      */
-    public function testPropertyDescription()
+    public function testPropertyCreated()
     {
     }
 
@@ -96,9 +96,9 @@ class UserWorkflowTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "scope"
      */
-    public function testPropertyId()
+    public function testPropertyScope()
     {
     }
 
@@ -110,16 +110,16 @@ class UserWorkflowTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "scope"
+     * Test attribute "description"
      */
-    public function testPropertyScope()
+    public function testPropertyDescription()
     {
     }
 
     /**
-     * Test attribute "scope_id"
+     * Test attribute "id"
      */
-    public function testPropertyScopeId()
+    public function testPropertyId()
     {
     }
 

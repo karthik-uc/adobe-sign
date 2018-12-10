@@ -75,16 +75,16 @@ class GroupUsersInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "user_info_list"
      */
-    public function testPropertyPage()
+    public function testPropertyUserInfoList()
     {
     }
 
     /**
-     * Test attribute "user_info_list"
+     * Test attribute "page"
      */
-    public function testPropertyUserInfoList()
+    public function testPropertyPage()
     {
     }
 }

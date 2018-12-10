@@ -75,9 +75,9 @@ class MegaSignChildAgreementsFileInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "child_agreements_info_file_id"
+     * Test attribute "transient_document_id"
      */
-    public function testPropertyChildAgreementsInfoFileId()
+    public function testPropertyTransientDocumentId()
     {
     }
 
@@ -89,9 +89,9 @@ class MegaSignChildAgreementsFileInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "transient_document_id"
+     * Test attribute "child_agreements_info_file_id"
      */
-    public function testPropertyTransientDocumentId()
+    public function testPropertyChildAgreementsInfoFileId()
     {
     }
 }

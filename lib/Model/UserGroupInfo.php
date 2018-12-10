@@ -55,9 +55,9 @@ class UserGroupInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
         'is_group_admin' => 'bool',
-        'name' => 'string'
+        'name' => 'string',
+        'id' => 'string'
     ];
 
     /**
@@ -66,9 +66,9 @@ class UserGroupInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
         'is_group_admin' => null,
-        'name' => null
+        'name' => null,
+        'id' => null
     ];
 
     /**
@@ -98,9 +98,9 @@ class UserGroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
         'is_group_admin' => 'isGroupAdmin',
-        'name' => 'name'
+        'name' => 'name',
+        'id' => 'id'
     ];
 
     /**
@@ -109,9 +109,9 @@ class UserGroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'is_group_admin' => 'setIsGroupAdmin',
-        'name' => 'setName'
+        'name' => 'setName',
+        'id' => 'setId'
     ];
 
     /**
@@ -120,9 +120,9 @@ class UserGroupInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'is_group_admin' => 'getIsGroupAdmin',
-        'name' => 'getName'
+        'name' => 'getName',
+        'id' => 'getId'
     ];
 
     /**
@@ -185,9 +185,9 @@ class UserGroupInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['is_group_admin'] = isset($data['is_group_admin']) ? $data['is_group_admin'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -213,30 +213,6 @@ class UserGroupInfo implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id Unique identifier of the group
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
 
     /**
      * Gets is_group_admin
@@ -282,6 +258,30 @@ class UserGroupInfo implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id Unique identifier of the group
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

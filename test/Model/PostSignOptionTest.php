@@ -75,16 +75,16 @@ class PostSignOptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "redirect_delay"
+     * Test attribute "redirect_url"
      */
-    public function testPropertyRedirectDelay()
+    public function testPropertyRedirectUrl()
     {
     }
 
     /**
-     * Test attribute "redirect_url"
+     * Test attribute "redirect_delay"
      */
-    public function testPropertyRedirectUrl()
+    public function testPropertyRedirectDelay()
     {
     }
 }

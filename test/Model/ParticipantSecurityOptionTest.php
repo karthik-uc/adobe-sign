@@ -75,16 +75,16 @@ class ParticipantSecurityOptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "authentication_method"
+     * Test attribute "password"
      */
-    public function testPropertyAuthenticationMethod()
+    public function testPropertyPassword()
     {
     }
 
     /**
-     * Test attribute "password"
+     * Test attribute "authentication_method"
      */
-    public function testPropertyPassword()
+    public function testPropertyAuthenticationMethod()
     {
     }
 

@@ -120,6 +120,16 @@ class LibraryDocumentsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getFormData
+     *
+     * Retrieves data entered into the interactive form fields of the library document..
+     *
+     */
+    public function testGetFormData()
+    {
+    }
+
+    /**
      * Test case for getLibraryDocument
      *
      * Retrieves the file stream of a document of library document..
@@ -186,6 +196,16 @@ class LibraryDocumentsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testUpdateLibraryDocument()
+    {
+    }
+
+    /**
+     * Test case for updateLibraryDocumentNoteForApiUser
+     *
+     * Updates the latest note of a library document for the API user..
+     *
+     */
+    public function testUpdateLibraryDocumentNoteForApiUser()
     {
     }
 

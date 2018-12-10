@@ -82,16 +82,16 @@ class UserViewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "expiration"
+     * Test attribute "name"
      */
-    public function testPropertyExpiration()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "expiration"
      */
-    public function testPropertyName()
+    public function testPropertyExpiration()
     {
     }
 

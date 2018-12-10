@@ -55,8 +55,8 @@ class MegaSignChildAgreements implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'mega_sign_child_agreement_list' => '\Adobe\ESign\\Model\MegaSignChildAgreement[]',
-        'page' => '\Adobe\ESign\\Model\PageInfo'
+        'page' => '\Adobe\ESign\\Model\PageInfo',
+        'mega_sign_child_agreement_list' => '\Adobe\ESign\\Model\MegaSignChildAgreement[]'
     ];
 
     /**
@@ -65,8 +65,8 @@ class MegaSignChildAgreements implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'mega_sign_child_agreement_list' => null,
-        'page' => null
+        'page' => null,
+        'mega_sign_child_agreement_list' => null
     ];
 
     /**
@@ -96,8 +96,8 @@ class MegaSignChildAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'mega_sign_child_agreement_list' => 'megaSignChildAgreementList',
-        'page' => 'page'
+        'page' => 'page',
+        'mega_sign_child_agreement_list' => 'megaSignChildAgreementList'
     ];
 
     /**
@@ -106,8 +106,8 @@ class MegaSignChildAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'mega_sign_child_agreement_list' => 'setMegaSignChildAgreementList',
-        'page' => 'setPage'
+        'page' => 'setPage',
+        'mega_sign_child_agreement_list' => 'setMegaSignChildAgreementList'
     ];
 
     /**
@@ -116,8 +116,8 @@ class MegaSignChildAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'mega_sign_child_agreement_list' => 'getMegaSignChildAgreementList',
-        'page' => 'getPage'
+        'page' => 'getPage',
+        'mega_sign_child_agreement_list' => 'getMegaSignChildAgreementList'
     ];
 
     /**
@@ -180,8 +180,8 @@ class MegaSignChildAgreements implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['mega_sign_child_agreement_list'] = isset($data['mega_sign_child_agreement_list']) ? $data['mega_sign_child_agreement_list'] : null;
         $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['mega_sign_child_agreement_list'] = isset($data['mega_sign_child_agreement_list']) ? $data['mega_sign_child_agreement_list'] : null;
     }
 
     /**
@@ -209,30 +209,6 @@ class MegaSignChildAgreements implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets mega_sign_child_agreement_list
-     *
-     * @return \Adobe\ESign\\Model\MegaSignChildAgreement[]
-     */
-    public function getMegaSignChildAgreementList()
-    {
-        return $this->container['mega_sign_child_agreement_list'];
-    }
-
-    /**
-     * Sets mega_sign_child_agreement_list
-     *
-     * @param \Adobe\ESign\\Model\MegaSignChildAgreement[] $mega_sign_child_agreement_list A array of MegaSign child agreements
-     *
-     * @return $this
-     */
-    public function setMegaSignChildAgreementList($mega_sign_child_agreement_list)
-    {
-        $this->container['mega_sign_child_agreement_list'] = $mega_sign_child_agreement_list;
-
-        return $this;
-    }
-
-    /**
      * Gets page
      *
      * @return \Adobe\ESign\\Model\PageInfo
@@ -252,6 +228,30 @@ class MegaSignChildAgreements implements ModelInterface, ArrayAccess
     public function setPage($page)
     {
         $this->container['page'] = $page;
+
+        return $this;
+    }
+
+    /**
+     * Gets mega_sign_child_agreement_list
+     *
+     * @return \Adobe\ESign\\Model\MegaSignChildAgreement[]
+     */
+    public function getMegaSignChildAgreementList()
+    {
+        return $this->container['mega_sign_child_agreement_list'];
+    }
+
+    /**
+     * Sets mega_sign_child_agreement_list
+     *
+     * @param \Adobe\ESign\\Model\MegaSignChildAgreement[] $mega_sign_child_agreement_list A array of MegaSign child agreements
+     *
+     * @return $this
+     */
+    public function setMegaSignChildAgreementList($mega_sign_child_agreement_list)
+    {
+        $this->container['mega_sign_child_agreement_list'] = $mega_sign_child_agreement_list;
 
         return $this;
     }

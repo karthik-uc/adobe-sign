@@ -75,16 +75,9 @@ class CCParticipantInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "company"
+     * Test attribute "participant_id"
      */
-    public function testPropertyCompany()
-    {
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
+    public function testPropertyParticipantId()
     {
     }
 
@@ -96,9 +89,16 @@ class CCParticipantInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "participant_id"
+     * Test attribute "company"
      */
-    public function testPropertyParticipantId()
+    public function testPropertyCompany()
+    {
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
     {
     }
 }

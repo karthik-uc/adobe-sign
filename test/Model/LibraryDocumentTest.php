@@ -75,16 +75,9 @@ class LibraryDocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "creator_email"
+     * Test attribute "template_types"
      */
-    public function testPropertyCreatorEmail()
-    {
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
+    public function testPropertyTemplateTypes()
     {
     }
 
@@ -92,6 +85,20 @@ class LibraryDocumentTest extends \PHPUnit_Framework_TestCase
      * Test attribute "hidden"
      */
     public function testPropertyHidden()
+    {
+    }
+
+    /**
+     * Test attribute "creator_email"
+     */
+    public function testPropertyCreatorEmail()
+    {
+    }
+
+    /**
+     * Test attribute "sharing_mode"
+     */
+    public function testPropertySharingMode()
     {
     }
 
@@ -110,9 +117,9 @@ class LibraryDocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "sharing_mode"
+     * Test attribute "id"
      */
-    public function testPropertySharingMode()
+    public function testPropertyId()
     {
     }
 
@@ -120,13 +127,6 @@ class LibraryDocumentTest extends \PHPUnit_Framework_TestCase
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "template_types"
-     */
-    public function testPropertyTemplateTypes()
     {
     }
 }

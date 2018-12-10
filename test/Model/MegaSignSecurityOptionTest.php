@@ -82,16 +82,16 @@ class MegaSignSecurityOptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "external_password"
+     * Test attribute "internal_authentication_method"
      */
-    public function testPropertyExternalPassword()
+    public function testPropertyInternalAuthenticationMethod()
     {
     }
 
     /**
-     * Test attribute "internal_authentication_method"
+     * Test attribute "external_password"
      */
-    public function testPropertyInternalAuthenticationMethod()
+    public function testPropertyExternalPassword()
     {
     }
 

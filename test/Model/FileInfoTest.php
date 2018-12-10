@@ -75,16 +75,16 @@ class FileInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "label"
+     * Test attribute "transient_document_id"
      */
-    public function testPropertyLabel()
+    public function testPropertyTransientDocumentId()
     {
     }
 
     /**
-     * Test attribute "transient_document_id"
+     * Test attribute "label"
      */
-    public function testPropertyTransientDocumentId()
+    public function testPropertyLabel()
     {
     }
 

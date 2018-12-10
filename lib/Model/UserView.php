@@ -56,8 +56,8 @@ class UserView implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'embedded_code' => 'string',
-        'expiration' => '\DateTime',
         'name' => 'string',
+        'expiration' => '\DateTime',
         'url' => 'string'
     ];
 
@@ -68,8 +68,8 @@ class UserView implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'embedded_code' => null,
-        'expiration' => 'date',
         'name' => null,
+        'expiration' => 'date',
         'url' => null
     ];
 
@@ -101,8 +101,8 @@ class UserView implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'embedded_code' => 'embeddedCode',
-        'expiration' => 'expiration',
         'name' => 'name',
+        'expiration' => 'expiration',
         'url' => 'url'
     ];
 
@@ -113,8 +113,8 @@ class UserView implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'embedded_code' => 'setEmbeddedCode',
-        'expiration' => 'setExpiration',
         'name' => 'setName',
+        'expiration' => 'setExpiration',
         'url' => 'setUrl'
     ];
 
@@ -125,8 +125,8 @@ class UserView implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'embedded_code' => 'getEmbeddedCode',
-        'expiration' => 'getExpiration',
         'name' => 'getName',
+        'expiration' => 'getExpiration',
         'url' => 'getUrl'
     ];
 
@@ -210,8 +210,8 @@ class UserView implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['embedded_code'] = isset($data['embedded_code']) ? $data['embedded_code'] : null;
-        $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
@@ -272,30 +272,6 @@ class UserView implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets expiration
-     *
-     * @return \DateTime
-     */
-    public function getExpiration()
-    {
-        return $this->container['expiration'];
-    }
-
-    /**
-     * Sets expiration
-     *
-     * @param \DateTime $expiration Expiration of user url
-     *
-     * @return $this
-     */
-    public function setExpiration($expiration)
-    {
-        $this->container['expiration'] = $expiration;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      *
      * @return string
@@ -324,6 +300,30 @@ class UserView implements ModelInterface, ArrayAccess
             );
         }
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets expiration
+     *
+     * @return \DateTime
+     */
+    public function getExpiration()
+    {
+        return $this->container['expiration'];
+    }
+
+    /**
+     * Sets expiration
+     *
+     * @param \DateTime $expiration Expiration of user url
+     *
+     * @return $this
+     */
+    public function setExpiration($expiration)
+    {
+        $this->container['expiration'] = $expiration;
 
         return $this;
     }

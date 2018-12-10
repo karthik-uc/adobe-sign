@@ -55,18 +55,18 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'is_account_admin' => 'bool',
+        'phone' => 'string',
+        'initials' => 'string',
         'account_type' => 'string',
         'company' => 'string',
-        'email' => 'string',
-        'first_name' => 'string',
         'id' => 'string',
-        'initials' => 'string',
-        'is_account_admin' => 'bool',
-        'last_name' => 'string',
         'locale' => 'string',
-        'phone' => 'string',
-        'status' => 'string',
-        'title' => 'string'
+        'title' => 'string',
+        'email' => 'string',
+        'status' => 'string'
     ];
 
     /**
@@ -75,18 +75,18 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'first_name' => null,
+        'last_name' => null,
+        'is_account_admin' => null,
+        'phone' => null,
+        'initials' => null,
         'account_type' => null,
         'company' => null,
-        'email' => null,
-        'first_name' => null,
         'id' => null,
-        'initials' => null,
-        'is_account_admin' => null,
-        'last_name' => null,
         'locale' => null,
-        'phone' => null,
-        'status' => null,
-        'title' => null
+        'title' => null,
+        'email' => null,
+        'status' => null
     ];
 
     /**
@@ -116,18 +116,18 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'first_name' => 'firstName',
+        'last_name' => 'lastName',
+        'is_account_admin' => 'isAccountAdmin',
+        'phone' => 'phone',
+        'initials' => 'initials',
         'account_type' => 'accountType',
         'company' => 'company',
-        'email' => 'email',
-        'first_name' => 'firstName',
         'id' => 'id',
-        'initials' => 'initials',
-        'is_account_admin' => 'isAccountAdmin',
-        'last_name' => 'lastName',
         'locale' => 'locale',
-        'phone' => 'phone',
-        'status' => 'status',
-        'title' => 'title'
+        'title' => 'title',
+        'email' => 'email',
+        'status' => 'status'
     ];
 
     /**
@@ -136,18 +136,18 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
+        'is_account_admin' => 'setIsAccountAdmin',
+        'phone' => 'setPhone',
+        'initials' => 'setInitials',
         'account_type' => 'setAccountType',
         'company' => 'setCompany',
-        'email' => 'setEmail',
-        'first_name' => 'setFirstName',
         'id' => 'setId',
-        'initials' => 'setInitials',
-        'is_account_admin' => 'setIsAccountAdmin',
-        'last_name' => 'setLastName',
         'locale' => 'setLocale',
-        'phone' => 'setPhone',
-        'status' => 'setStatus',
-        'title' => 'setTitle'
+        'title' => 'setTitle',
+        'email' => 'setEmail',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -156,18 +156,18 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
+        'is_account_admin' => 'getIsAccountAdmin',
+        'phone' => 'getPhone',
+        'initials' => 'getInitials',
         'account_type' => 'getAccountType',
         'company' => 'getCompany',
-        'email' => 'getEmail',
-        'first_name' => 'getFirstName',
         'id' => 'getId',
-        'initials' => 'getInitials',
-        'is_account_admin' => 'getIsAccountAdmin',
-        'last_name' => 'getLastName',
         'locale' => 'getLocale',
-        'phone' => 'getPhone',
-        'status' => 'getStatus',
-        'title' => 'getTitle'
+        'title' => 'getTitle',
+        'email' => 'getEmail',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -276,18 +276,18 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['is_account_admin'] = isset($data['is_account_admin']) ? $data['is_account_admin'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
         $this->container['account_type'] = isset($data['account_type']) ? $data['account_type'] : null;
         $this->container['company'] = isset($data['company']) ? $data['company'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
-        $this->container['is_account_admin'] = isset($data['is_account_admin']) ? $data['is_account_admin'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -329,6 +329,126 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets first_name
+     *
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     *
+     * @param string $first_name The first name of the user
+     *
+     * @return $this
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     *
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     *
+     * @param string $last_name The last name of the user
+     *
+     * @return $this
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_account_admin
+     *
+     * @return bool
+     */
+    public function getIsAccountAdmin()
+    {
+        return $this->container['is_account_admin'];
+    }
+
+    /**
+     * Sets is_account_admin
+     *
+     * @param bool $is_account_admin True if the user is account admin
+     *
+     * @return $this
+     */
+    public function setIsAccountAdmin($is_account_admin)
+    {
+        $this->container['is_account_admin'] = $is_account_admin;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone
+     *
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     *
+     * @param string $phone The phone number of the user
+     *
+     * @return $this
+     */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets initials
+     *
+     * @return string
+     */
+    public function getInitials()
+    {
+        return $this->container['initials'];
+    }
+
+    /**
+     * Sets initials
+     *
+     * @param string $initials The initials of the user
+     *
+     * @return $this
+     */
+    public function setInitials($initials)
+    {
+        $this->container['initials'] = $initials;
+
+        return $this;
+    }
 
     /**
      * Gets account_type
@@ -388,54 +508,6 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string $email The email address of the user
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets first_name
-     *
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->container['first_name'];
-    }
-
-    /**
-     * Sets first_name
-     *
-     * @param string $first_name The first name of the user
-     *
-     * @return $this
-     */
-    public function setFirstName($first_name)
-    {
-        $this->container['first_name'] = $first_name;
-
-        return $this;
-    }
-
-    /**
      * Gets id
      *
      * @return string
@@ -455,78 +527,6 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets initials
-     *
-     * @return string
-     */
-    public function getInitials()
-    {
-        return $this->container['initials'];
-    }
-
-    /**
-     * Sets initials
-     *
-     * @param string $initials The initials of the user
-     *
-     * @return $this
-     */
-    public function setInitials($initials)
-    {
-        $this->container['initials'] = $initials;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_account_admin
-     *
-     * @return bool
-     */
-    public function getIsAccountAdmin()
-    {
-        return $this->container['is_account_admin'];
-    }
-
-    /**
-     * Sets is_account_admin
-     *
-     * @param bool $is_account_admin True if the user is account admin
-     *
-     * @return $this
-     */
-    public function setIsAccountAdmin($is_account_admin)
-    {
-        $this->container['is_account_admin'] = $is_account_admin;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_name
-     *
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->container['last_name'];
-    }
-
-    /**
-     * Sets last_name
-     *
-     * @param string $last_name The last name of the user
-     *
-     * @return $this
-     */
-    public function setLastName($last_name)
-    {
-        $this->container['last_name'] = $last_name;
 
         return $this;
     }
@@ -556,25 +556,49 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets phone
+     * Gets title
      *
      * @return string
      */
-    public function getPhone()
+    public function getTitle()
     {
-        return $this->container['phone'];
+        return $this->container['title'];
     }
 
     /**
-     * Sets phone
+     * Sets title
      *
-     * @param string $phone The phone number of the user
+     * @param string $title The job title of the user
      *
      * @return $this
      */
-    public function setPhone($phone)
+    public function setTitle($title)
     {
-        $this->container['phone'] = $phone;
+        $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     *
+     * @param string $email The email address of the user
+     *
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
 
         return $this;
     }
@@ -608,30 +632,6 @@ class DetailedUserInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets title
-     *
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     *
-     * @param string $title The job title of the user
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->container['title'] = $title;
 
         return $this;
     }

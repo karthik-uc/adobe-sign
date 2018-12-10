@@ -1,6 +1,6 @@
 # Adobe\ESign\\WebhooksApi
 
-All URIs are relative to *http://localhost/api/rest/v6*
+All URIs are relative to *https://upstreamtest.na2.echosign.com/api/rest/v6*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -194,9 +194,9 @@ $x_api_user = "x_api_user_example"; // string | The userId or email of API calle
 $x_on_behalf_of_user = "x_on_behalf_of_user_example"; // string | The userId or email in the format <b>userid:{userId} OR email:{email}.</b> of the user that has shared his/her account
 $show_in_active_webhooks = true; // bool | A query parameter to fetch all the inactive webhooks along with the active webhooks.
 $scope = "scope_example"; // string | Scope of webhook. The possible values are ACCOUNT, GROUP, USER or RESOURCE
-$resource_type = "resource_type_example"; // string | The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET and MEGASIGN.
+$resource_type = "resource_type_example"; // string | The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET, MEGASIGN and LIBRARY_DOCUMENT.
 $cursor = "cursor_example"; // string | Used to navigate through the pages. If not provided, returns the first page.
-$page_size = 56; // int | Number of intended items in the response page.
+$page_size = 56; // int | Number of intended items in the response page. If not provided, it is decided by the application settings.
 
 try {
     $result = $apiInstance->getWebhooks($authorization, $x_api_user, $x_on_behalf_of_user, $show_in_active_webhooks, $scope, $resource_type, $cursor, $page_size);
@@ -216,9 +216,9 @@ Name | Type | Description  | Notes
  **x_on_behalf_of_user** | **string**| The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account | [optional]
  **show_in_active_webhooks** | **bool**| A query parameter to fetch all the inactive webhooks along with the active webhooks. | [optional]
  **scope** | **string**| Scope of webhook. The possible values are ACCOUNT, GROUP, USER or RESOURCE | [optional]
- **resource_type** | **string**| The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET and MEGASIGN. | [optional]
+ **resource_type** | **string**| The type of resource on which webhook was created. The possible values are AGREEMENT, WIDGET, MEGASIGN and LIBRARY_DOCUMENT. | [optional]
  **cursor** | **string**| Used to navigate through the pages. If not provided, returns the first page. | [optional]
- **page_size** | **int**| Number of intended items in the response page. | [optional]
+ **page_size** | **int**| Number of intended items in the response page. If not provided, it is decided by the application settings. | [optional]
 
 ### Return type
 

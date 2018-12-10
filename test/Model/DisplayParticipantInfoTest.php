@@ -75,6 +75,13 @@ class DisplayParticipantInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "full_name"
+     */
+    public function testPropertyFullName()
+    {
+    }
+
+    /**
      * Test attribute "company"
      */
     public function testPropertyCompany()
@@ -85,13 +92,6 @@ class DisplayParticipantInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "email"
      */
     public function testPropertyEmail()
-    {
-    }
-
-    /**
-     * Test attribute "full_name"
-     */
-    public function testPropertyFullName()
     {
     }
 }

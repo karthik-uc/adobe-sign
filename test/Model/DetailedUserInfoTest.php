@@ -75,6 +75,41 @@ class DetailedUserInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
+    {
+    }
+
+    /**
+     * Test attribute "is_account_admin"
+     */
+    public function testPropertyIsAccountAdmin()
+    {
+    }
+
+    /**
+     * Test attribute "phone"
+     */
+    public function testPropertyPhone()
+    {
+    }
+
+    /**
+     * Test attribute "initials"
+     */
+    public function testPropertyInitials()
+    {
+    }
+
+    /**
      * Test attribute "account_type"
      */
     public function testPropertyAccountType()
@@ -89,44 +124,9 @@ class DetailedUserInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-    }
-
-    /**
-     * Test attribute "first_name"
-     */
-    public function testPropertyFirstName()
-    {
-    }
-
-    /**
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-    }
-
-    /**
-     * Test attribute "initials"
-     */
-    public function testPropertyInitials()
-    {
-    }
-
-    /**
-     * Test attribute "is_account_admin"
-     */
-    public function testPropertyIsAccountAdmin()
-    {
-    }
-
-    /**
-     * Test attribute "last_name"
-     */
-    public function testPropertyLastName()
     {
     }
 
@@ -138,9 +138,16 @@ class DetailedUserInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "phone"
+     * Test attribute "title"
      */
-    public function testPropertyPhone()
+    public function testPropertyTitle()
+    {
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
     {
     }
 
@@ -148,13 +155,6 @@ class DetailedUserInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "title"
-     */
-    public function testPropertyTitle()
     {
     }
 }

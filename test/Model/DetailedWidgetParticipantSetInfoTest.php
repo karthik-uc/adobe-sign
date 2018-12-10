@@ -75,6 +75,13 @@ class DetailedWidgetParticipantSetInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "role"
+     */
+    public function testPropertyRole()
+    {
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
@@ -92,13 +99,6 @@ class DetailedWidgetParticipantSetInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "order"
      */
     public function testPropertyOrder()
-    {
-    }
-
-    /**
-     * Test attribute "role"
-     */
-    public function testPropertyRole()
     {
     }
 }

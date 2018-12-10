@@ -1,6 +1,6 @@
 # Adobe\ESign\\MegaSignsApi
 
-All URIs are relative to *http://localhost/api/rest/v6*
+All URIs are relative to *https://upstreamtest.na2.echosign.com/api/rest/v6*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -205,7 +205,7 @@ $mega_sign_id = "mega_sign_id_example"; // string | The identifier of the MegaSi
 $x_api_user = "x_api_user_example"; // string | The userId or email of API caller using the account or group token in the format <b>userid:{userId} OR email:{email}.</b> If it is not specified, then the caller is inferred from the token.
 $x_on_behalf_of_user = "x_on_behalf_of_user_example"; // string | The userId or email in the format <b>userid:{userId} OR email:{email}.</b> of the user that has shared his/her account
 $cursor = "cursor_example"; // string | Used to navigate through the pages. If not provided, returns the first page.
-$page_size = 56; // int | Number of intended items in the response page.
+$page_size = 56; // int | Number of intended items in the response page. If not provided, it is decided by the application settings.
 
 try {
     $result = $apiInstance->getMegaSignChildAgreements($authorization, $mega_sign_id, $x_api_user, $x_on_behalf_of_user, $cursor, $page_size);
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
  **x_api_user** | **string**| The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. | [optional]
  **x_on_behalf_of_user** | **string**| The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account | [optional]
  **cursor** | **string**| Used to navigate through the pages. If not provided, returns the first page. | [optional]
- **page_size** | **int**| Number of intended items in the response page. | [optional]
+ **page_size** | **int**| Number of intended items in the response page. If not provided, it is decided by the application settings. | [optional]
 
 ### Return type
 
@@ -483,7 +483,7 @@ $authorization = "authorization_example"; // string | An <a href=\"#\" onclick=\
 $x_api_user = "x_api_user_example"; // string | The userId or email of API caller using the account or group token in the format <b>userid:{userId} OR email:{email}.</b> If it is not specified, then the caller is inferred from the token.
 $x_on_behalf_of_user = "x_on_behalf_of_user_example"; // string | The userId or email in the format <b>userid:{userId} OR email:{email}.</b> of the user that has shared his/her account
 $cursor = "cursor_example"; // string | Used to navigate through the pages. If not provided, returns the first page.
-$page_size = 56; // int | Number of intended items in the response page.
+$page_size = 56; // int | Number of intended items in the response page. If not provided, it is decided by the application settings.
 
 try {
     $result = $apiInstance->getMegaSigns($authorization, $x_api_user, $x_on_behalf_of_user, $cursor, $page_size);
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
  **x_api_user** | **string**| The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. | [optional]
  **x_on_behalf_of_user** | **string**| The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account | [optional]
  **cursor** | **string**| Used to navigate through the pages. If not provided, returns the first page. | [optional]
- **page_size** | **int**| Number of intended items in the response page. | [optional]
+ **page_size** | **int**| Number of intended items in the response page. If not provided, it is decided by the application settings. | [optional]
 
 ### Return type
 

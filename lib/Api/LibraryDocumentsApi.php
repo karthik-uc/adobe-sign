@@ -91,7 +91,7 @@ class LibraryDocumentsApi
      * Creates a template that is placed in the library of the user for reuse.
      *
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
-     * @param  \Adobe\ESign\\Model\LibraryDocumentInfo $library_document_info Information about the library document that you want to create. (required)
+     * @param  \Adobe\ESign\\Model\LibraryDocumentCreationInfoV6 $library_document_info Information about the library document that you want to create. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      *
@@ -111,7 +111,7 @@ class LibraryDocumentsApi
      * Creates a template that is placed in the library of the user for reuse.
      *
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
-     * @param  \Adobe\ESign\\Model\LibraryDocumentInfo $library_document_info Information about the library document that you want to create. (required)
+     * @param  \Adobe\ESign\\Model\LibraryDocumentCreationInfoV6 $library_document_info Information about the library document that you want to create. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      *
@@ -189,7 +189,7 @@ class LibraryDocumentsApi
      * Creates a template that is placed in the library of the user for reuse.
      *
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
-     * @param  \Adobe\ESign\\Model\LibraryDocumentInfo $library_document_info Information about the library document that you want to create. (required)
+     * @param  \Adobe\ESign\\Model\LibraryDocumentCreationInfoV6 $library_document_info Information about the library document that you want to create. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      *
@@ -212,7 +212,7 @@ class LibraryDocumentsApi
      * Creates a template that is placed in the library of the user for reuse.
      *
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
-     * @param  \Adobe\ESign\\Model\LibraryDocumentInfo $library_document_info Information about the library document that you want to create. (required)
+     * @param  \Adobe\ESign\\Model\LibraryDocumentCreationInfoV6 $library_document_info Information about the library document that you want to create. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      *
@@ -265,7 +265,7 @@ class LibraryDocumentsApi
      * Create request for operation 'createLibraryDocument'
      *
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
-     * @param  \Adobe\ESign\\Model\LibraryDocumentInfo $library_document_info Information about the library document that you want to create. (required)
+     * @param  \Adobe\ESign\\Model\LibraryDocumentCreationInfoV6 $library_document_info Information about the library document that you want to create. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
      *
@@ -1624,6 +1624,310 @@ class LibraryDocumentsApi
     }
 
     /**
+     * Operation getFormData
+     *
+     * Retrieves data entered into the interactive form fields of the library document.
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
+     *
+     * @throws \Adobe\ESign\\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return string
+     */
+    public function getFormData($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
+    {
+        list($response) = $this->getFormDataWithHttpInfo($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match);
+        return $response;
+    }
+
+    /**
+     * Operation getFormDataWithHttpInfo
+     *
+     * Retrieves data entered into the interactive form fields of the library document.
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
+     *
+     * @throws \Adobe\ESign\\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getFormDataWithHttpInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
+    {
+        $returnType = 'string';
+        $request = $this->getFormDataRequest($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getFormDataAsync
+     *
+     * Retrieves data entered into the interactive form fields of the library document.
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getFormDataAsync($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
+    {
+        return $this->getFormDataAsyncWithHttpInfo($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getFormDataAsyncWithHttpInfo
+     *
+     * Retrieves data entered into the interactive form fields of the library document.
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getFormDataAsyncWithHttpInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
+    {
+        $returnType = 'string';
+        $request = $this->getFormDataRequest($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getFormData'
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getFormDataRequest($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
+    {
+        // verify the required parameter 'authorization' is set
+        if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $authorization when calling getFormData'
+            );
+        }
+        // verify the required parameter 'library_document_id' is set
+        if ($library_document_id === null || (is_array($library_document_id) && count($library_document_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $library_document_id when calling getFormData'
+            );
+        }
+
+        $resourcePath = '/libraryDocuments/{libraryDocumentId}/formData';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($authorization !== null) {
+            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
+        }
+        // header params
+        if ($x_api_user !== null) {
+            $headerParams['x-api-user'] = ObjectSerializer::toHeaderValue($x_api_user);
+        }
+        // header params
+        if ($x_on_behalf_of_user !== null) {
+            $headerParams['x-on-behalf-of-user'] = ObjectSerializer::toHeaderValue($x_on_behalf_of_user);
+        }
+        // header params
+        if ($if_none_match !== null) {
+            $headerParams['If-None-Match'] = ObjectSerializer::toHeaderValue($if_none_match);
+        }
+
+        // path params
+        if ($library_document_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'libraryDocumentId' . '}',
+                ObjectSerializer::toPathValue($library_document_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['text/csv']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['text/csv'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getLibraryDocument
      *
      * Retrieves the file stream of a document of library document.
@@ -1955,14 +2259,15 @@ class LibraryDocumentsApi
      * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
-    public function getLibraryDocumentAuditTrail($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null)
+    public function getLibraryDocumentAuditTrail($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
     {
-        list($response) = $this->getLibraryDocumentAuditTrailWithHttpInfo($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user);
+        list($response) = $this->getLibraryDocumentAuditTrailWithHttpInfo($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match);
         return $response;
     }
 
@@ -1975,15 +2280,16 @@ class LibraryDocumentsApi
      * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLibraryDocumentAuditTrailWithHttpInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null)
+    public function getLibraryDocumentAuditTrailWithHttpInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
     {
         $returnType = 'string';
-        $request = $this->getLibraryDocumentAuditTrailRequest($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user);
+        $request = $this->getLibraryDocumentAuditTrailRequest($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2053,13 +2359,14 @@ class LibraryDocumentsApi
      * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLibraryDocumentAuditTrailAsync($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null)
+    public function getLibraryDocumentAuditTrailAsync($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
     {
-        return $this->getLibraryDocumentAuditTrailAsyncWithHttpInfo($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user)
+        return $this->getLibraryDocumentAuditTrailAsyncWithHttpInfo($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2076,14 +2383,15 @@ class LibraryDocumentsApi
      * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLibraryDocumentAuditTrailAsyncWithHttpInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null)
+    public function getLibraryDocumentAuditTrailAsyncWithHttpInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
     {
         $returnType = 'string';
-        $request = $this->getLibraryDocumentAuditTrailRequest($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user);
+        $request = $this->getLibraryDocumentAuditTrailRequest($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2129,11 +2437,12 @@ class LibraryDocumentsApi
      * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     * @param  string $if_none_match Pass the value of the e-tag header obtained from the previous response to the same request to get a RESOURCE_NOT_MODIFIED(304) if the resource hasn&#39;t changed. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getLibraryDocumentAuditTrailRequest($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null)
+    protected function getLibraryDocumentAuditTrailRequest($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
     {
         // verify the required parameter 'authorization' is set
         if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
@@ -2166,6 +2475,10 @@ class LibraryDocumentsApi
         // header params
         if ($x_on_behalf_of_user !== null) {
             $headerParams['x-on-behalf-of-user'] = ObjectSerializer::toHeaderValue($x_on_behalf_of_user);
+        }
+        // header params
+        if ($if_none_match !== null) {
+            $headerParams['If-None-Match'] = ObjectSerializer::toHeaderValue($if_none_match);
         }
 
         // path params
@@ -2604,7 +2917,7 @@ class LibraryDocumentsApi
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Adobe\ESign\\Model\LibraryDocumentInfo
+     * @return \Adobe\ESign\\Model\LibraryDocumentCreationInfoV6
      */
     public function getLibraryDocumentInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
     {
@@ -2625,11 +2938,11 @@ class LibraryDocumentsApi
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Adobe\ESign\\Model\LibraryDocumentInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Adobe\ESign\\Model\LibraryDocumentCreationInfoV6, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLibraryDocumentInfoWithHttpInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
     {
-        $returnType = '\Adobe\ESign\\Model\LibraryDocumentInfo';
+        $returnType = '\Adobe\ESign\\Model\LibraryDocumentCreationInfoV6';
         $request = $this->getLibraryDocumentInfoRequest($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match);
 
         try {
@@ -2681,7 +2994,7 @@ class LibraryDocumentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Adobe\ESign\\Model\LibraryDocumentInfo',
+                        '\Adobe\ESign\\Model\LibraryDocumentCreationInfoV6',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2731,7 +3044,7 @@ class LibraryDocumentsApi
      */
     public function getLibraryDocumentInfoAsyncWithHttpInfo($authorization, $library_document_id, $x_api_user = null, $x_on_behalf_of_user = null, $if_none_match = null)
     {
-        $returnType = '\Adobe\ESign\\Model\LibraryDocumentInfo';
+        $returnType = '\Adobe\ESign\\Model\LibraryDocumentCreationInfoV6';
         $request = $this->getLibraryDocumentInfoRequest($authorization, $library_document_id, $x_api_user, $x_on_behalf_of_user, $if_none_match);
 
         return $this->client
@@ -3198,9 +3511,9 @@ class LibraryDocumentsApi
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
-     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. (optional)
+     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. Default value is false. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3220,9 +3533,9 @@ class LibraryDocumentsApi
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
-     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. (optional)
+     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. Default value is false. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \Adobe\ESign\\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3300,9 +3613,9 @@ class LibraryDocumentsApi
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
-     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. (optional)
+     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. Default value is false. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3325,9 +3638,9 @@ class LibraryDocumentsApi
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
-     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. (optional)
+     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. Default value is false. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3380,9 +3693,9 @@ class LibraryDocumentsApi
      * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_read&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_read&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
      * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
      * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
-     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. (optional)
+     * @param  bool $show_hidden_library_documents A query parameter to fetch all the hidden library documents along with the visible library documents. Default value is false. (optional)
      * @param  string $cursor Used to navigate through the pages. If not provided, returns the first page. (optional)
-     * @param  int $page_size Number of intended items in the response page. (optional)
+     * @param  int $page_size Number of intended items in the response page. If not provided, it is decided by the application settings. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3721,6 +4034,278 @@ class LibraryDocumentsApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/csv']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/csv'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateLibraryDocumentNoteForApiUser
+     *
+     * Updates the latest note of a library document for the API user.
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  \Adobe\ESign\\Model\Note $note The note to be associated with the library document. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     *
+     * @throws \Adobe\ESign\\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function updateLibraryDocumentNoteForApiUser($authorization, $library_document_id, $note, $x_api_user = null, $x_on_behalf_of_user = null)
+    {
+        $this->updateLibraryDocumentNoteForApiUserWithHttpInfo($authorization, $library_document_id, $note, $x_api_user, $x_on_behalf_of_user);
+    }
+
+    /**
+     * Operation updateLibraryDocumentNoteForApiUserWithHttpInfo
+     *
+     * Updates the latest note of a library document for the API user.
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  \Adobe\ESign\\Model\Note $note The note to be associated with the library document. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     *
+     * @throws \Adobe\ESign\\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateLibraryDocumentNoteForApiUserWithHttpInfo($authorization, $library_document_id, $note, $x_api_user = null, $x_on_behalf_of_user = null)
+    {
+        $returnType = '';
+        $request = $this->updateLibraryDocumentNoteForApiUserRequest($authorization, $library_document_id, $note, $x_api_user, $x_on_behalf_of_user);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateLibraryDocumentNoteForApiUserAsync
+     *
+     * Updates the latest note of a library document for the API user.
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  \Adobe\ESign\\Model\Note $note The note to be associated with the library document. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateLibraryDocumentNoteForApiUserAsync($authorization, $library_document_id, $note, $x_api_user = null, $x_on_behalf_of_user = null)
+    {
+        return $this->updateLibraryDocumentNoteForApiUserAsyncWithHttpInfo($authorization, $library_document_id, $note, $x_api_user, $x_on_behalf_of_user)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateLibraryDocumentNoteForApiUserAsyncWithHttpInfo
+     *
+     * Updates the latest note of a library document for the API user.
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  \Adobe\ESign\\Model\Note $note The note to be associated with the library document. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateLibraryDocumentNoteForApiUserAsyncWithHttpInfo($authorization, $library_document_id, $note, $x_api_user = null, $x_on_behalf_of_user = null)
+    {
+        $returnType = '';
+        $request = $this->updateLibraryDocumentNoteForApiUserRequest($authorization, $library_document_id, $note, $x_api_user, $x_on_behalf_of_user);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateLibraryDocumentNoteForApiUser'
+     *
+     * @param  string $authorization An &lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc()\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;OAuth Access Token&lt;/a&gt; with scopes:&lt;ul&gt;&lt;li style&#x3D;&#39;list-style-type: square&#39;&gt;&lt;a href&#x3D;\&quot;#\&quot; onclick&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; oncontextmenu&#x3D;\&quot;this.href&#x3D;oauthDoc(&#39;library_write&#39;)\&quot; target&#x3D;\&quot;oauthDoc\&quot;&gt;library_write&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;in the format &lt;b&gt;&#39;Bearer {accessToken}&#39;. (required)
+     * @param  string $library_document_id The document identifier, as retrieved from the API to fetch library documents. (required)
+     * @param  \Adobe\ESign\\Model\Note $note The note to be associated with the library document. (required)
+     * @param  string $x_api_user The userId or email of API caller using the account or group token in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; If it is not specified, then the caller is inferred from the token. (optional)
+     * @param  string $x_on_behalf_of_user The userId or email in the format &lt;b&gt;userid:{userId} OR email:{email}.&lt;/b&gt; of the user that has shared his/her account (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function updateLibraryDocumentNoteForApiUserRequest($authorization, $library_document_id, $note, $x_api_user = null, $x_on_behalf_of_user = null)
+    {
+        // verify the required parameter 'authorization' is set
+        if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $authorization when calling updateLibraryDocumentNoteForApiUser'
+            );
+        }
+        // verify the required parameter 'library_document_id' is set
+        if ($library_document_id === null || (is_array($library_document_id) && count($library_document_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $library_document_id when calling updateLibraryDocumentNoteForApiUser'
+            );
+        }
+        // verify the required parameter 'note' is set
+        if ($note === null || (is_array($note) && count($note) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $note when calling updateLibraryDocumentNoteForApiUser'
+            );
+        }
+
+        $resourcePath = '/libraryDocuments/{libraryDocumentId}/me/note';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($authorization !== null) {
+            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
+        }
+        // header params
+        if ($x_api_user !== null) {
+            $headerParams['x-api-user'] = ObjectSerializer::toHeaderValue($x_api_user);
+        }
+        // header params
+        if ($x_on_behalf_of_user !== null) {
+            $headerParams['x-on-behalf-of-user'] = ObjectSerializer::toHeaderValue($x_on_behalf_of_user);
+        }
+
+        // path params
+        if ($library_document_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'libraryDocumentId' . '}',
+                ObjectSerializer::toPathValue($library_document_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($note)) {
+            $_tempBody = $note;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
             );
         } else {
@@ -4008,11 +4593,11 @@ class LibraryDocumentsApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'text/csv']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'text/csv'],
                 []
             );
         }
@@ -4280,11 +4865,11 @@ class LibraryDocumentsApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'text/csv']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'text/csv'],
                 []
             );
         }

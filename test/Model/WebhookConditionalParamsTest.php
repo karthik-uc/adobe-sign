@@ -75,9 +75,9 @@ class WebhookConditionalParamsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "webhook_agreement_events"
+     * Test attribute "webhook_widget_events"
      */
-    public function testPropertyWebhookAgreementEvents()
+    public function testPropertyWebhookWidgetEvents()
     {
     }
 
@@ -89,9 +89,16 @@ class WebhookConditionalParamsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "webhook_widget_events"
+     * Test attribute "webhook_library_document_events"
      */
-    public function testPropertyWebhookWidgetEvents()
+    public function testPropertyWebhookLibraryDocumentEvents()
+    {
+    }
+
+    /**
+     * Test attribute "webhook_agreement_events"
+     */
+    public function testPropertyWebhookAgreementEvents()
     {
     }
 }

@@ -82,16 +82,16 @@ class WebhookWidgetEventsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_documents_info"
+     * Test attribute "include_participants_info"
      */
-    public function testPropertyIncludeDocumentsInfo()
+    public function testPropertyIncludeParticipantsInfo()
     {
     }
 
     /**
-     * Test attribute "include_participants_info"
+     * Test attribute "include_documents_info"
      */
-    public function testPropertyIncludeParticipantsInfo()
+    public function testPropertyIncludeDocumentsInfo()
     {
     }
 }

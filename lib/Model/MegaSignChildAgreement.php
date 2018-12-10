@@ -56,9 +56,9 @@ class MegaSignChildAgreement implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'display_date' => '\DateTime',
-        'id' => 'string',
         'esign' => 'bool',
         'name' => 'string',
+        'id' => 'string',
         'status' => 'string'
     ];
 
@@ -69,9 +69,9 @@ class MegaSignChildAgreement implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'display_date' => 'date',
-        'id' => null,
         'esign' => null,
         'name' => null,
+        'id' => null,
         'status' => null
     ];
 
@@ -103,9 +103,9 @@ class MegaSignChildAgreement implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'display_date' => 'displayDate',
-        'id' => 'id',
         'esign' => 'esign',
         'name' => 'name',
+        'id' => 'id',
         'status' => 'status'
     ];
 
@@ -116,9 +116,9 @@ class MegaSignChildAgreement implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'display_date' => 'setDisplayDate',
-        'id' => 'setId',
         'esign' => 'setEsign',
         'name' => 'setName',
+        'id' => 'setId',
         'status' => 'setStatus'
     ];
 
@@ -129,9 +129,9 @@ class MegaSignChildAgreement implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'display_date' => 'getDisplayDate',
-        'id' => 'getId',
         'esign' => 'getEsign',
         'name' => 'getName',
+        'id' => 'getId',
         'status' => 'getStatus'
     ];
 
@@ -257,9 +257,9 @@ class MegaSignChildAgreement implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['display_date'] = isset($data['display_date']) ? $data['display_date'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['esign'] = isset($data['esign']) ? $data['esign'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
@@ -320,30 +320,6 @@ class MegaSignChildAgreement implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id The unique identifier of the agreement.If provided in POST, it will simply be ignored
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets esign
      *
      * @return bool
@@ -387,6 +363,30 @@ class MegaSignChildAgreement implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id The unique identifier of the agreement.If provided in POST, it will simply be ignored
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

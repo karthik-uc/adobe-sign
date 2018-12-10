@@ -55,25 +55,25 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'acting_user_email' => 'string',
-        'acting_user_ip_address' => 'string',
-        'acting_user_name' => 'string',
-        'comment' => 'string',
         'date' => '\DateTime',
-        'description' => 'string',
-        'device_location' => '\Adobe\ESign\\Model\LibDocEventDeviceLocation',
-        'device_phone_number' => 'string',
-        'digital_signature_info' => '\Adobe\ESign\\Model\DigitalSignatureInfo',
-        'initiating_user_email' => 'string',
         'initiating_user_name' => 'string',
+        'description' => 'string',
+        'acting_user_name' => 'string',
+        'acting_user_ip_address' => 'string',
         'participant_email' => 'string',
-        'participant_id' => 'string',
-        'participant_role' => 'string',
-        'synchronization_id' => 'string',
         'type' => 'string',
+        'participant_role' => 'string',
         'vault_event_id' => 'string',
+        'participant_id' => 'string',
+        'version_id' => 'string',
+        'acting_user_email' => 'string',
+        'device_phone_number' => 'string',
+        'initiating_user_email' => 'string',
+        'digital_signature_info' => '\Adobe\ESign\\Model\DigitalSignatureInfo',
         'vault_provider_name' => 'string',
-        'version_id' => 'string'
+        'comment' => 'string',
+        'synchronization_id' => 'string',
+        'device_location' => '\Adobe\ESign\\Model\LibDocEventDeviceLocation'
     ];
 
     /**
@@ -82,25 +82,25 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'acting_user_email' => null,
-        'acting_user_ip_address' => null,
-        'acting_user_name' => null,
-        'comment' => null,
         'date' => 'date',
-        'description' => null,
-        'device_location' => null,
-        'device_phone_number' => null,
-        'digital_signature_info' => null,
-        'initiating_user_email' => null,
         'initiating_user_name' => null,
+        'description' => null,
+        'acting_user_name' => null,
+        'acting_user_ip_address' => null,
         'participant_email' => null,
-        'participant_id' => null,
-        'participant_role' => null,
-        'synchronization_id' => null,
         'type' => null,
+        'participant_role' => null,
         'vault_event_id' => null,
+        'participant_id' => null,
+        'version_id' => null,
+        'acting_user_email' => null,
+        'device_phone_number' => null,
+        'initiating_user_email' => null,
+        'digital_signature_info' => null,
         'vault_provider_name' => null,
-        'version_id' => null
+        'comment' => null,
+        'synchronization_id' => null,
+        'device_location' => null
     ];
 
     /**
@@ -130,25 +130,25 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'acting_user_email' => 'actingUserEmail',
-        'acting_user_ip_address' => 'actingUserIpAddress',
-        'acting_user_name' => 'actingUserName',
-        'comment' => 'comment',
         'date' => 'date',
-        'description' => 'description',
-        'device_location' => 'deviceLocation',
-        'device_phone_number' => 'devicePhoneNumber',
-        'digital_signature_info' => 'digitalSignatureInfo',
-        'initiating_user_email' => 'initiatingUserEmail',
         'initiating_user_name' => 'initiatingUserName',
+        'description' => 'description',
+        'acting_user_name' => 'actingUserName',
+        'acting_user_ip_address' => 'actingUserIpAddress',
         'participant_email' => 'participantEmail',
-        'participant_id' => 'participantId',
-        'participant_role' => 'participantRole',
-        'synchronization_id' => 'synchronizationId',
         'type' => 'type',
+        'participant_role' => 'participantRole',
         'vault_event_id' => 'vaultEventId',
+        'participant_id' => 'participantId',
+        'version_id' => 'versionId',
+        'acting_user_email' => 'actingUserEmail',
+        'device_phone_number' => 'devicePhoneNumber',
+        'initiating_user_email' => 'initiatingUserEmail',
+        'digital_signature_info' => 'digitalSignatureInfo',
         'vault_provider_name' => 'vaultProviderName',
-        'version_id' => 'versionId'
+        'comment' => 'comment',
+        'synchronization_id' => 'synchronizationId',
+        'device_location' => 'deviceLocation'
     ];
 
     /**
@@ -157,25 +157,25 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'acting_user_email' => 'setActingUserEmail',
-        'acting_user_ip_address' => 'setActingUserIpAddress',
-        'acting_user_name' => 'setActingUserName',
-        'comment' => 'setComment',
         'date' => 'setDate',
-        'description' => 'setDescription',
-        'device_location' => 'setDeviceLocation',
-        'device_phone_number' => 'setDevicePhoneNumber',
-        'digital_signature_info' => 'setDigitalSignatureInfo',
-        'initiating_user_email' => 'setInitiatingUserEmail',
         'initiating_user_name' => 'setInitiatingUserName',
+        'description' => 'setDescription',
+        'acting_user_name' => 'setActingUserName',
+        'acting_user_ip_address' => 'setActingUserIpAddress',
         'participant_email' => 'setParticipantEmail',
-        'participant_id' => 'setParticipantId',
-        'participant_role' => 'setParticipantRole',
-        'synchronization_id' => 'setSynchronizationId',
         'type' => 'setType',
+        'participant_role' => 'setParticipantRole',
         'vault_event_id' => 'setVaultEventId',
+        'participant_id' => 'setParticipantId',
+        'version_id' => 'setVersionId',
+        'acting_user_email' => 'setActingUserEmail',
+        'device_phone_number' => 'setDevicePhoneNumber',
+        'initiating_user_email' => 'setInitiatingUserEmail',
+        'digital_signature_info' => 'setDigitalSignatureInfo',
         'vault_provider_name' => 'setVaultProviderName',
-        'version_id' => 'setVersionId'
+        'comment' => 'setComment',
+        'synchronization_id' => 'setSynchronizationId',
+        'device_location' => 'setDeviceLocation'
     ];
 
     /**
@@ -184,25 +184,25 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'acting_user_email' => 'getActingUserEmail',
-        'acting_user_ip_address' => 'getActingUserIpAddress',
-        'acting_user_name' => 'getActingUserName',
-        'comment' => 'getComment',
         'date' => 'getDate',
-        'description' => 'getDescription',
-        'device_location' => 'getDeviceLocation',
-        'device_phone_number' => 'getDevicePhoneNumber',
-        'digital_signature_info' => 'getDigitalSignatureInfo',
-        'initiating_user_email' => 'getInitiatingUserEmail',
         'initiating_user_name' => 'getInitiatingUserName',
+        'description' => 'getDescription',
+        'acting_user_name' => 'getActingUserName',
+        'acting_user_ip_address' => 'getActingUserIpAddress',
         'participant_email' => 'getParticipantEmail',
-        'participant_id' => 'getParticipantId',
-        'participant_role' => 'getParticipantRole',
-        'synchronization_id' => 'getSynchronizationId',
         'type' => 'getType',
+        'participant_role' => 'getParticipantRole',
         'vault_event_id' => 'getVaultEventId',
+        'participant_id' => 'getParticipantId',
+        'version_id' => 'getVersionId',
+        'acting_user_email' => 'getActingUserEmail',
+        'device_phone_number' => 'getDevicePhoneNumber',
+        'initiating_user_email' => 'getInitiatingUserEmail',
+        'digital_signature_info' => 'getDigitalSignatureInfo',
         'vault_provider_name' => 'getVaultProviderName',
-        'version_id' => 'getVersionId'
+        'comment' => 'getComment',
+        'synchronization_id' => 'getSynchronizationId',
+        'device_location' => 'getDeviceLocation'
     ];
 
     /**
@@ -246,6 +246,10 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const TYPE_AUTO_CANCELLED_CONVERSION_PROBLEM = 'AUTO_CANCELLED_CONVERSION_PROBLEM';
+    const TYPE_CREATED = 'CREATED';
+    const TYPE_MODIFIED = 'MODIFIED';
+    const TYPE_DOCUMENTS_DELETED = 'DOCUMENTS_DELETED';
     const PARTICIPANT_ROLE_SIGNER = 'SIGNER';
     const PARTICIPANT_ROLE_DELEGATE_TO_SIGNER = 'DELEGATE_TO_SIGNER';
     const PARTICIPANT_ROLE_APPROVER = 'APPROVER';
@@ -258,12 +262,23 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
     const PARTICIPANT_ROLE_DELEGATE_TO_CERTIFIED_RECIPIENT = 'DELEGATE_TO_CERTIFIED_RECIPIENT';
     const PARTICIPANT_ROLE_SHARE = 'SHARE';
     const PARTICIPANT_ROLE_SENDER = 'SENDER';
-    const TYPE_AUTO_CANCELLED_CONVERSION_PROBLEM = 'AUTO_CANCELLED_CONVERSION_PROBLEM';
-    const TYPE_CREATED = 'CREATED';
-    const TYPE_MODIFIED = 'MODIFIED';
-    const TYPE_DOCUMENTS_DELETED = 'DOCUMENTS_DELETED';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_AUTO_CANCELLED_CONVERSION_PROBLEM,
+            self::TYPE_CREATED,
+            self::TYPE_MODIFIED,
+            self::TYPE_DOCUMENTS_DELETED,
+        ];
+    }
     
     /**
      * Gets allowable values of the enum
@@ -288,21 +303,6 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
         ];
     }
     
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_AUTO_CANCELLED_CONVERSION_PROBLEM,
-            self::TYPE_CREATED,
-            self::TYPE_MODIFIED,
-            self::TYPE_DOCUMENTS_DELETED,
-        ];
-    }
-    
 
     /**
      * Associative array for storing property values
@@ -319,25 +319,25 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['acting_user_email'] = isset($data['acting_user_email']) ? $data['acting_user_email'] : null;
-        $this->container['acting_user_ip_address'] = isset($data['acting_user_ip_address']) ? $data['acting_user_ip_address'] : null;
-        $this->container['acting_user_name'] = isset($data['acting_user_name']) ? $data['acting_user_name'] : null;
-        $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
         $this->container['date'] = isset($data['date']) ? $data['date'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['device_location'] = isset($data['device_location']) ? $data['device_location'] : null;
-        $this->container['device_phone_number'] = isset($data['device_phone_number']) ? $data['device_phone_number'] : null;
-        $this->container['digital_signature_info'] = isset($data['digital_signature_info']) ? $data['digital_signature_info'] : null;
-        $this->container['initiating_user_email'] = isset($data['initiating_user_email']) ? $data['initiating_user_email'] : null;
         $this->container['initiating_user_name'] = isset($data['initiating_user_name']) ? $data['initiating_user_name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['acting_user_name'] = isset($data['acting_user_name']) ? $data['acting_user_name'] : null;
+        $this->container['acting_user_ip_address'] = isset($data['acting_user_ip_address']) ? $data['acting_user_ip_address'] : null;
         $this->container['participant_email'] = isset($data['participant_email']) ? $data['participant_email'] : null;
-        $this->container['participant_id'] = isset($data['participant_id']) ? $data['participant_id'] : null;
-        $this->container['participant_role'] = isset($data['participant_role']) ? $data['participant_role'] : null;
-        $this->container['synchronization_id'] = isset($data['synchronization_id']) ? $data['synchronization_id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['participant_role'] = isset($data['participant_role']) ? $data['participant_role'] : null;
         $this->container['vault_event_id'] = isset($data['vault_event_id']) ? $data['vault_event_id'] : null;
-        $this->container['vault_provider_name'] = isset($data['vault_provider_name']) ? $data['vault_provider_name'] : null;
+        $this->container['participant_id'] = isset($data['participant_id']) ? $data['participant_id'] : null;
         $this->container['version_id'] = isset($data['version_id']) ? $data['version_id'] : null;
+        $this->container['acting_user_email'] = isset($data['acting_user_email']) ? $data['acting_user_email'] : null;
+        $this->container['device_phone_number'] = isset($data['device_phone_number']) ? $data['device_phone_number'] : null;
+        $this->container['initiating_user_email'] = isset($data['initiating_user_email']) ? $data['initiating_user_email'] : null;
+        $this->container['digital_signature_info'] = isset($data['digital_signature_info']) ? $data['digital_signature_info'] : null;
+        $this->container['vault_provider_name'] = isset($data['vault_provider_name']) ? $data['vault_provider_name'] : null;
+        $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
+        $this->container['synchronization_id'] = isset($data['synchronization_id']) ? $data['synchronization_id'] : null;
+        $this->container['device_location'] = isset($data['device_location']) ? $data['device_location'] : null;
     }
 
     /**
@@ -349,18 +349,18 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getParticipantRoleAllowableValues();
-        if (!is_null($this->container['participant_role']) && !in_array($this->container['participant_role'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'participant_role', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getParticipantRoleAllowableValues();
+        if (!is_null($this->container['participant_role']) && !in_array($this->container['participant_role'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'participant_role', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -379,102 +379,6 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets acting_user_email
-     *
-     * @return string
-     */
-    public function getActingUserEmail()
-    {
-        return $this->container['acting_user_email'];
-    }
-
-    /**
-     * Sets acting_user_email
-     *
-     * @param string $acting_user_email Email address of the user that created the event
-     *
-     * @return $this
-     */
-    public function setActingUserEmail($acting_user_email)
-    {
-        $this->container['acting_user_email'] = $acting_user_email;
-
-        return $this;
-    }
-
-    /**
-     * Gets acting_user_ip_address
-     *
-     * @return string
-     */
-    public function getActingUserIpAddress()
-    {
-        return $this->container['acting_user_ip_address'];
-    }
-
-    /**
-     * Sets acting_user_ip_address
-     *
-     * @param string $acting_user_ip_address The IP address of the user that created the event
-     *
-     * @return $this
-     */
-    public function setActingUserIpAddress($acting_user_ip_address)
-    {
-        $this->container['acting_user_ip_address'] = $acting_user_ip_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets acting_user_name
-     *
-     * @return string
-     */
-    public function getActingUserName()
-    {
-        return $this->container['acting_user_name'];
-    }
-
-    /**
-     * Sets acting_user_name
-     *
-     * @param string $acting_user_name The name of the acting user
-     *
-     * @return $this
-     */
-    public function setActingUserName($acting_user_name)
-    {
-        $this->container['acting_user_name'] = $acting_user_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets comment
-     *
-     * @return string
-     */
-    public function getComment()
-    {
-        return $this->container['comment'];
-    }
-
-    /**
-     * Sets comment
-     *
-     * @param string $comment The event comment. For RECALLED or REJECTED, the reason given by the user that initiates the event. For DELEGATE or SHARE, the message from the acting user to the participant
-     *
-     * @return $this
-     */
-    public function setComment($comment)
-    {
-        $this->container['comment'] = $comment;
-
-        return $this;
-    }
 
     /**
      * Gets date
@@ -496,126 +400,6 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
     public function setDate($date)
     {
         $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description A description of the audit event
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets device_location
-     *
-     * @return \Adobe\ESign\\Model\LibDocEventDeviceLocation
-     */
-    public function getDeviceLocation()
-    {
-        return $this->container['device_location'];
-    }
-
-    /**
-     * Sets device_location
-     *
-     * @param \Adobe\ESign\\Model\LibDocEventDeviceLocation $device_location Location of the device that generated the event (This value may be null due to limited privileges)
-     *
-     * @return $this
-     */
-    public function setDeviceLocation($device_location)
-    {
-        $this->container['device_location'] = $device_location;
-
-        return $this;
-    }
-
-    /**
-     * Gets device_phone_number
-     *
-     * @return string
-     */
-    public function getDevicePhoneNumber()
-    {
-        return $this->container['device_phone_number'];
-    }
-
-    /**
-     * Sets device_phone_number
-     *
-     * @param string $device_phone_number Phone number from the device used when the participation is completed on a mobile phone
-     *
-     * @return $this
-     */
-    public function setDevicePhoneNumber($device_phone_number)
-    {
-        $this->container['device_phone_number'] = $device_phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets digital_signature_info
-     *
-     * @return \Adobe\ESign\\Model\DigitalSignatureInfo
-     */
-    public function getDigitalSignatureInfo()
-    {
-        return $this->container['digital_signature_info'];
-    }
-
-    /**
-     * Sets digital_signature_info
-     *
-     * @param \Adobe\ESign\\Model\DigitalSignatureInfo $digital_signature_info This is present for ESIGNED events when the participation is signed digitally
-     *
-     * @return $this
-     */
-    public function setDigitalSignatureInfo($digital_signature_info)
-    {
-        $this->container['digital_signature_info'] = $digital_signature_info;
-
-        return $this;
-    }
-
-    /**
-     * Gets initiating_user_email
-     *
-     * @return string
-     */
-    public function getInitiatingUserEmail()
-    {
-        return $this->container['initiating_user_email'];
-    }
-
-    /**
-     * Sets initiating_user_email
-     *
-     * @param string $initiating_user_email Email address of the user that initiated the event on behalf of the acting user when the account is shared. Will be empty if there is no account sharing in effect
-     *
-     * @return $this
-     */
-    public function setInitiatingUserEmail($initiating_user_email)
-    {
-        $this->container['initiating_user_email'] = $initiating_user_email;
 
         return $this;
     }
@@ -645,6 +429,78 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description A description of the audit event
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets acting_user_name
+     *
+     * @return string
+     */
+    public function getActingUserName()
+    {
+        return $this->container['acting_user_name'];
+    }
+
+    /**
+     * Sets acting_user_name
+     *
+     * @param string $acting_user_name The name of the acting user
+     *
+     * @return $this
+     */
+    public function setActingUserName($acting_user_name)
+    {
+        $this->container['acting_user_name'] = $acting_user_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets acting_user_ip_address
+     *
+     * @return string
+     */
+    public function getActingUserIpAddress()
+    {
+        return $this->container['acting_user_ip_address'];
+    }
+
+    /**
+     * Sets acting_user_ip_address
+     *
+     * @param string $acting_user_ip_address The IP address of the user that created the event
+     *
+     * @return $this
+     */
+    public function setActingUserIpAddress($acting_user_ip_address)
+    {
+        $this->container['acting_user_ip_address'] = $acting_user_ip_address;
+
+        return $this;
+    }
+
+    /**
      * Gets participant_email
      *
      * @return string
@@ -664,87 +520,6 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
     public function setParticipantEmail($participant_email)
     {
         $this->container['participant_email'] = $participant_email;
-
-        return $this;
-    }
-
-    /**
-     * Gets participant_id
-     *
-     * @return string
-     */
-    public function getParticipantId()
-    {
-        return $this->container['participant_id'];
-    }
-
-    /**
-     * Sets participant_id
-     *
-     * @param string $participant_id The unique identifier of the participant for the event. This may be different than the acting user for certain event types. For example, for a DELEGATION event, this is the user who was delegated to
-     *
-     * @return $this
-     */
-    public function setParticipantId($participant_id)
-    {
-        $this->container['participant_id'] = $participant_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets participant_role
-     *
-     * @return string
-     */
-    public function getParticipantRole()
-    {
-        return $this->container['participant_role'];
-    }
-
-    /**
-     * Sets participant_role
-     *
-     * @param string $participant_role Role assumed by all participants in the participant set the participant belongs to (signer, approver etc.).
-     *
-     * @return $this
-     */
-    public function setParticipantRole($participant_role)
-    {
-        $allowedValues = $this->getParticipantRoleAllowableValues();
-        if (!is_null($participant_role) && !in_array($participant_role, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'participant_role', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['participant_role'] = $participant_role;
-
-        return $this;
-    }
-
-    /**
-     * Gets synchronization_id
-     *
-     * @return string
-     */
-    public function getSynchronizationId()
-    {
-        return $this->container['synchronization_id'];
-    }
-
-    /**
-     * Sets synchronization_id
-     *
-     * @param string $synchronization_id A unique identifier linking offline events to synchronization events (specified for offline signing events and synchronization events, else null)
-     *
-     * @return $this
-     */
-    public function setSynchronizationId($synchronization_id)
-    {
-        $this->container['synchronization_id'] = $synchronization_id;
 
         return $this;
     }
@@ -783,6 +558,39 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets participant_role
+     *
+     * @return string
+     */
+    public function getParticipantRole()
+    {
+        return $this->container['participant_role'];
+    }
+
+    /**
+     * Sets participant_role
+     *
+     * @param string $participant_role Role assumed by all participants in the participant set the participant belongs to (signer, approver etc.).
+     *
+     * @return $this
+     */
+    public function setParticipantRole($participant_role)
+    {
+        $allowedValues = $this->getParticipantRoleAllowableValues();
+        if (!is_null($participant_role) && !in_array($participant_role, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'participant_role', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['participant_role'] = $participant_role;
+
+        return $this;
+    }
+
+    /**
      * Gets vault_event_id
      *
      * @return string
@@ -802,6 +610,150 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
     public function setVaultEventId($vault_event_id)
     {
         $this->container['vault_event_id'] = $vault_event_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets participant_id
+     *
+     * @return string
+     */
+    public function getParticipantId()
+    {
+        return $this->container['participant_id'];
+    }
+
+    /**
+     * Sets participant_id
+     *
+     * @param string $participant_id The unique identifier of the participant for the event. This may be different than the acting user for certain event types. For example, for a DELEGATION event, this is the user who was delegated to
+     *
+     * @return $this
+     */
+    public function setParticipantId($participant_id)
+    {
+        $this->container['participant_id'] = $participant_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets version_id
+     *
+     * @return string
+     */
+    public function getVersionId()
+    {
+        return $this->container['version_id'];
+    }
+
+    /**
+     * Sets version_id
+     *
+     * @param string $version_id An ID which uniquely identifies the version of the document associated with this audit event
+     *
+     * @return $this
+     */
+    public function setVersionId($version_id)
+    {
+        $this->container['version_id'] = $version_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets acting_user_email
+     *
+     * @return string
+     */
+    public function getActingUserEmail()
+    {
+        return $this->container['acting_user_email'];
+    }
+
+    /**
+     * Sets acting_user_email
+     *
+     * @param string $acting_user_email Email address of the user that created the event
+     *
+     * @return $this
+     */
+    public function setActingUserEmail($acting_user_email)
+    {
+        $this->container['acting_user_email'] = $acting_user_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets device_phone_number
+     *
+     * @return string
+     */
+    public function getDevicePhoneNumber()
+    {
+        return $this->container['device_phone_number'];
+    }
+
+    /**
+     * Sets device_phone_number
+     *
+     * @param string $device_phone_number Phone number from the device used when the participation is completed on a mobile phone
+     *
+     * @return $this
+     */
+    public function setDevicePhoneNumber($device_phone_number)
+    {
+        $this->container['device_phone_number'] = $device_phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets initiating_user_email
+     *
+     * @return string
+     */
+    public function getInitiatingUserEmail()
+    {
+        return $this->container['initiating_user_email'];
+    }
+
+    /**
+     * Sets initiating_user_email
+     *
+     * @param string $initiating_user_email Email address of the user that initiated the event on behalf of the acting user when the account is shared. Will be empty if there is no account sharing in effect
+     *
+     * @return $this
+     */
+    public function setInitiatingUserEmail($initiating_user_email)
+    {
+        $this->container['initiating_user_email'] = $initiating_user_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets digital_signature_info
+     *
+     * @return \Adobe\ESign\\Model\DigitalSignatureInfo
+     */
+    public function getDigitalSignatureInfo()
+    {
+        return $this->container['digital_signature_info'];
+    }
+
+    /**
+     * Sets digital_signature_info
+     *
+     * @param \Adobe\ESign\\Model\DigitalSignatureInfo $digital_signature_info This is present for ESIGNED events when the participation is signed digitally
+     *
+     * @return $this
+     */
+    public function setDigitalSignatureInfo($digital_signature_info)
+    {
+        $this->container['digital_signature_info'] = $digital_signature_info;
 
         return $this;
     }
@@ -831,25 +783,73 @@ class LibraryDocumentEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets version_id
+     * Gets comment
      *
      * @return string
      */
-    public function getVersionId()
+    public function getComment()
     {
-        return $this->container['version_id'];
+        return $this->container['comment'];
     }
 
     /**
-     * Sets version_id
+     * Sets comment
      *
-     * @param string $version_id An ID which uniquely identifies the version of the document associated with this audit event
+     * @param string $comment The event comment. For RECALLED or REJECTED, the reason given by the user that initiates the event. For DELEGATE or SHARE, the message from the acting user to the participant
      *
      * @return $this
      */
-    public function setVersionId($version_id)
+    public function setComment($comment)
     {
-        $this->container['version_id'] = $version_id;
+        $this->container['comment'] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Gets synchronization_id
+     *
+     * @return string
+     */
+    public function getSynchronizationId()
+    {
+        return $this->container['synchronization_id'];
+    }
+
+    /**
+     * Sets synchronization_id
+     *
+     * @param string $synchronization_id A unique identifier linking offline events to synchronization events (specified for offline signing events and synchronization events, else null)
+     *
+     * @return $this
+     */
+    public function setSynchronizationId($synchronization_id)
+    {
+        $this->container['synchronization_id'] = $synchronization_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets device_location
+     *
+     * @return \Adobe\ESign\\Model\LibDocEventDeviceLocation
+     */
+    public function getDeviceLocation()
+    {
+        return $this->container['device_location'];
+    }
+
+    /**
+     * Sets device_location
+     *
+     * @param \Adobe\ESign\\Model\LibDocEventDeviceLocation $device_location Location of the device that generated the event (This value may be null due to limited privileges)
+     *
+     * @return $this
+     */
+    public function setDeviceLocation($device_location)
+    {
+        $this->container['device_location'] = $device_location;
 
         return $this;
     }

@@ -75,16 +75,16 @@ class UserWidgetsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "user_widget_list"
      */
-    public function testPropertyPage()
+    public function testPropertyUserWidgetList()
     {
     }
 
     /**
-     * Test attribute "user_widget_list"
+     * Test attribute "page"
      */
-    public function testPropertyUserWidgetList()
+    public function testPropertyPage()
     {
     }
 }

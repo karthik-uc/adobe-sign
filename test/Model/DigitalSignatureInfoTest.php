@@ -75,6 +75,13 @@ class DigitalSignatureInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
+
+    /**
      * Test attribute "company"
      */
     public function testPropertyCompany()
@@ -85,13 +92,6 @@ class DigitalSignatureInfoTest extends \PHPUnit_Framework_TestCase
      * Test attribute "email"
      */
     public function testPropertyEmail()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
     {
     }
 }

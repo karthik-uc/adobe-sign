@@ -75,20 +75,6 @@ class WidgetViewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "embedded_code"
-     */
-    public function testPropertyEmbeddedCode()
-    {
-    }
-
-    /**
-     * Test attribute "expiration"
-     */
-    public function testPropertyExpiration()
-    {
-    }
-
-    /**
      * Test attribute "is_current"
      */
     public function testPropertyIsCurrent()
@@ -96,9 +82,23 @@ class WidgetViewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "embedded_code"
+     */
+    public function testPropertyEmbeddedCode()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "expiration"
+     */
+    public function testPropertyExpiration()
     {
     }
 

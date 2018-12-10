@@ -56,7 +56,8 @@ class LibraryViewInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'common_view_configuration' => '\Adobe\ESign\\Model\CommonViewConfiguration',
-        'name' => 'string'
+        'name' => 'string',
+        'send_view_configuration' => '\Adobe\ESign\\Model\SendViewConfiguration'
     ];
 
     /**
@@ -66,7 +67,8 @@ class LibraryViewInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'common_view_configuration' => null,
-        'name' => null
+        'name' => null,
+        'send_view_configuration' => null
     ];
 
     /**
@@ -97,7 +99,8 @@ class LibraryViewInfo implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'common_view_configuration' => 'commonViewConfiguration',
-        'name' => 'name'
+        'name' => 'name',
+        'send_view_configuration' => 'sendViewConfiguration'
     ];
 
     /**
@@ -107,7 +110,8 @@ class LibraryViewInfo implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'common_view_configuration' => 'setCommonViewConfiguration',
-        'name' => 'setName'
+        'name' => 'setName',
+        'send_view_configuration' => 'setSendViewConfiguration'
     ];
 
     /**
@@ -117,7 +121,8 @@ class LibraryViewInfo implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'common_view_configuration' => 'getCommonViewConfiguration',
-        'name' => 'getName'
+        'name' => 'getName',
+        'send_view_configuration' => 'getSendViewConfiguration'
     ];
 
     /**
@@ -203,6 +208,7 @@ class LibraryViewInfo implements ModelInterface, ArrayAccess
     {
         $this->container['common_view_configuration'] = isset($data['common_view_configuration']) ? $data['common_view_configuration'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['send_view_configuration'] = isset($data['send_view_configuration']) ? $data['send_view_configuration'] : null;
     }
 
     /**
@@ -290,6 +296,30 @@ class LibraryViewInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets send_view_configuration
+     *
+     * @return \Adobe\ESign\\Model\SendViewConfiguration
+     */
+    public function getSendViewConfiguration()
+    {
+        return $this->container['send_view_configuration'];
+    }
+
+    /**
+     * Sets send_view_configuration
+     *
+     * @param \Adobe\ESign\\Model\SendViewConfiguration $send_view_configuration Send page view configuration. This will be ignored for views other than SEND.
+     *
+     * @return $this
+     */
+    public function setSendViewConfiguration($send_view_configuration)
+    {
+        $this->container['send_view_configuration'] = $send_view_configuration;
 
         return $this;
     }

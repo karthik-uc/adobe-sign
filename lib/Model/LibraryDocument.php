@@ -55,14 +55,14 @@ class LibraryDocument implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'creator_email' => 'string',
-        'id' => 'string',
+        'template_types' => 'string[]',
         'hidden' => 'bool',
+        'creator_email' => 'string',
+        'sharing_mode' => 'string',
         'modified_date' => '\DateTime',
         'name' => 'string',
-        'sharing_mode' => 'string',
-        'status' => 'string',
-        'template_types' => 'string[]'
+        'id' => 'string',
+        'status' => 'string'
     ];
 
     /**
@@ -71,14 +71,14 @@ class LibraryDocument implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'creator_email' => null,
-        'id' => null,
+        'template_types' => null,
         'hidden' => null,
+        'creator_email' => null,
+        'sharing_mode' => null,
         'modified_date' => 'date',
         'name' => null,
-        'sharing_mode' => null,
-        'status' => null,
-        'template_types' => null
+        'id' => null,
+        'status' => null
     ];
 
     /**
@@ -108,14 +108,14 @@ class LibraryDocument implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'creator_email' => 'creatorEmail',
-        'id' => 'id',
+        'template_types' => 'templateTypes',
         'hidden' => 'hidden',
+        'creator_email' => 'creatorEmail',
+        'sharing_mode' => 'sharingMode',
         'modified_date' => 'modifiedDate',
         'name' => 'name',
-        'sharing_mode' => 'sharingMode',
-        'status' => 'status',
-        'template_types' => 'templateTypes'
+        'id' => 'id',
+        'status' => 'status'
     ];
 
     /**
@@ -124,14 +124,14 @@ class LibraryDocument implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'creator_email' => 'setCreatorEmail',
-        'id' => 'setId',
+        'template_types' => 'setTemplateTypes',
         'hidden' => 'setHidden',
+        'creator_email' => 'setCreatorEmail',
+        'sharing_mode' => 'setSharingMode',
         'modified_date' => 'setModifiedDate',
         'name' => 'setName',
-        'sharing_mode' => 'setSharingMode',
-        'status' => 'setStatus',
-        'template_types' => 'setTemplateTypes'
+        'id' => 'setId',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -140,14 +140,14 @@ class LibraryDocument implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'creator_email' => 'getCreatorEmail',
-        'id' => 'getId',
+        'template_types' => 'getTemplateTypes',
         'hidden' => 'getHidden',
+        'creator_email' => 'getCreatorEmail',
+        'sharing_mode' => 'getSharingMode',
         'modified_date' => 'getModifiedDate',
         'name' => 'getName',
-        'sharing_mode' => 'getSharingMode',
-        'status' => 'getStatus',
-        'template_types' => 'getTemplateTypes'
+        'id' => 'getId',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -191,6 +191,8 @@ class LibraryDocument implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const TEMPLATE_TYPES_DOCUMENT = 'DOCUMENT';
+    const TEMPLATE_TYPES_FORM_FIELD_LAYER = 'FORM_FIELD_LAYER';
     const SHARING_MODE_USER = 'USER';
     const SHARING_MODE_GROUP = 'GROUP';
     const SHARING_MODE_ACCOUNT = 'ACCOUNT';
@@ -198,10 +200,21 @@ class LibraryDocument implements ModelInterface, ArrayAccess
     const STATUS_AUTHORING = 'AUTHORING';
     const STATUS_ACTIVE = 'ACTIVE';
     const STATUS_REMOVED = 'REMOVED';
-    const TEMPLATE_TYPES_DOCUMENT = 'DOCUMENT';
-    const TEMPLATE_TYPES_FORM_FIELD_LAYER = 'FORM_FIELD_LAYER';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTemplateTypesAllowableValues()
+    {
+        return [
+            self::TEMPLATE_TYPES_DOCUMENT,
+            self::TEMPLATE_TYPES_FORM_FIELD_LAYER,
+        ];
+    }
     
     /**
      * Gets allowable values of the enum
@@ -232,19 +245,6 @@ class LibraryDocument implements ModelInterface, ArrayAccess
         ];
     }
     
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTemplateTypesAllowableValues()
-    {
-        return [
-            self::TEMPLATE_TYPES_DOCUMENT,
-            self::TEMPLATE_TYPES_FORM_FIELD_LAYER,
-        ];
-    }
-    
 
     /**
      * Associative array for storing property values
@@ -261,14 +261,14 @@ class LibraryDocument implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['creator_email'] = isset($data['creator_email']) ? $data['creator_email'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['template_types'] = isset($data['template_types']) ? $data['template_types'] : null;
         $this->container['hidden'] = isset($data['hidden']) ? $data['hidden'] : null;
+        $this->container['creator_email'] = isset($data['creator_email']) ? $data['creator_email'] : null;
+        $this->container['sharing_mode'] = isset($data['sharing_mode']) ? $data['sharing_mode'] : null;
         $this->container['modified_date'] = isset($data['modified_date']) ? $data['modified_date'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['sharing_mode'] = isset($data['sharing_mode']) ? $data['sharing_mode'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['template_types'] = isset($data['template_types']) ? $data['template_types'] : null;
     }
 
     /**
@@ -312,49 +312,34 @@ class LibraryDocument implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets creator_email
+     * Gets template_types
      *
-     * @return string
+     * @return string[]
      */
-    public function getCreatorEmail()
+    public function getTemplateTypes()
     {
-        return $this->container['creator_email'];
+        return $this->container['template_types'];
     }
 
     /**
-     * Sets creator_email
+     * Sets template_types
      *
-     * @param string $creator_email Email address of the library document creator. It will be ignored in POST call
+     * @param string[] $template_types A list of one or more library template types
      *
      * @return $this
      */
-    public function setCreatorEmail($creator_email)
+    public function setTemplateTypes($template_types)
     {
-        $this->container['creator_email'] = $creator_email;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string $id The unique identifier that is used to refer to the library template
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
+        $allowedValues = $this->getTemplateTypesAllowableValues();
+        if (!is_null($template_types) && array_diff($template_types, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'template_types', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['template_types'] = $template_types;
 
         return $this;
     }
@@ -379,6 +364,63 @@ class LibraryDocument implements ModelInterface, ArrayAccess
     public function setHidden($hidden)
     {
         $this->container['hidden'] = $hidden;
+
+        return $this;
+    }
+
+    /**
+     * Gets creator_email
+     *
+     * @return string
+     */
+    public function getCreatorEmail()
+    {
+        return $this->container['creator_email'];
+    }
+
+    /**
+     * Sets creator_email
+     *
+     * @param string $creator_email Email address of the library document creator. It will be ignored in POST call
+     *
+     * @return $this
+     */
+    public function setCreatorEmail($creator_email)
+    {
+        $this->container['creator_email'] = $creator_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets sharing_mode
+     *
+     * @return string
+     */
+    public function getSharingMode()
+    {
+        return $this->container['sharing_mode'];
+    }
+
+    /**
+     * Sets sharing_mode
+     *
+     * @param string $sharing_mode Specifies who should have access to this library document. GLOBAL sharing mode is not applicable in POST/PUT calls
+     *
+     * @return $this
+     */
+    public function setSharingMode($sharing_mode)
+    {
+        $allowedValues = $this->getSharingModeAllowableValues();
+        if (!is_null($sharing_mode) && !in_array($sharing_mode, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sharing_mode', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['sharing_mode'] = $sharing_mode;
 
         return $this;
     }
@@ -432,34 +474,25 @@ class LibraryDocument implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets sharing_mode
+     * Gets id
      *
      * @return string
      */
-    public function getSharingMode()
+    public function getId()
     {
-        return $this->container['sharing_mode'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets sharing_mode
+     * Sets id
      *
-     * @param string $sharing_mode Specifies who should have access to this library document. GLOBAL sharing mode is not applicable in POST/PUT calls
+     * @param string $id The unique identifier that is used to refer to the library template
      *
      * @return $this
      */
-    public function setSharingMode($sharing_mode)
+    public function setId($id)
     {
-        $allowedValues = $this->getSharingModeAllowableValues();
-        if (!is_null($sharing_mode) && !in_array($sharing_mode, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'sharing_mode', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['sharing_mode'] = $sharing_mode;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -493,39 +526,6 @@ class LibraryDocument implements ModelInterface, ArrayAccess
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets template_types
-     *
-     * @return string[]
-     */
-    public function getTemplateTypes()
-    {
-        return $this->container['template_types'];
-    }
-
-    /**
-     * Sets template_types
-     *
-     * @param string[] $template_types A list of one or more library template types
-     *
-     * @return $this
-     */
-    public function setTemplateTypes($template_types)
-    {
-        $allowedValues = $this->getTemplateTypesAllowableValues();
-        if (!is_null($template_types) && array_diff($template_types, $allowedValues)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'template_types', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['template_types'] = $template_types;
 
         return $this;
     }

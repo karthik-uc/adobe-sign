@@ -75,16 +75,16 @@ class WidgetStateInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "widget_in_active_info"
      */
-    public function testPropertyState()
+    public function testPropertyWidgetInActiveInfo()
     {
     }
 
     /**
-     * Test attribute "widget_in_active_info"
+     * Test attribute "state"
      */
-    public function testPropertyWidgetInActiveInfo()
+    public function testPropertyState()
     {
     }
 }

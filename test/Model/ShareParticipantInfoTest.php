@@ -75,16 +75,9 @@ class ShareParticipantInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "company"
+     * Test attribute "participant_id"
      */
-    public function testPropertyCompany()
-    {
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
+    public function testPropertyParticipantId()
     {
     }
 
@@ -96,16 +89,23 @@ class ShareParticipantInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "participant_id"
+     * Test attribute "sharer_participant_id"
      */
-    public function testPropertyParticipantId()
+    public function testPropertySharerParticipantId()
     {
     }
 
     /**
-     * Test attribute "sharer_participant_id"
+     * Test attribute "company"
      */
-    public function testPropertySharerParticipantId()
+    public function testPropertyCompany()
+    {
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
     {
     }
 }

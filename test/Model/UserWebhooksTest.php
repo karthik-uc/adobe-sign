@@ -75,16 +75,16 @@ class UserWebhooksTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "user_webhook_list"
      */
-    public function testPropertyPage()
+    public function testPropertyUserWebhookList()
     {
     }
 
     /**
-     * Test attribute "user_webhook_list"
+     * Test attribute "page"
      */
-    public function testPropertyUserWebhookList()
+    public function testPropertyPage()
     {
     }
 }
