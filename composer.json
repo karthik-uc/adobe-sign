@@ -1,11 +1,58 @@
 {
+  "name": "unicourt/adobe-sign",
+  "version": "1.0.0",
   "repositories": [
     {
       "type": "path",
       "url": "Adobe/ESign/Agreements"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/BaseUris"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/Groups"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/LibraryDocuments"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/MegaSigns"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/TransientDocuments"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/Users"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/Webhooks"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/Widgets"
+    },
+    {
+      "type": "path",
+      "url": "Adobe/ESign/Workflows"
     }
   ],
   "require": {
-    "esign/agreements": "*"
+    "esign/agreements": "1.0.0",
+    "esign/baseUris": "1.0.0",
+    "esign/groups": "1.0.0",
+    "esign/libraryDocuments": "1.0.0",
+    "esign/megaSigns": "1.0.0",
+    "esign/transientDocuments": "1.0.0",
+    "esign/users": "1.0.0",
+    "esign/webhooks": "1.0.0",
+    "esign/widgets": "1.0.0",
+    "esign/workflows": "1.0.0"
   }
 }
